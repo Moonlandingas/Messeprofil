@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messevegg tekstil buet 3×3 | Messeprofil.no</title>
+<meta name="description" content="Buet messevegg 3×3 meter med sømløst tekstiltrykk. Verktøyfri montering på 10 minutter. Fra 8 990 kr eks. mva.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#D51D29;--red-dark:#B01523;--red-soft:#F9E2E4;
+  --ink:#16161A;--grey-50:#FBF6F7;--grey-100:#F7EDEF;--grey-200:#EBDCDF;--grey-500:#75676B;
+  --white:#fff;--radius:14px;
+  --shadow-sm:0 1px 2px rgba(22,22,26,.05);--shadow-md:0 10px 30px rgba(22,22,26,.08);
+  --font-head:'Montserrat',sans-serif;--font-body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}html{background:#EBDCDF}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{font-family:var(--font-body);color:var(--ink);background:#FDFAFB;max-width:1440px;margin:0 auto;box-shadow:0 0 60px rgba(26,26,26,.14);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,select{font-family:inherit;cursor:pointer}
+h1,h2,h3{font-family:var(--font-head);line-height:1.15}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px;border-radius:4px}
+
+.topbar{background:var(--ink);color:#D6D6DC;font-size:13px}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:16px}
+.topbar a{display:inline-flex;align-items:center;gap:6px;color:#D6D6DC;transition:color .15s}
+.topbar a:hover{color:#fff}
+.topbar-left{display:flex;gap:24px;align-items:center}
+.topbar svg{width:14px;height:14px;flex:none}
+
+.header{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--grey-200)}
+.header-inner{display:flex;align-items:center;gap:32px;min-height:76px}
+.logo{display:flex;align-items:center;gap:10px;flex:none}
+.logo-mark{width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:var(--font-head);font-weight:800;font-size:19px}
+.logo-text{font-family:var(--font-head);font-weight:800;font-size:20px;letter-spacing:-.02em}
+.logo-text span{color:var(--red)}
+.search{flex:1;max-width:440px;position:relative}
+.search input{width:100%;height:46px;border:1.5px solid var(--grey-200);border-radius:999px;background:var(--grey-50);padding:0 48px 0 20px;font:500 15px var(--font-body);color:var(--ink);transition:border-color .15s,background .15s}
+.search input::placeholder{color:var(--grey-500)}
+.search input:focus{outline:none;border-color:var(--red);background:#fff}
+.search button{position:absolute;right:5px;top:5px;width:36px;height:36px;border-radius:50%;border:none;background:var(--red);color:#fff;display:grid;place-items:center;transition:background .15s}
+.search button:hover{background:var(--red-dark)}
+.search svg{width:16px;height:16px}
+.nav{display:flex;gap:28px;margin-left:auto}
+.nav a{font:600 15px var(--font-body);color:var(--ink);padding:6px 0;position:relative;white-space:nowrap}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.nav a:hover::after,.nav a[aria-current]::after{transform:scaleX(1)}
+.header-actions{display:flex;align-items:center;gap:12px;flex:none}
+.cart-btn{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--grey-200);background:#fff;display:grid;place-items:center;position:relative;transition:border-color .15s}
+.cart-btn:hover{border-color:var(--ink)}
+.cart-btn svg{width:19px;height:19px}
+.cart-count{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;border-radius:999px;background:var(--red);color:#fff;font:600 11px/18px var(--font-body);text-align:center;padding:0 4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px var(--font-body);border-radius:999px;border:none;padding:0 26px;height:48px;transition:background .15s,color .15s,border-color .15s;white-space:nowrap}
+.btn svg{width:15px;height:15px}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000}
+.btn-outline{background:#fff;color:var(--ink);border:1.5px solid var(--grey-200)}
+.btn-outline:hover{border-color:var(--ink)}
+.burger{display:none;width:46px;height:46px;border-radius:12px;border:1.5px solid var(--grey-200);background:#fff;place-items:center}
+.burger svg{width:20px;height:20px}
+.mobile-menu{display:none;background:#fff;border-bottom:1px solid var(--grey-200);padding:12px 24px 20px}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:12px 4px;font:600 16px var(--font-body);border-bottom:1px solid var(--grey-100)}
+.mobile-menu .btn{width:100%;margin-top:14px}
+
+.breadcrumb{display:flex;gap:8px;flex-wrap:wrap;font-size:13.5px;color:var(--grey-500);padding:24px 0 0}
+.breadcrumb a:hover{color:var(--red)}
+.breadcrumb span[aria-current]{color:var(--ink);font-weight:500}
+
+/* Product layout */
+.product{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;padding:32px 0 80px;align-items:start}
+
+.gallery-main{background:var(--grey-100);border-radius:var(--radius);aspect-ratio:1/.85;display:grid;place-items:center;padding:44px;border:1px solid var(--grey-200)}
+.gallery-main svg{width:100%;height:100%}
+.gallery-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+.gallery-thumbs button{background:var(--grey-100);border:1.5px solid var(--grey-200);border-radius:10px;aspect-ratio:1/.8;display:grid;place-items:center;padding:12px;transition:border-color .15s}
+.gallery-thumbs button:hover{border-color:var(--grey-500)}
+.gallery-thumbs button.active{border-color:var(--red)}
+.gallery-thumbs svg{width:100%;height:100%}
+
+.p-cat{font:600 12px var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.p-info h1{font-size:clamp(26px,3vw,34px);font-weight:800;letter-spacing:-.02em;margin:10px 0 12px}
+.stars{display:flex;gap:3px;color:var(--red);align-items:center;margin-bottom:20px}
+.stars svg{width:16px;height:16px}
+.stars a{color:var(--grey-500);font-size:13.5px;margin-left:8px;text-decoration:underline}
+.p-price{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.p-price strong{font:800 30px var(--font-head);letter-spacing:-.02em}
+.p-price span{color:var(--grey-500);font-size:14px}
+.p-lead{color:var(--grey-500);font-size:15.5px;margin:16px 0 26px}
+
+.option-label{font:700 13px var(--font-head);letter-spacing:.04em;margin-bottom:10px;display:flex;justify-content:space-between}
+.option-label small{font:500 13px var(--font-body);color:var(--grey-500)}
+.options{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.opt{height:46px;padding:0 18px;border-radius:12px;border:1.5px solid var(--grey-200);background:#fff;font:600 14px var(--font-body);transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--ink)}
+.opt.active{border-color:var(--red);background:var(--red-soft);color:var(--red)}
+
+.buy-row{display:flex;gap:12px;margin:26px 0 18px}
+.qty{display:flex;align-items:center;border:1.5px solid var(--grey-200);border-radius:999px;height:54px}
+.qty button{width:46px;height:100%;border:none;background:none;font:600 20px var(--font-body);color:var(--grey-500)}
+.qty button:hover{color:var(--ink)}
+.qty input{width:44px;text-align:center;border:none;font:600 16px var(--font-body);color:var(--ink)}
+.qty input:focus{outline:none}
+.buy-row .btn{flex:1;height:54px;font-size:16px}
+.buy-alt{font-size:14px;color:var(--grey-500);margin-bottom:26px}
+.buy-alt a{color:var(--red);font-weight:600;text-decoration:underline}
+
+.usp-list{display:grid;gap:11px;border-top:1px solid var(--grey-200);padding-top:24px}
+.usp-list li{display:flex;gap:11px;align-items:center;list-style:none;font-size:14.5px;color:var(--ink)}
+.usp-list svg{width:17px;height:17px;color:var(--red);flex:none}
+
+/* Tabs */
+.tabs{border-top:1px solid var(--grey-200);padding:64px 0 80px}
+.tab-nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:32px}
+.tab-nav button{height:46px;padding:0 22px;border-radius:999px;border:1.5px solid var(--grey-200);background:#fff;font:600 14.5px var(--font-body);transition:all .15s}
+.tab-nav button:hover{border-color:var(--ink)}
+.tab-nav button.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.tab-panel{display:none;max-width:760px}
+.tab-panel.active{display:block}
+.tab-panel h3{font-size:19px;margin-bottom:14px}
+.tab-panel p{color:var(--grey-500);margin-bottom:14px;font-size:15.5px}
+.spec-table{width:100%;border-collapse:collapse;font-size:14.5px}
+.spec-table tr{border-bottom:1px solid var(--grey-200)}
+.spec-table th{text-align:left;padding:13px 16px 13px 0;font-weight:600;color:var(--ink);width:40%}
+.spec-table td{padding:13px 0;color:var(--grey-500)}
+
+/* Related */
+.related{background:var(--grey-100);padding:80px 0 96px}
+.related h2{font-size:clamp(24px,3vw,32px);font-weight:800;letter-spacing:-.02em;margin-bottom:36px}
+.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.product-card{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;position:relative}
+.product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.product-thumb{background:var(--grey-100);aspect-ratio:1/.82;display:grid;place-items:center;padding:20px}
+.product-thumb svg{width:100%;height:100%;max-height:110px}
+.product-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1;gap:4px}
+.product-body h3{font-size:14.5px;font-weight:700;font-family:var(--font-body)}
+.product-price{color:var(--grey-500);font-size:13.5px}
+.product-price strong{color:var(--ink);font-weight:600}
+.product-body .btn{height:40px;font-size:13.5px;margin-top:12px;width:100%}
+
+/* Cart drawer */
+.drawer-backdrop{position:fixed;inset:0;background:rgba(22,22,26,.45);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:#fff;z-index:91;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column}
+body.drawer-open .drawer{transform:none}
+body.drawer-open .drawer-backdrop{opacity:1;pointer-events:auto}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:22px 26px;border-bottom:1px solid var(--grey-200)}
+.drawer-head h2{font-size:19px;font-weight:800}
+.drawer-head button{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--grey-200);background:#fff;display:grid;place-items:center}
+.drawer-head svg{width:16px;height:16px}
+.drawer-body{flex:1;overflow-y:auto;padding:26px}
+.cart-item{display:flex;gap:16px;padding-bottom:20px;border-bottom:1px solid var(--grey-200)}
+.cart-item-thumb{flex:none;width:86px;height:72px;background:var(--grey-100);border-radius:10px;display:grid;place-items:center;padding:10px}
+.cart-item h3{font:600 14.5px var(--font-body)}
+.cart-item p{font-size:13px;color:var(--grey-500)}
+.cart-item strong{font-size:14.5px}
+.drawer-foot{padding:22px 26px;border-top:1px solid var(--grey-200)}
+.drawer-total{display:flex;justify-content:space-between;font:700 16px var(--font-body);margin-bottom:16px}
+.drawer-foot .btn{width:100%;height:52px}
+.drawer-foot .btn + .btn{margin-top:10px}
+
+.footer{background:var(--ink);color:#B9B9C2;font-size:14.5px}
+.footer-bottom{padding:26px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#8A8A94}
+.footer a:hover{color:#fff}
+
+@media (max-width:1024px){
+  .nav{display:none}
+  .burger{display:grid}
+  .search{max-width:none}
+  .product{grid-template-columns:1fr;gap:36px}
+  .related-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  .topbar-left span.hide-m{display:none}
+  .header-inner{flex-wrap:wrap;gap:14px;padding:14px 0}
+  .search{order:3;flex-basis:100%}
+  .header-actions .btn{display:none}
+  .buy-row{flex-wrap:wrap}
+  .buy-row .btn{flex-basis:100%}
+  .related-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+}
+</style>
+<style>
+/* Figma-restyle: rød header, hvit logo, lys footer, mobil-fix */
+html,body{overflow-x:hidden}
+.header{background:var(--red);border-bottom:none;transition:box-shadow .25s}
+.header.scrolled{box-shadow:0 8px 26px rgba(142,16,27,.35)}
+.logo{color:#fff;display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--red);display:grid;place-items:center;font-family:var(--font-head);font-weight:800;font-size:18px;flex:none}
+.logo-text{font-family:var(--font-head);font-weight:800;font-size:19px;letter-spacing:-.02em;white-space:nowrap}
+.nav a{color:rgba(255,255,255,.92)}
+.nav a:hover{color:#fff}
+.nav a::after{background:#fff}
+.search input{border:none;background:#fff}
+.search input:focus{outline:2px solid rgba(255,255,255,.7);outline-offset:2px;border:none}
+.cart-btn{border-color:rgba(255,255,255,.5);background:transparent;color:#fff}
+.cart-btn:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+.cart-count{background:#fff;color:var(--red)}
+.header .btn-red{background:#fff;color:var(--red)}
+.header .btn-red:hover{background:var(--red-soft)}
+.burger{border-color:rgba(255,255,255,.5);background:transparent;color:#fff}
+.mobile-menu{background:var(--red-dark);border-bottom:none}
+.mobile-menu a{color:#fff;border-bottom:1px solid rgba(255,255,255,.14)}
+.mobile-menu .btn-red{background:#fff;color:var(--red)}
+.footer{background:#FBF8F8;color:var(--grey-500);border-top:1px solid var(--grey-200)}
+.footer a:hover{color:var(--red)}
+.footer-bottom{color:var(--grey-500)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}}
+@media (max-width:720px){
+  body{box-shadow:none}
+  .container{padding:0 18px}
+  .logo{margin-right:auto}
+  .logo-text{font-size:17px}
+}
+</style>
+<style>
+/* Boxed layout på alle skjermstørrelser */
+body{max-width:1240px;box-shadow:0 0 70px rgba(142,16,27,.28)}
+@media (max-width:1300px){body{margin:0 20px;max-width:none}}
+@media (max-width:720px){body{margin:0 12px;box-shadow:0 4px 26px rgba(142,16,27,.24)}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="tel:+4791168911">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2Z"/></svg>
+        +47 911 68 911
+      </a>
+      <span class="hide-m">Rask levering i hele Norge</span>
+    </div>
+    <a href="butikk.html">← Tilbake til nettbutikken</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Messeprofil.no – til forsiden">
+      <span class="logo-mark">M</span>
+      <span class="logo-text">Messeprofil.no</span>
+    </a>
+    <form class="search" role="search" action="#" onsubmit="return false">
+      <input type="search" placeholder="Søk etter messevegg, roll-up, lyskasse …" aria-label="Søk i nettbutikken">
+      <button type="submit" aria-label="Søk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+    </form>
+    <nav class="nav" aria-label="Hovedmeny">
+      <a href="index.html">Hjem</a>
+      <a href="butikk.html" aria-current="page">Nettbutikk</a>
+      <a href="https://beta.moonlandingsite.no/messeprofil/om-oss/">Om oss</a>
+      <a href="https://beta.moonlandingsite.no/messeprofil/verdt-a-vite/">Kundeservice</a>
+      <a href="https://beta.moonlandingsite.no/messeprofil/kontakt-oss/">Kontakt</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" aria-label="Handlekurv" onclick="openDrawer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57L23 6H5.12"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a class="btn btn-red" href="index.html#forespoersel">Send forespørsel</a>
+      <button class="burger" aria-label="Åpne meny" aria-expanded="false" onclick="toggleMenu(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Hjem</a>
+    <a href="butikk.html">Nettbutikk</a>
+    <a href="https://beta.moonlandingsite.no/messeprofil/om-oss/">Om oss</a>
+    <a href="https://beta.moonlandingsite.no/messeprofil/verdt-a-vite/">Kundeservice</a>
+    <a href="https://beta.moonlandingsite.no/messeprofil/kontakt-oss/">Kontakt</a>
+    <a class="btn btn-red" href="index.html#forespoersel">Send forespørsel</a>
+  </div>
+</header>
+
+<main class="container">
+
+<nav class="breadcrumb" aria-label="Brødsmulesti">
+  <a href="index.html">Hjem</a> / <a href="butikk.html">Nettbutikk</a> / <a href="butikk.html">Messevegger</a> / <span aria-current="page">Messevegg tekstil buet 3×3</span>
+</nav>
+
+<div class="product">
+
+  <div>
+    <div class="gallery-main" id="galleryMain">
+      <svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="dots" x="0" y="0" width="34" height="34" patternUnits="userSpaceOnUse">
+            <circle cx="17" cy="17" r="8.5" fill="#fff" opacity=".92"/>
+          </pattern>
+          <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#E23540"/>
+            <stop offset="1" stop-color="#D51D29"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="280" cy="372" rx="230" ry="20" fill="#16161A" opacity=".06"/>
+        <path d="M100 60 q180 -34 360 0 v240 q-180 -34 -360 0 Z" fill="url(#wall)"/>
+        <rect x="130" y="92" width="140" height="150" fill="url(#dots)"/>
+        <text x="300" y="128" font-family="Montserrat,sans-serif" font-weight="800" font-size="24" fill="#fff">Messeprofil.no</text>
+        <rect x="300" y="144" width="110" height="6" rx="3" fill="#fff" opacity=".55"/>
+        <rect x="300" y="160" width="80" height="6" rx="3" fill="#fff" opacity=".35"/>
+        <rect x="132" y="304" width="12" height="66" rx="4" fill="#B01523"/>
+        <rect x="416" y="304" width="12" height="66" rx="4" fill="#B01523"/>
+      </svg>
+    </div>
+    <div class="gallery-thumbs" role="tablist" aria-label="Produktbilder">
+      <button class="active" aria-label="Bilde 1: forfra"><svg viewBox="0 0 100 70"><path d="M14 12 q36 -8 72 0 v42 q-36 -8 -72 0Z" fill="#D51D29"/></svg></button>
+      <button aria-label="Bilde 2: fra siden"><svg viewBox="0 0 100 70"><path d="M30 10 l40 6 v40 l-40 6Z" fill="#D51D29"/></svg></button>
+      <button aria-label="Bilde 3: bakside og ramme"><svg viewBox="0 0 100 70"><rect x="16" y="12" width="68" height="44" rx="4" fill="none" stroke="#D51D29" stroke-width="4"/><line x1="16" y1="34" x2="84" y2="34" stroke="#D51D29" stroke-width="3"/><line x1="50" y1="12" x2="50" y2="56" stroke="#D51D29" stroke-width="3"/></svg></button>
+      <button aria-label="Bilde 4: transportbag"><svg viewBox="0 0 100 70"><rect x="20" y="26" width="60" height="28" rx="12" fill="#16161A"/><path d="M38 26 q12 -16 24 0" fill="none" stroke="#16161A" stroke-width="5"/></svg></button>
+    </div>
+  </div>
+
+  <div class="p-info">
+    <span class="p-cat">Messevegger tekstil</span>
+    <h1>Messevegg tekstil buet 3×3</h1>
+    <div class="stars" aria-label="4,9 av 5 stjerner">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+      <a href="#omtaler">4,9 · 31 omtaler</a>
+    </div>
+    <div class="p-price">
+      <strong id="price">8 990 kr</strong>
+      <span>eks. mva · inkl. trykk av ditt design</span>
+    </div>
+    <p class="p-lead">Buet tekstilvegg med sømløst trykk på hele flaten. Aluminiumsramme som klikkes sammen uten verktøy – én person monterer hele veggen på ca. 10 minutter.</p>
+
+    <div class="option-label">Størrelse <small id="sizeLabel">3 × 3 m</small></div>
+    <div class="options" role="group" aria-label="Velg størrelse">
+      <button class="opt" data-price="7 490 kr" data-size="2 × 3 m" onclick="pick(this,'size')">2 × 3 m</button>
+      <button class="opt active" data-price="8 990 kr" data-size="3 × 3 m" onclick="pick(this,'size')">3 × 3 m</button>
+      <button class="opt" data-price="10 490 kr" data-size="4 × 3 m" onclick="pick(this,'size')">4 × 3 m</button>
+      <button class="opt" data-price="12 900 kr" data-size="5 × 3 m" onclick="pick(this,'size')">5 × 3 m</button>
+    </div>
+
+    <div class="option-label">Trykk</div>
+    <div class="options" role="group" aria-label="Velg trykk">
+      <button class="opt active" onclick="pick(this,'print')">Enkeltsidig</button>
+      <button class="opt" onclick="pick(this,'print')">Dobbeltsidig (+2 490 kr)</button>
+    </div>
+
+    <div class="option-label">Design</div>
+    <div class="options" role="group" aria-label="Velg design">
+      <button class="opt active" onclick="pick(this,'design')">Jeg laster opp eget design</button>
+      <button class="opt" onclick="pick(this,'design')">Gratis designhjelp</button>
+    </div>
+
+    <div class="buy-row">
+      <div class="qty" aria-label="Antall">
+        <button type="button" aria-label="Reduser antall" onclick="qty(-1)">−</button>
+        <input type="text" id="qtyInput" value="1" inputmode="numeric" aria-label="Antall">
+        <button type="button" aria-label="Øk antall" onclick="qty(1)">+</button>
+      </div>
+      <button class="btn btn-red" onclick="addToCart()">
+        Legg i handlekurv
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57L23 6H5.12"/></svg>
+      </button>
+    </div>
+    <p class="buy-alt">Usikker på hva som passer? <a href="index.html#forespoersel">Be om et uforpliktende tilbud</a> eller ring oss på +47 911 68 911.</p>
+
+    <ul class="usp-list">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Levering 3–5 virkedager etter designgodkjenning</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Transportbag og monteringsanvisning inkludert</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Vaskbar tekstil – nytt trykk kan bestilles til samme ramme</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>2 års garanti på ramme</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Tabs -->
+<section class="tabs" id="omtaler">
+  <div class="tab-nav" role="tablist">
+    <button class="active" role="tab" aria-selected="true" onclick="tab(this,0)">Beskrivelse</button>
+    <button role="tab" aria-selected="false" onclick="tab(this,1)">Spesifikasjoner</button>
+    <button role="tab" aria-selected="false" onclick="tab(this,2)">Levering og filkrav</button>
+  </div>
+  <div class="tab-panel active" role="tabpanel">
+    <h3>Bygget for å brukes igjen og igjen</h3>
+    <p>Den buede tekstilveggen er vår mest populære messevegg – og det er ikke tilfeldig. Rammen i aluminium klikkes sammen uten verktøy, tekstilduken trekkes over som en sokk, og hele standen står klar på rundt ti minutter.</p>
+    <p>Trykket er sømløst over hele flaten, så designet ditt vises uten skjøter eller synlige overganger. Duken tåler maskinvask, og når du skal fornye profilen bestiller du bare ny duk til samme ramme.</p>
+    <p>Alt pakkes i den medfølgende transportbaggen som får plass i bagasjerommet på en vanlig personbil.</p>
+  </div>
+  <div class="tab-panel" role="tabpanel">
+    <table class="spec-table">
+      <tr><th>Mål montert (3×3)</th><td>Ca. 300 × 228 cm</td></tr>
+      <tr><th>Ramme</th><td>Aluminium, 30 mm rør med klikklås</td></tr>
+      <tr><th>Duk</th><td>Polyester-tekstil 260 g/m², sømløst sublimasjonstrykk</td></tr>
+      <tr><th>Vekt inkl. bag</th><td>Ca. 11 kg</td></tr>
+      <tr><th>Pakkemål</th><td>Ca. 80 × 30 × 30 cm</td></tr>
+      <tr><th>Montering</th><td>1 person, ca. 10 minutter, uten verktøy</td></tr>
+      <tr><th>Garanti</th><td>2 år på ramme</td></tr>
+    </table>
+  </div>
+  <div class="tab-panel" role="tabpanel">
+    <h3>Levering</h3>
+    <p>Normal leveringstid er 3–5 virkedager etter at designet er godkjent. Trenger du det raskere? Ekspressproduksjon på 1–2 dager kan velges i kassen.</p>
+    <h3>Filkrav</h3>
+    <p>Last opp trykkeklar PDF i målestokk 1:10 med 3 mm utfall, CMYK og minimum 150 dpi i full størrelse. Ferdige maler ligger klare for nedlasting – eller la oss sette opp designet for deg, helt uten ekstra kostnad.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- Related -->
+<section class="related">
+  <div class="container">
+    <h2>Andre har også sett på</h2>
+    <div class="related-grid">
+      <article class="product-card">
+        <div class="product-thumb" aria-hidden="true">
+          <svg viewBox="0 0 160 110"><rect x="18" y="8" width="124" height="80" rx="7" fill="#D51D29"/><rect x="32" y="22" width="60" height="36" rx="4" fill="#fff"/><text x="62" y="44" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="12" fill="#D51D29">M</text><rect x="30" y="88" width="7" height="12" rx="3" fill="#B01523"/><rect x="124" y="88" width="7" height="12" rx="3" fill="#B01523"/></svg>
+        </div>
+        <div class="product-body">
+          <h3>Messevegg tekstil rett 4×3</h3>
+          <p class="product-price">Fra <strong>10 490 kr</strong></p>
+          <a class="btn btn-dark" href="produkt.html">Se produkt</a>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-thumb" aria-hidden="true">
+          <svg viewBox="0 0 160 110"><rect x="56" y="6" width="48" height="84" rx="5" fill="#D51D29"/><circle cx="80" cy="28" r="12" fill="#fff"/><text x="80" y="33" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="12" fill="#D51D29">M</text><rect x="48" y="90" width="64" height="10" rx="5" fill="#16161A"/></svg>
+        </div>
+        <div class="product-body">
+          <h3>Roll-up Premium 85×200</h3>
+          <p class="product-price">Fra <strong>1 290 kr</strong></p>
+          <a class="btn btn-dark" href="produkt.html">Se produkt</a>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-thumb" aria-hidden="true">
+          <svg viewBox="0 0 160 110"><path d="M52 38 h56 a7 7 0 0 1 7 7 v55 h-70 v-55 a7 7 0 0 1 7-7Z" fill="#D51D29"/><rect x="40" y="28" width="80" height="12" rx="6" fill="#fff" stroke="#DADAE0" stroke-width="2"/><circle cx="80" cy="72" r="16" fill="#fff"/><text x="80" y="78" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="16" fill="#D51D29">M</text></svg>
+        </div>
+        <div class="product-body">
+          <h3>Messedisk med trykk</h3>
+          <p class="product-price">Fra <strong>3 490 kr</strong></p>
+          <a class="btn btn-dark" href="produkt.html">Se produkt</a>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-thumb" aria-hidden="true">
+          <svg viewBox="0 0 160 110"><rect x="30" y="8" width="100" height="86" rx="8" fill="#16161A"/><rect x="38" y="16" width="84" height="70" rx="5" fill="#D51D29"/><rect x="48" y="28" width="64" height="26" rx="4" fill="#fff" opacity=".95"/><text x="80" y="45" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="9" fill="#D51D29">LYSKASSE</text></svg>
+        </div>
+        <div class="product-body">
+          <h3>Lyskasse LED 2×2</h3>
+          <p class="product-price">Fra <strong>12 900 kr</strong></p>
+          <a class="btn btn-dark" href="produkt.html">Se produkt</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-bottom">
+    <span>© 2026 Messeprofil.no – Alle rettigheter forbeholdt</span>
+    <a href="index.html">Til forsiden</a>
+  </div>
+</footer>
+
+<!-- Cart drawer -->
+<div class="drawer-backdrop" onclick="closeDrawer()"></div>
+<aside class="drawer" aria-label="Handlekurv" aria-hidden="true">
+  <div class="drawer-head">
+    <h2>Handlekurv</h2>
+    <button aria-label="Lukk handlekurv" onclick="closeDrawer()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawerBody">
+    <p style="color:var(--grey-500)">Handlekurven er tom.</p>
+  </div>
+  <div class="drawer-foot">
+    <div class="drawer-total"><span>Sum eks. mva</span><span id="cartTotal">0 kr</span></div>
+    <button class="btn btn-red">Gå til kassen</button>
+    <button class="btn btn-outline" onclick="closeDrawer()">Fortsett å handle</button>
+  </div>
+</aside>
+
+<script>
+function toggleMenu(btn){
+  const menu = document.getElementById('mobileMenu');
+  const open = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+function pick(btn, group){
+  [...btn.parentElement.children].forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  if(group === 'size'){
+    document.getElementById('price').textContent = btn.dataset.price;
+    document.getElementById('sizeLabel').textContent = btn.dataset.size;
+  }
+}
+function qty(d){
+  const i = document.getElementById('qtyInput');
+  i.value = Math.max(1, (parseInt(i.value)||1) + d);
+}
+let cartQty = 0, cartSum = 0;
+function addToCart(){
+  const n = parseInt(document.getElementById('qtyInput').value)||1;
+  const price = parseInt(document.getElementById('price').textContent.replace(/\D/g,''));
+  const size = document.getElementById('sizeLabel').textContent;
+  cartQty += n; cartSum += price*n;
+  document.getElementById('cartCount').textContent = cartQty;
+  document.getElementById('cartTotal').textContent = cartSum.toLocaleString('nb-NO') + ' kr';
+  document.getElementById('drawerBody').innerHTML = `
+    <div class="cart-item">
+      <div class="cart-item-thumb">
+        <svg viewBox="0 0 100 70"><path d="M14 12 q36 -8 72 0 v42 q-36 -8 -72 0Z" fill="#D51D29"/></svg>
+      </div>
+      <div style="flex:1">
+        <h3>Messevegg tekstil buet</h3>
+        <p>${size} · Enkeltsidig · Antall: ${cartQty}</p>
+        <strong>${cartSum.toLocaleString('nb-NO')} kr</strong>
+      </div>
+    </div>`;
+  openDrawer();
+}
+function openDrawer(){
+  document.body.classList.add('drawer-open');
+  document.querySelector('.drawer').setAttribute('aria-hidden','false');
+}
+function closeDrawer(){
+  document.body.classList.remove('drawer-open');
+  document.querySelector('.drawer').setAttribute('aria-hidden','true');
+}
+function tab(btn, i){
+  document.querySelectorAll('.tab-nav button').forEach((b,j)=>{
+    b.classList.toggle('active', j===i);
+    b.setAttribute('aria-selected', j===i);
+  });
+  document.querySelectorAll('.tab-panel').forEach((p,j)=>p.classList.toggle('active', j===i));
+}
+</script>
+
+<script>
+(function(){
+  var h=document.querySelector('.header');
+  if(h){addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>10)},{passive:true});}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.pg-card,.product-card,.review-card,.filter-group,.gallery-main,.p-info,.tabs').forEach(function(el){el.classList.add('reveal');io.observe(el);});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messeprofil.no – Smarte messeløsninger</title>
+<meta name="description" content="Lette å frakte – enkle å montere. Smarte løsninger for synlighet med fokus på design og bærekraft.">
+<link rel="icon" href="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Logo-1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#D51D29;
+  --red-dark:#B01523;
+  --red-deep:#8E101B;
+  --pink:#F2A9B0;
+  --pink-soft:#F9E7E9;
+  --red-soft:#FCEDEE;
+  --ink:#1A1A1A;
+  --grey-50:#FBF8F8;
+  --grey-100:#F5F0F1;
+  --grey-200:#E9DEE0;
+  --grey-500:#75676B;
+  --white:#FFFFFF;
+  --radius:18px;
+  --radius-sm:12px;
+  --shadow-sm:0 1px 2px rgba(26,26,26,.05);
+  --shadow-md:0 12px 34px rgba(26,26,26,.10);
+  --font-head:'Montserrat',sans-serif;
+  --font-body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;background:#E8C4C9}
+body{
+  font-family:var(--font-body);color:var(--ink);background:#fff;
+  max-width:1440px;margin:0 auto;box-shadow:0 0 60px rgba(26,26,26,.16);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+html{overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.2}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px;border-radius:4px}
+
+/* ---------- Scroll reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger > *{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
+.stagger.in > *{opacity:1;transform:none}
+.stagger.in > :nth-child(1){transition-delay:.05s}
+.stagger.in > :nth-child(2){transition-delay:.13s}
+.stagger.in > :nth-child(3){transition-delay:.21s}
+.stagger.in > :nth-child(4){transition-delay:.29s}
+.stagger.in > :nth-child(5){transition-delay:.37s}
+.stagger.in > :nth-child(6){transition-delay:.45s}
+.stagger.in > :nth-child(7){transition-delay:.53s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.stagger > *{opacity:1!important;transform:none!important}
+}
+
+/* ---------- Header (rød som i Figma) ---------- */
+.header{position:sticky;top:0;z-index:50;background:var(--red);transition:box-shadow .25s}
+.header.scrolled{box-shadow:0 8px 26px rgba(142,16,27,.35)}
+.header-inner{display:flex;align-items:center;gap:30px;min-height:72px}
+.logo{display:flex;align-items:center;gap:10px;flex:none;color:#fff}
+.logo-mark{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--red);display:grid;place-items:center;font-family:var(--font-head);font-weight:800;font-size:18px;flex:none}
+.logo-text{font-family:var(--font-head);font-weight:800;font-size:19px;letter-spacing:-.02em;white-space:nowrap}
+.nav{display:flex;gap:26px;align-items:center}
+.nav > li{list-style:none;position:relative}
+.nav a{font:600 13.5px var(--font-head);color:rgba(255,255,255,.92);padding:10px 0;position:relative;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.nav a:hover{color:#fff}
+.nav > li > a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:#fff;border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .22s}
+.nav > li:hover > a::after,.nav > li > a[aria-current]::after{transform:scaleX(1)}
+.nav svg.caret{width:10px;height:10px;opacity:.8}
+.dropdown{position:absolute;top:100%;left:-14px;background:#fff;border:1px solid var(--grey-200);border-radius:12px;box-shadow:var(--shadow-md);min-width:230px;padding:8px;opacity:0;visibility:hidden;transform:translateY(6px);transition:all .18s;z-index:60}
+.nav > li:hover .dropdown,.nav > li:focus-within .dropdown{opacity:1;visibility:visible;transform:none}
+.dropdown a{display:block;padding:10px 14px;border-radius:8px;font:500 14px var(--font-body);color:var(--ink)}
+.dropdown a:hover{background:var(--grey-100);color:var(--red)}
+.header-actions{display:flex;align-items:center;gap:12px;flex:none;margin-left:auto}
+.search{position:relative;width:250px}
+.search input{width:100%;height:42px;border:none;border-radius:999px;background:#fff;padding:0 44px 0 18px;font:500 14px var(--font-body);color:var(--ink)}
+.search input::placeholder{color:var(--grey-500)}
+.search input:focus{outline:2px solid rgba(255,255,255,.7);outline-offset:2px}
+.search button{position:absolute;right:5px;top:5px;width:32px;height:32px;border-radius:50%;border:none;background:var(--red);color:#fff;display:grid;place-items:center;transition:background .15s}
+.search button:hover{background:var(--red-dark)}
+.search svg{width:14px;height:14px}
+.cart-btn{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.5);background:transparent;color:#fff;display:grid;place-items:center;position:relative;transition:all .15s;flex:none}
+.cart-btn:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.cart-btn svg{width:17px;height:17px}
+.cart-count{position:absolute;top:-4px;right:-4px;min-width:17px;height:17px;border-radius:999px;background:#fff;color:var(--red);font:700 10.5px/17px var(--font-body);text-align:center;padding:0 4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 12.5px var(--font-head);letter-spacing:.06em;text-transform:uppercase;border-radius:999px;border:none;padding:0 24px;height:44px;transition:background .18s,color .18s,border-color .18s,transform .18s;white-space:nowrap}
+.btn svg{width:14px;height:14px;transition:transform .18s}
+.btn:hover svg{transform:translateX(3px)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000}
+.btn-white{background:#fff;color:var(--red)}
+.btn-white:hover{background:var(--pink-soft)}
+.btn-ghost-w{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.65)}
+.btn-ghost-w:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--grey-200)}
+.btn-outline:hover{border-color:var(--ink)}
+.burger{display:none;width:42px;height:42px;border-radius:10px;border:1.5px solid rgba(255,255,255,.5);background:transparent;color:#fff;place-items:center}
+.burger svg{width:20px;height:20px}
+.mobile-menu{display:none;background:var(--red-dark);padding:8px 24px 20px}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:13px 4px;font:600 15px var(--font-body);color:#fff;border-bottom:1px solid rgba(255,255,255,.14)}
+.mobile-menu a.sub{padding-left:22px;color:rgba(255,255,255,.75);font-weight:500}
+.mobile-menu .btn{width:100%;margin-top:16px}
+
+/* ---------- Hero (rosa/magenta som i Figma) ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#C1141F 0%,#DE3946 34%,#EE7A85 68%,#F5B8BE 100%);color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at center,rgba(255,255,255,.16) 0 7px,transparent 8px);background-size:44px 44px;mask-image:linear-gradient(105deg,transparent 34%,#000 88%);-webkit-mask-image:linear-gradient(105deg,transparent 34%,#000 88%);opacity:.9}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 8% 0%,rgba(255,255,255,.14),transparent 55%),radial-gradient(90% 130% at 100% 100%,rgba(255,255,255,.22),transparent 50%);mix-blend-mode:soft-light}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:84px 0 92px}
+.hero h1{font-size:clamp(28px,3.8vw,46px);font-weight:800;letter-spacing:-.02em;line-height:1.2;text-shadow:0 2px 18px rgba(142,16,27,.25)}
+.hero p{color:rgba(255,255,255,.9);font-size:17px;margin-top:16px;max-width:460px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.hero .btn{height:50px;padding:0 28px}
+.hero-load h1,.hero-load p,.hero-load .hero-ctas{opacity:0;transform:translateY(22px);animation:heroUp .8s cubic-bezier(.2,.7,.3,1) forwards}
+.hero-load p{animation-delay:.15s}
+.hero-load .hero-ctas{animation-delay:.3s}
+.hero-load .hero-visual{opacity:0;transform:translateY(30px) scale(.97);animation:heroUp .9s cubic-bezier(.2,.7,.3,1) .2s forwards}
+@keyframes heroUp{to{opacity:1;transform:none}}
+.hero-visual{position:relative}
+.hero-visual svg{width:100%;height:auto;filter:drop-shadow(0 30px 46px rgba(142,16,27,.4))}
+.hero-visual .float{animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+/* ---------- Quick links strip ---------- */
+.quicklinks{background:#fff;border-bottom:1px solid var(--grey-200)}
+.quicklinks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:16px 0}
+.quicklink{display:flex;align-items:center;justify-content:center;gap:12px;padding:14px 12px;border-radius:var(--radius-sm);transition:background .15s}
+.quicklink:hover{background:var(--red-soft)}
+.quicklink svg{width:26px;height:26px;color:var(--red);flex:none}
+.quicklink span{font:600 15px var(--font-body)}
+
+/* ---------- USP ---------- */
+.usp{padding:64px 0 4px}
+.usp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.usp-box{display:flex;gap:18px;align-items:center;padding:26px 26px;background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+.usp-icon{flex:none;width:56px;height:56px;border-radius:50%;background:var(--red-soft);display:grid;place-items:center}
+.usp-icon svg{width:28px;height:28px;color:var(--red)}
+.usp-box h3{font-size:16.5px;font-weight:700;margin-bottom:2px}
+.usp-box p{color:var(--grey-500);font-size:14px}
+
+/* ---------- Sections shared ---------- */
+.section{padding:84px 0}
+.section-head{text-align:center;max-width:660px;margin:0 auto 44px}
+h2.sec-title{font-size:clamp(25px,3.1vw,36px);font-weight:800;letter-spacing:-.02em}
+.section-head p{color:var(--grey-500);margin-top:12px;font-size:16px}
+.section-grey{background:var(--grey-50)}
+
+/* ---------- Produktgrupper ---------- */
+.pg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.pg-card{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius);padding:18px 18px 24px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;position:relative}
+.pg-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.pg-thumb{border-radius:var(--radius-sm);overflow:hidden}
+.pg-thumb img{width:100%;height:auto;aspect-ratio:300/241;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.pg-card:hover .pg-thumb img{transform:scale(1.05)}
+.pg-card h3{font:700 18px var(--font-head);margin:16px 0 6px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pg-card h3 svg{width:16px;height:16px;color:var(--red);flex:none;transition:transform .22s}
+.pg-card:hover h3 svg{transform:translateX(4px)}
+.pg-card p{color:var(--grey-500);font-size:14px;line-height:1.55}
+.pg-card > a::after{content:"";position:absolute;inset:0;border-radius:var(--radius)}
+
+/* ---------- Populære produkter (slider) ---------- */
+.slider-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:32px}
+.slider-nav{display:flex;gap:10px}
+.slider-nav button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--grey-200);background:#fff;display:grid;place-items:center;transition:all .15s}
+.slider-nav button:hover{border-color:var(--red);color:var(--red)}
+.slider-nav svg{width:16px;height:16px}
+.slider{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;scrollbar-width:none}
+.slider::-webkit-scrollbar{display:none}
+.product-card{flex:0 0 250px;scroll-snap-align:start;background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius);overflow:hidden;padding:16px 16px 20px;text-align:center;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.product-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.product-card .pt{border-radius:var(--radius-sm);overflow:hidden}
+.product-card img{width:100%;height:auto;aspect-ratio:300/241;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.product-card:hover img{transform:scale(1.06)}
+.product-card h3{font:600 15.5px var(--font-head);margin:14px 0 12px}
+.product-card .btn{height:40px;font-size:11.5px;width:100%;margin-top:auto}
+
+/* ---------- Kundeomtaler ---------- */
+.review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:980px;margin:0 auto}
+.review-card{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius);padding:30px 30px 26px;position:relative;box-shadow:var(--shadow-sm)}
+.review-top{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.review-top img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.review-top strong{display:block;font:700 15.5px var(--font-head)}
+.review-top span{color:var(--grey-500);font-size:13.5px}
+.review-card blockquote{font-size:15px;line-height:1.7;color:var(--ink);padding-right:52px}
+.review-quote{position:absolute;right:26px;bottom:20px;color:var(--red)}
+.review-quote svg{width:42px;height:32px}
+
+/* ---------- Verdt å vite ---------- */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.blog-card{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;position:relative}
+.blog-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.blog-thumb{overflow:hidden}
+.blog-card img{width:100%;aspect-ratio:417/300;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.blog-card:hover img{transform:scale(1.05)}
+.blog-badge{position:absolute;top:14px;left:14px;background:var(--red);color:#fff;font:600 11px/1 var(--font-body);letter-spacing:.05em;text-transform:uppercase;padding:7px 12px;border-radius:999px;z-index:1}
+.blog-body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1;gap:9px}
+.blog-body h3{font:700 17px var(--font-head);line-height:1.35}
+.blog-body h3 a::after{content:"";position:absolute;inset:0}
+.blog-body p{color:var(--grey-500);font-size:14px;flex:1}
+.blog-meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--grey-500)}
+.blog-meta .more{color:var(--red);font-weight:600}
+
+/* ---------- Logo strip (piller som i Figma) ---------- */
+.logos{padding:56px 0 76px}
+.logo-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+.logo-pill{background:#fff;border:1px solid var(--grey-200);border-radius:14px;padding:16px 30px;display:grid;place-items:center;transition:transform .2s,box-shadow .2s}
+.logo-pill:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.logo-pill img{height:34px;width:auto;max-width:150px;object-fit:contain}
+
+/* ---------- CTA ---------- */
+.cta-band{background:linear-gradient(115deg,var(--red-deep),var(--red) 55%,#E8505B);color:#fff;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at center,rgba(255,255,255,.13) 0 7px,transparent 8px);background-size:46px 46px;mask-image:linear-gradient(100deg,transparent 45%,#000 82%);-webkit-mask-image:linear-gradient(100deg,transparent 45%,#000 82%)}
+.cta-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:60px 0;flex-wrap:wrap}
+.cta-inner h2{color:#fff;font-size:clamp(23px,2.8vw,32px);font-weight:800;max-width:520px}
+.cta-inner p{color:rgba(255,255,255,.86);margin-top:8px;max-width:470px}
+.cta-actions{display:flex;gap:14px;flex-wrap:wrap}
+.cta-band .btn{height:50px;padding:0 28px}
+
+/* ---------- Footer (lys som i Figma) ---------- */
+.footer{background:var(--grey-50);border-top:1px solid var(--grey-200);color:var(--ink);font-size:14.5px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1.2fr 1.3fr;gap:44px;padding:64px 0 48px}
+.footer .logo{color:var(--ink)}
+.footer .logo-mark{background:var(--red);color:#fff}
+.footer-about{margin-top:16px;max-width:300px;line-height:1.7;color:var(--grey-500);font-size:14px}
+.footer h4{font:700 14px var(--font-head);margin-bottom:16px}
+.footer ul{list-style:none;display:grid;gap:10px}
+.footer ul a{color:var(--grey-500);transition:color .15s}
+.footer ul a:hover{color:var(--red)}
+.footer-contact li{color:var(--grey-500)}
+.footer-contact .lbl{color:var(--red);font-weight:600;margin-right:6px}
+.footer-bottom{border-top:1px solid var(--grey-200);padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--grey-500)}
+.socials{display:flex;gap:10px}
+.socials a{width:36px;height:36px;border-radius:50%;border:1px solid var(--grey-200);display:grid;place-items:center;color:var(--grey-500);transition:all .15s}
+.socials a:hover{background:var(--red);border-color:var(--red);color:#fff}
+.socials svg{width:15px;height:15px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1120px){.search{width:180px}.nav{gap:18px}}
+@media (max-width:1024px){
+  .nav{display:none}
+  .burger{display:grid}
+  .hero-inner{grid-template-columns:1fr;gap:40px;padding:64px 0 72px}
+  .usp-grid{grid-template-columns:1fr}
+  .pg-grid{grid-template-columns:repeat(2,1fr)}
+  .review-grid{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media (max-width:720px){
+  body{box-shadow:none}
+  .section{padding:60px 0}
+  .container{padding:0 18px}
+  .header-inner{flex-wrap:wrap;gap:0;row-gap:10px;padding:10px 0 12px;min-height:0}
+  .logo{margin-right:auto}
+  .logo-text{font-size:17px}
+  .search{order:5;flex-basis:100%;width:auto}
+  .header-actions{gap:8px}
+  .header-actions .btn{display:none}
+  .hero-inner{padding:52px 0 60px;gap:30px}
+  .hero p{font-size:15.5px}
+  .hero .btn{height:46px;padding:0 22px}
+  .quicklinks-grid{grid-template-columns:1fr 1fr;gap:4px;padding:10px 0}
+  .quicklink{padding:10px 6px;gap:9px;justify-content:flex-start}
+  .quicklink svg{width:21px;height:21px}
+  .quicklink span{font-size:13.5px}
+  .usp{padding-top:48px}
+  .usp-box{padding:18px 18px}
+  .usp-icon{width:46px;height:46px}
+  .usp-icon svg{width:23px;height:23px}
+  .pg-grid{grid-template-columns:1fr;gap:18px}
+  .slider-head{flex-wrap:wrap;gap:14px}
+  .product-card{flex-basis:210px}
+  .review-card blockquote{padding-right:40px}
+  .cta-inner{padding:48px 0}
+  .cta-band .btn{width:100%}
+  .cta-actions{width:100%}
+  .logo-pill{padding:12px 20px}
+  .logo-pill img{height:26px;max-width:120px}
+  .footer-grid{grid-template-columns:1fr;gap:32px;padding:48px 0 36px}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+</style>
+<style>
+/* Boxed layout på alle skjermstørrelser */
+body{max-width:1240px;box-shadow:0 0 70px rgba(142,16,27,.28)}
+@media (max-width:1300px){body{margin:0 20px;max-width:none}}
+@media (max-width:720px){body{margin:0 12px;box-shadow:0 4px 26px rgba(142,16,27,.24)}}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Messeprofil.no – til forsiden">
+      <span class="logo-mark">M</span>
+      <span class="logo-text">Messeprofil.no</span>
+    </a>
+
+    <ul class="nav" aria-label="Hovedmeny">
+      <li><a href="index.html" aria-current="page">Hjem</a></li>
+      <li><a href="butikk.html">Nettbutikk</a></li>
+      <li>
+        <a href="https://beta.moonlandingsite.no/messeprofil/om-oss/">Om <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="dropdown">
+          <a href="https://beta.moonlandingsite.no/messeprofil/om-oss/">Om oss</a>
+          <a href="https://beta.moonlandingsite.no/messeprofil/baerekraft/">Bærekraft</a>
+        </div>
+      </li>
+      <li>
+        <a href="#">Kundeservice <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="dropdown">
+          <a href="https://beta.moonlandingsite.no/messeprofil/ide-design/">Idé &amp; design</a>
+          <a href="https://beta.moonlandingsite.no/messeprofil/verdt-a-vite/">Verdt å vite</a>
+          <a href="https://beta.moonlandingsite.no/messeprofil/vanlige-sporsmal-messeutstyr/">Vanlige spørsmål</a>
+          <a href="https://beta.moonlandingsite.no/messeprofil/kjopsvilkar/">Kjøpsvilkår</a>
+        </div>
+      </li>
+      <li><a href="https://beta.moonlandingsite.no/messeprofil/kontakt-oss/">Kontakt</a></li>
+    </ul>
+
+    <div class="header-actions">
+      <form class="search" role="search" action="#" onsubmit="return false">
+        <input type="search" placeholder="Søk …" aria-label="Søk i nettbutikken">
+        <button type="submit" aria-label="Søk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+      </form>
+      <a class="cart-btn" href="https://beta.moonlandingsite.no/messeprofil/cart/" aria-label="Handlekurv, 0 varer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57L23 6H5.12"/></svg>
+        <span class="cart-count">0</span>
+      </a>
+      <a class="btn btn-white" href="#forespoersel">Send forespørsel</a>
+      <button class="burger" aria-label="Åpne meny" aria-expanded="false" onclick="toggleMenu(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Hjem</a>
+    <a href="butikk.html">Nettbutikk</a>
+    <a href="https://beta.moonlandingsite.no/messeprofil/om-oss/">Om oss</a>
+    <a class="sub" href="https://beta.moonlandingsite.no/messeprofil/baerekraft/">Bærekraft</a>
+    <a href="https://beta.moonlandingsite.no/messeprofil/verdt-a-vite/">Kundeservice</a>
+    <a class="sub" href="https://beta.moonlandingsite.no/messeprofil/ide-design/">Idé &amp; design</a>
+    <a class="sub" href="https://beta.moonlandingsite.no/messeprofil/vanlige-sporsmal-messeutstyr/">Vanlige spørsmål</a>
+    <a class="sub" href="https://beta.moonlandingsite.no/messeprofil/kjopsvilkar/">Kjøpsvilkår</a>
+    <a href="https://beta.moonlandingsite.no/messeprofil/kontakt-oss/">Kontakt</a>
+    <a class="btn btn-white" href="#forespoersel">Send forespørsel</a>
+  </div>
+</header>
+
+<main>
+
+<!-- Hero -->
+<section class="hero hero-load">
+  <div class="container hero-inner">
+    <div>
+      <h1>Lette å frakte – enkle å montere. Smarte løsninger for synlighet med fokus på design og bærekraft.</h1>
+      <p>Messevegger, roll-ups, lyskasser og komplette stands – designet, trykket og levert i Norge.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-white" href="butikk.html">Se produkter
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost-w" href="https://beta.moonlandingsite.no/messeprofil/kontakt-oss/">Kontakt oss</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg class="float" viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="hd" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+            <circle cx="16" cy="16" r="8" fill="#D51D29" opacity=".85"/>
+          </pattern>
+        </defs>
+        <ellipse cx="260" cy="334" rx="220" ry="18" fill="#8E101B" opacity=".22"/>
+        <rect x="110" y="36" width="310" height="212" rx="12" fill="#fff"/>
+        <rect x="134" y="60" width="132" height="132" fill="url(#hd)"/>
+        <text x="290" y="92" font-family="Montserrat,sans-serif" font-weight="800" font-size="20" fill="#D51D29">Messeprofil.no</text>
+        <rect x="290" y="106" width="96" height="6" rx="3" fill="#F2A9B0"/>
+        <rect x="290" y="120" width="70" height="6" rx="3" fill="#F9E7E9"/>
+        <rect x="138" y="248" width="11" height="74" rx="4" fill="#fff" opacity=".85"/>
+        <rect x="382" y="248" width="11" height="74" rx="4" fill="#fff" opacity=".85"/>
+        <g stroke="#8E101B" stroke-width="5" stroke-linecap="round" opacity=".8">
+          <line x1="175" y1="36" x2="175" y2="16"/><line x1="265" y1="36" x2="265" y2="16"/><line x1="355" y1="36" x2="355" y2="16"/>
+        </g>
+        <circle cx="175" cy="12" r="8" fill="#8E101B" opacity=".8"/><circle cx="265" cy="12" r="8" fill="#8E101B" opacity=".8"/><circle cx="355" cy="12" r="8" fill="#8E101B" opacity=".8"/>
+        <g>
+          <rect x="28" y="120" width="78" height="196" rx="8" fill="#fff"/>
+          <circle cx="67" cy="158" r="18" fill="#D51D29"/>
+          <text x="67" y="165" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="18" fill="#fff">M</text>
+          <rect x="42" y="192" width="50" height="6" rx="3" fill="#F2A9B0"/>
+          <rect x="42" y="206" width="36" height="6" rx="3" fill="#F9E7E9"/>
+          <rect x="20" y="316" width="94" height="12" rx="6" fill="#8E101B" opacity=".75"/>
+        </g>
+        <g>
+          <path d="M418 210 h74 a9 9 0 0 1 9 9 v96 h-92 v-96 a9 9 0 0 1 9-9Z" fill="#fff"/>
+          <rect x="404" y="200" width="96" height="14" rx="7" fill="#F5B8BE"/>
+          <circle cx="455" cy="262" r="23" fill="#D51D29"/>
+          <text x="455" y="270" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="22" fill="#fff">M</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- Quick links -->
+<div class="quicklinks">
+  <div class="container quicklinks-grid">
+    <a class="quicklink" href="tel:+4791168911">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2Z"/></svg>
+      <span>+47 911 68 911</span>
+    </a>
+    <a class="quicklink" href="https://beta.moonlandingsite.no/messeprofil/kontakt-oss/">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      <span>Kontakt oss</span>
+    </a>
+    <a class="quicklink" href="https://beta.moonlandingsite.no/messeprofil/om-oss/">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+      <span>Om oss</span>
+    </a>
+    <a class="quicklink" href="butikk.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57L23 6H5.12"/></svg>
+      <span>Nettbutikk</span>
+    </a>
+  </div>
+</div>
+
+<!-- USP -->
+<section class="usp">
+  <div class="container usp-grid stagger">
+    <div class="usp-box">
+      <span class="usp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span>
+      <div><h3>Monteres på minutter</h3><p>Rask og enkel montering</p></div>
+    </div>
+    <div class="usp-box">
+      <span class="usp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 17H4V5h10zM14 8h4l3 4v5h-7z"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></span>
+      <div><h3>Lett å transportere</h3><p>Kompakte og bærbare løsninger</p></div>
+    </div>
+    <div class="usp-box">
+      <span class="usp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.5 12 13 13 12"/></svg></span>
+      <div><h3>Bærekraftig</h3><p>Miljøvennlige materialer</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Produktgrupper -->
+<section class="section" id="produktgrupper">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="sec-title">Se våre ulike produktgrupper</h2>
+    </div>
+    <div class="pg-grid stagger">
+      <article class="pg-card">
+        <div class="pg-thumb"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Utstillingsbord-og-disker_1st_product-img-300x240.webp" alt="Utstillingsbord og disker" width="300" height="240" loading="lazy"></div>
+        <h3>Utstillingsbord og disker <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+        <p>Hev standarden på din stand med innovative messebord som vekker interesse.</p>
+        <a href="https://beta.moonlandingsite.no/messeprofil/product/populaere-produkter/" aria-label="Utstillingsbord og disker"></a>
+      </article>
+      <article class="pg-card">
+        <div class="pg-thumb"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Messevegger-Tekstil_img-300x241.webp" alt="Messevegger tekstil" width="300" height="241" loading="lazy"></div>
+        <h3>Messevegger tekstil <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+        <p>Skap blikkfang med moderne tekstilvegger – lett, bærbart og profesjonelt.</p>
+        <a href="https://beta.moonlandingsite.no/messeprofil/product/messevegger-tekstil/" aria-label="Messevegger tekstil"></a>
+      </article>
+      <article class="pg-card">
+        <div class="pg-thumb"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Lyskasser_img-300x241.webp" alt="Lyskasser" width="300" height="241" loading="lazy"></div>
+        <h3>Lyskasser <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+        <p>Fang oppmerksomheten med lys! Lyskasser gir budskapet ditt ekstra gjennomslagskraft.</p>
+        <a href="https://beta.moonlandingsite.no/messeprofil/product/lyskasser/" aria-label="Lyskasser"></a>
+      </article>
+      <article class="pg-card">
+        <div class="pg-thumb"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Utendors-profilering_img-300x241.webp" alt="Utendørs profilering" width="300" height="241" loading="lazy"></div>
+        <h3>Utendørs profilering <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+        <p>Få maksimal synlighet utendørs med reklameløsninger som tåler alle værforhold.</p>
+        <a href="https://beta.moonlandingsite.no/messeprofil/product/utendors-profilering/" aria-label="Utendørs profilering"></a>
+      </article>
+      <article class="pg-card">
+        <div class="pg-thumb"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Klassisk_messeutstyr_img-300x241.webp" alt="Klassisk messeutstyr" width="300" height="241" loading="lazy"></div>
+        <h3>Klassisk messeutstyr <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+        <p>Perfekt for enhver anledning – rollups og popup-vegger som gir et profesjonelt inntrykk.</p>
+        <a href="https://beta.moonlandingsite.no/messeprofil/product/klassisk-messeutstyr/" aria-label="Klassisk messeutstyr"></a>
+      </article>
+      <article class="pg-card">
+        <div class="pg-thumb"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Messepakke-og-stands_img-300x241.webp" alt="Messepakker og stands" width="300" height="241" loading="lazy"></div>
+        <h3>Messepakker og stands <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h3>
+        <p>Gjør inntrykk på messen med skreddersydde standløsninger som fremhever din merkevare.</p>
+        <a href="https://beta.moonlandingsite.no/messeprofil/product/messepakker-og-stands/" aria-label="Messepakker og stands"></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Populære produkter -->
+<section class="section section-grey" id="populaere">
+  <div class="container">
+    <div class="slider-head reveal">
+      <h2 class="sec-title">Populære produkter</h2>
+      <div class="slider-nav">
+        <button aria-label="Forrige produkter" onclick="slide(-1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        </button>
+        <button aria-label="Neste produkter" onclick="slide(1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="slider reveal" id="slider">
+      <article class="product-card">
+        <div class="pt"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Messepakke-og-stands_img-300x241.webp" alt="Messepakker og stands" loading="lazy"></div>
+        <h3>Messepakker og stands</h3>
+        <a class="btn btn-red" href="produkt.html">Se produkt</a>
+      </article>
+      <article class="product-card">
+        <div class="pt"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Klassisk_messeutstyr_img-300x241.webp" alt="Klassisk messeutstyr" loading="lazy"></div>
+        <h3>Klassisk messeutstyr</h3>
+        <a class="btn btn-red" href="produkt.html">Se produkt</a>
+      </article>
+      <article class="product-card">
+        <div class="pt"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Utendors-profilering_img-300x241.webp" alt="Utendørs profilering" loading="lazy"></div>
+        <h3>Utendørs profilering</h3>
+        <a class="btn btn-red" href="produkt.html">Se produkt</a>
+      </article>
+      <article class="product-card">
+        <div class="pt"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Lyskasser_img-300x241.webp" alt="Lyskasser" loading="lazy"></div>
+        <h3>Lyskasser</h3>
+        <a class="btn btn-red" href="produkt.html">Se produkt</a>
+      </article>
+      <article class="product-card">
+        <div class="pt"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Messevegger-Tekstil_img-300x241.webp" alt="Messevegger tekstil" loading="lazy"></div>
+        <h3>Messevegger tekstil</h3>
+        <a class="btn btn-red" href="produkt.html">Se produkt</a>
+      </article>
+      <article class="product-card">
+        <div class="pt"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Utstillingsbord-og-disker_1st_product-img-300x240.webp" alt="Utstillingsbord og disker" loading="lazy"></div>
+        <h3>Utstillingsbord og disker</h3>
+        <a class="btn btn-red" href="produkt.html">Se produkt</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Kundeomtaler -->
+<section class="section" id="omtaler">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="sec-title">Dette sier våre kunder om oss!</h2>
+    </div>
+    <div class="review-grid stagger">
+      <article class="review-card">
+        <div class="review-top">
+          <img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Camilla-Nilsen_img.png" alt="Camilla Nilsen" width="140" height="140" loading="lazy">
+          <div><strong>Camilla Nilsen</strong><span>Eventansvarlig, Arctic Sports</span></div>
+        </div>
+        <blockquote>Vi bestilte flagg og telt til et utendørsarrangement, og alt tålte vær og vind uten problemer. Anbefales på det sterkeste!</blockquote>
+        <div class="review-quote" aria-hidden="true">
+          <svg viewBox="0 0 96 74" fill="currentColor"><path d="M57.8 0h36c1.2 0 2.2 1 2.2 2.2L96 36.6c0 17.9-10.6 30.5-29.5 37.3-1 .4-2.2-.1-2.7-1.1l-6-12.4c-.5-1.1 0-2.4 1-2.9 14.4-6.8 16.6-14.8 16.7-18.6.1-1.2-.9-2.3-2.2-2.3H57.8c-1.2 0-2.2-1-2.2-2.2v-32C55.6 1 56.6 0 57.8 0Z"/><path d="M2.2 0h36c1.2 0 2.2 1 2.2 2.2l-.1 34.4c0 17.9-10.6 30.5-29.4 37.3-1.1.4-2.2-.1-2.7-1.1l-6-12.4c-.6-1.1-.1-2.4 1-2.9 14.3-6.8 16.6-14.8 16.7-18.6.1-1.2-.9-2.3-2.2-2.3H2.2c-1.2 0-2.2-1-2.2-2.2v-32C0 1 1 0 2.2 0Z"/></svg>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-top">
+          <img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Anders_Pedersen_img.png" alt="Anders Pedersen" width="140" height="140" loading="lazy">
+          <div><strong>Anders Pedersen</strong><span>Salgsleder, TechExpo Norge</span></div>
+        </div>
+        <blockquote>Messeprofil leverer både profesjonelle produkter og rask kundeservice. Vi fikk alt vi trengte til vår lansering uten stress.</blockquote>
+        <div class="review-quote" aria-hidden="true">
+          <svg viewBox="0 0 96 74" fill="currentColor"><path d="M57.8 0h36c1.2 0 2.2 1 2.2 2.2L96 36.6c0 17.9-10.6 30.5-29.5 37.3-1 .4-2.2-.1-2.7-1.1l-6-12.4c-.5-1.1 0-2.4 1-2.9 14.4-6.8 16.6-14.8 16.7-18.6.1-1.2-.9-2.3-2.2-2.3H57.8c-1.2 0-2.2-1-2.2-2.2v-32C55.6 1 56.6 0 57.8 0Z"/><path d="M2.2 0h36c1.2 0 2.2 1 2.2 2.2l-.1 34.4c0 17.9-10.6 30.5-29.4 37.3-1.1.4-2.2-.1-2.7-1.1l-6-12.4c-.6-1.1-.1-2.4 1-2.9 14.3-6.8 16.6-14.8 16.7-18.6.1-1.2-.9-2.3-2.2-2.3H2.2c-1.2 0-2.2-1-2.2-2.2v-32C0 1 1 0 2.2 0Z"/></svg>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="forespoersel">
+  <div class="container cta-inner reveal">
+    <div>
+      <h2>Klar for din neste messe?</h2>
+      <p>Send oss en forespørsel, så får du et skreddersydd tilbud – som regel samme dag.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-white" href="https://beta.moonlandingsite.no/messeprofil/kontakt-oss/">Send forespørsel
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-ghost-w" href="tel:+4791168911">Ring +47 911 68 911</a>
+    </div>
+  </div>
+</section>
+
+<!-- Verdt å vite -->
+<section class="section section-grey" id="verdt-a-vite">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="sec-title">Verdt å vite</h2>
+    </div>
+    <div class="blog-grid stagger">
+      <article class="blog-card">
+        <div class="blog-thumb"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/blog_post-img.webp" alt="" loading="lazy"></div>
+        <span class="blog-badge">Tips &amp; triks</span>
+        <div class="blog-body">
+          <h3><a href="https://beta.moonlandingsite.no/messeprofil/guide-til-frittstaende-lyskasser/">Guide til frittstående lyskasser</a></h3>
+          <p>LED-lyskasser for maksimal synlighet – hvilken modell bør du velge? Høykvalitets trykk, LED-belysning og verktøyfritt oppsett.</p>
+          <div class="blog-meta"><span>15. april 2026</span><span class="more">Les mer →</span></div>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-thumb"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/Hvordan_img.webp" alt="" loading="lazy"></div>
+        <span class="blog-badge">Tips &amp; triks</span>
+        <div class="blog-body">
+          <h3><a href="https://beta.moonlandingsite.no/messeprofil/hvordan-skape-en-stand-som-tiltrekker-riktige-kunder/">Hvordan skape en stand som tiltrekker riktige kunder</a></h3>
+          <p>En stand bør ikke bare se bra ut – den bør tiltrekke de kundene du ønsker å nå. Klar kommunikasjon er nøkkelen.</p>
+          <div class="blog-meta"><span>15. april 2026</span><span class="more">Les mer →</span></div>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-thumb"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/blog_post-img.webp" alt="" loading="lazy"></div>
+        <span class="blog-badge">Tips &amp; triks</span>
+        <div class="blog-body">
+          <h3><a href="https://beta.moonlandingsite.no/messeprofil/slik-velger-du-riktig-displaysystem-for-din-bedrift/">Slik velger du riktig displaysystem for din bedrift</a></h3>
+          <p>Det finnes mange typer displaysystemer, og det kan være vanskelig å vite hva som passer best. Her er tre faktorer.</p>
+          <div class="blog-meta"><span>15. april 2026</span><span class="more">Les mer →</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Logo strip -->
+<section class="logos">
+  <div class="container">
+    <div class="logo-grid stagger">
+      <span class="logo-pill"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/fire-eater-img.svg" alt="Fire Eater" loading="lazy"></span>
+      <span class="logo-pill"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/forbundet-img.svg" alt="Utdanningsforbundet" loading="lazy"></span>
+      <span class="logo-pill"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/norwegian-img.svg" alt="Norwegian" loading="lazy"></span>
+      <span class="logo-pill"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/golf-img.svg" alt="Miklagard Golf" loading="lazy"></span>
+      <span class="logo-pill"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/novs-img.svg" alt="Nova Spektrum" loading="lazy"></span>
+      <span class="logo-pill"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/sport-img.svg" alt="Sport 1" loading="lazy"></span>
+      <span class="logo-pill"><img src="https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/2026/04/ecit-img.svg" alt="ECIT" loading="lazy"></span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer (lys, som i Figma) -->
+<footer class="footer" id="kontakt">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="Messeprofil.no">
+          <span class="logo-mark">M</span>
+          <span class="logo-text">Messeprofil.no</span>
+        </a>
+        <p class="footer-about">Hos Messeprofil.no hjelper vi bedrifter med å skape profesjonelle messestands og utstillingssystemer som skiller seg ut. Smarte og brukervennlige messeløsninger som gir deg maksimal synlighet.</p>
+      </div>
+      <div>
+        <h4>Nyttige lenker</h4>
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="butikk.html">Nettbutikk</a></li>
+          <li><a href="https://beta.moonlandingsite.no/messeprofil/om-oss/">Om oss</a></li>
+          <li><a href="https://beta.moonlandingsite.no/messeprofil/verdt-a-vite/">Kundeservice</a></li>
+          <li><a href="https://beta.moonlandingsite.no/messeprofil/kontakt-oss/">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Produktlenker</h4>
+        <ul>
+          <li><a href="https://beta.moonlandingsite.no/messeprofil/product/lyskasser/">Lyskasser</a></li>
+          <li><a href="https://beta.moonlandingsite.no/messeprofil/product/messevegger-tekstil/">Messevegger tekstil</a></li>
+          <li><a href="https://beta.moonlandingsite.no/messeprofil/product/utendors-profilering/">Utendørs profilering</a></li>
+          <li><a href="https://beta.moonlandingsite.no/messeprofil/product/klassisk-messeutstyr/">Klassisk messeutstyr</a></li>
+          <li><a href="https://beta.moonlandingsite.no/messeprofil/product/messepakker-og-stands/">Messepakker og stands</a></li>
+          <li><a href="https://beta.moonlandingsite.no/messeprofil/product/populaere-produkter/">Utstillingsbord og disker</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Messeprofil AS</h4>
+        <ul class="footer-contact">
+          <li><span class="lbl">Telefon:</span><a href="tel:+4791168911">+47 911 68 911</a></li>
+          <li><span class="lbl">E-post:</span><a href="mailto:kundeservice@messeprofil.no">kundeservice@messeprofil.no</a></li>
+          <li><span class="lbl">Adresse:</span>Jomfrustien 9A, 2165 Hvam</li>
+          <li><span class="lbl">Org.nr:</span>924 970 154</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Messeprofil AS. Alle rettigheter forbeholdt.</span>
+      <div class="socials">
+        <a href="https://www.facebook.com/Messeprofil.no" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.6V3.3c-.3 0-1.3-.1-2.4-.1-2.3 0-4 1.4-4 4.1v2.5H7.6V13h2.7v8h3.2Z"/></svg></a>
+        <a href="https://www.linkedin.com/company/messeprofil-no" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.8H3.6V21h2.9V8.8ZM5 7.4A1.7 1.7 0 1 0 5 4a1.7 1.7 0 0 0 0 3.4ZM21 14.3c0-3.2-1.7-4.7-4-4.7-1.8 0-2.7 1-3.1 1.7V8.8h-2.9V21h2.9v-6.5c0-1.3.9-2.1 2-2.1s1.9.8 1.9 2.1V21H21v-6.7Z"/></svg></a>
+        <a href="https://www.youtube.com/@Messeprofil" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15.2V8.8L15.6 12 10 15.2Z"/></svg></a>
+        <a href="https://www.instagram.com/messeprofil.no/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(btn){
+  const menu = document.getElementById('mobileMenu');
+  const open = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+function slide(dir){
+  document.getElementById('slider').scrollBy({left: dir * 280, behavior: 'smooth'});
+}
+// Header shadow on scroll
+const header = document.getElementById('header');
+addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10), {passive:true});
+// Scroll reveal
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.stagger').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
