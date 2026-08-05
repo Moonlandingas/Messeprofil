@@ -386,12 +386,12 @@ function chips(){
   el.querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{cat=parseInt(ch.dataset.c);chips();render()});
 }
 function render(){
-  const hits = PRODS.filter(p=>(cat===-1||p[2].includes(cat)) && (!q||p[1].toLowerCase().includes(q)));
+  const hits = PRODS.filter(p=>(cat===-1||p[2].includes(cat)) && (!q||p[1].toLowerCase().includes(q)||p[2].some(i=>CATS[i].toLowerCase().includes(q))));
   document.getElementById('grid').innerHTML = hits.map(p=>
     '<article class="pcard">'+
     '<a class="im" href="produkt.html"><img loading="lazy" src="'+IMG+p[3]+'" alt="'+p[1].replace(/"/g,'&quot;')+'"></a>'+
     '<div class="bd">'+
-    '<span class="cat">'+(CATS[p[2][0]]||'')+'</span>'+
+    '<span class="cat">'+(cat!==-1&&p[2].includes(cat)?CATS[cat]:(CATS[p[2][0]]||''))+'</span>'+
     '<h3><a href="produkt.html">'+p[1]+'</a></h3>'+
     (p[4]>0?'<span class="var">'+p[4]+' varianter/størrelser</span>':'')+
     '<a class="go" href="produkt.html">Se produkt <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>'+
