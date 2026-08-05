@@ -283,6 +283,7 @@ html,body{overflow-x:hidden}
   .trykk-inner{grid-template-columns:1fr;padding:36px 0}
 }
 </style>
+<style>.logo-img{height:38px;width:auto;display:block}@media(max-width:640px){.logo-img{height:31px}}.as-credit strong{font-weight:700}.g-avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:#fff;font:700 17px var(--font-head,sans-serif);flex:none}.g-stars{color:#FBBC04;letter-spacing:2px;font-size:14px}.g-src{font-size:12.5px;color:var(--grey-500,#777)}</style>
 </head>
 <body>
 
@@ -302,8 +303,7 @@ html,body{overflow-x:hidden}
 <header class="header">
   <div class="container header-inner">
     <a class="logo" href="index.html" aria-label="Messeprofil.no – til forsiden">
-      <span class="logo-mark">M</span>
-      <span class="logo-text">Messeprofil.no</span>
+      <img class="logo-img" src="logo-messeprofil.svg" alt="Messeprofil.no">
     </a>
     <form class="search" role="search" action="#" onsubmit="return false">
       <input type="search" placeholder="Søk etter messevegg, roll-up, lyskasse …" aria-label="Søk i nettbutikken">
@@ -468,12 +468,12 @@ function render(){
   const hits = PRODS.filter(p=>(cat===-1||p[2].includes(cat)) && (!q||p[1].toLowerCase().includes(q)||p[2].some(i=>CATS[i].toLowerCase().includes(q))));
   document.getElementById('grid').innerHTML = hits.map(p=>
     '<article class="pcard">'+
-    '<a class="im" href="produkt.html"><img loading="lazy" src="'+IMG+p[3]+'" alt="'+p[1].replace(/"/g,'&quot;')+'"></a>'+
+    '<a class="im" href="produkt.html?id='+p[0]+'"><img loading="lazy" src="'+IMG+p[3]+'" alt="'+p[1].replace(/"/g,'&quot;')+'"></a>'+
     '<div class="bd">'+
     '<span class="cat">'+(cat!==-1&&p[2].includes(cat)?CATS[cat]:(CATS[p[2][0]]||''))+'</span>'+
-    '<h3><a href="produkt.html">'+p[1]+'</a></h3>'+
+    '<h3><a href="produkt.html?id='+p[0]+'">'+p[1]+'</a></h3>'+
     (p[4]>0?'<span class="var">'+p[4]+' varianter/størrelser</span>':'')+
-    '<a class="go" href="produkt.html">Se produkt <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>'+
+    '<a class="go" href="produkt.html?id='+p[0]+'">Se produkt <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>'+
     '</div></article>').join('');
   document.getElementById('count').innerHTML = 'Viser <strong>'+hits.length+'</strong> av <strong>'+PRODS.length+'</strong> produkter';
   document.getElementById('tomt').style.display = hits.length ? 'none' : 'block';
@@ -486,7 +486,7 @@ chips(); render();
 
 <footer class="footer">
   <div class="container footer-bottom">
-    <span>© 2026 Messeprofil.no – Alle rettigheter forbeholdt</span> <span class="ml-credit">Nettside fra <a href="https://www.moonlandingsite.no" target="_blank" rel="noopener">Moonlanding AS – Launchpad</a></span>
+    <span>© 2026 Messeprofil.no – Alle rettigheter forbeholdt</span> <span class="ml-credit">Nettside fra <a href="https://www.moonlandingsite.no" target="_blank" rel="noopener">Moonlanding AS – Launchpad</a></span> <span class="as-credit">· Powered by <strong>Adsystem</strong></span>
     <a href="index.html">Til forsiden</a>
   </div>
 </footer>

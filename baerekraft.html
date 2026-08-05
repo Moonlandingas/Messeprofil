@@ -159,7 +159,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.2}
 
 /* ---------- Sections shared ---------- */
 .section{padding:84px 0}
-.section-head{text-align:center;max-width:660px;margin:0 auto 44px}
+.section-head{text-align:left;max-width:760px;margin:0 0 44px}
 h2.sec-title{font-size:clamp(25px,3.1vw,36px);font-weight:800;letter-spacing:-.02em}
 .section-head p{color:var(--grey-500);margin-top:12px;font-size:16px}
 .section-grey{background:var(--grey-50)}
@@ -420,6 +420,7 @@ details.faq .a{padding:0 20px 18px;color:#3d3538;font-size:14.5px;line-height:1.
   .trykk-inner{grid-template-columns:1fr;padding:36px 0}
 }
 </style>
+<style>.logo-img{height:38px;width:auto;display:block}@media(max-width:640px){.logo-img{height:31px}}.as-credit strong{font-weight:700}.g-avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:#fff;font:700 17px var(--font-head,sans-serif);flex:none}.g-stars{color:#FBBC04;letter-spacing:2px;font-size:14px}.g-src{font-size:12.5px;color:var(--grey-500,#777)}</style>
 </head>
 <body>
 
@@ -427,8 +428,7 @@ details.faq .a{padding:0 20px 18px;color:#3d3538;font-size:14.5px;line-height:1.
 <header class="header" id="header">
   <div class="container header-inner">
     <a class="logo" href="index.html" aria-label="Messeprofil.no – til forsiden">
-      <span class="logo-mark">M</span>
-      <span class="logo-text">Messeprofil.no</span>
+      <img class="logo-img" src="logo-messeprofil.svg" alt="Messeprofil.no">
     </a>
 
     <ul class="nav" aria-label="Hovedmeny">
@@ -514,8 +514,7 @@ details.faq .a{padding:0 20px 18px;color:#3d3538;font-size:14.5px;line-height:1.
     <div class="footer-grid">
       <div>
         <a class="logo" href="index.html" aria-label="Messeprofil.no">
-          <span class="logo-mark">M</span>
-          <span class="logo-text">Messeprofil.no</span>
+          <img class="logo-img" src="logo-messeprofil.svg" alt="Messeprofil.no">
         </a>
         <p class="footer-about">Hos Messeprofil.no hjelper vi bedrifter med å skape profesjonelle messestands og utstillingssystemer som skiller seg ut. Smarte og brukervennlige messeløsninger som gir deg maksimal synlighet.</p>
       </div>
@@ -551,7 +550,7 @@ details.faq .a{padding:0 20px 18px;color:#3d3538;font-size:14.5px;line-height:1.
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Messeprofil AS. Alle rettigheter forbeholdt.</span> <span class="ml-credit">Nettside fra <a href="https://www.moonlandingsite.no" target="_blank" rel="noopener">Moonlanding AS – Launchpad</a></span>
+      <span>© 2026 Messeprofil AS. Alle rettigheter forbeholdt.</span> <span class="ml-credit">Nettside fra <a href="https://www.moonlandingsite.no" target="_blank" rel="noopener">Moonlanding AS – Launchpad</a></span> <span class="as-credit">· Powered by <strong>Adsystem</strong></span>
       <div class="socials">
         <a href="https://www.facebook.com/Messeprofil.no" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.6V3.3c-.3 0-1.3-.1-2.4-.1-2.3 0-4 1.4-4 4.1v2.5H7.6V13h2.7v8h3.2Z"/></svg></a>
         <a href="https://www.linkedin.com/company/messeprofil-no" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.8H3.6V21h2.9V8.8ZM5 7.4A1.7 1.7 0 1 0 5 4a1.7 1.7 0 0 0 0 3.4ZM21 14.3c0-3.2-1.7-4.7-4-4.7-1.8 0-2.7 1-3.1 1.7V8.8h-2.9V21h2.9v-6.5c0-1.3.9-2.1 2-2.1s1.9.8 1.9 2.1V21H21v-6.7Z"/></svg></a>
