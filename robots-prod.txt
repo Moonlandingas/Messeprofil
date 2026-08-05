@@ -1,0 +1,32 @@
+# Produksjons-robots.txt for www.messeprofil.no
+# VED LANSERING: gi denne filen navnet robots.txt (erstatt dagens som har Disallow: /)
+
+User-agent: *
+Allow: /
+
+# AI-crawlere (GEO) – eksplisitt velkommen
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://www.messeprofil.no/sitemap.xml
