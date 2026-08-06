@@ -594,5 +594,19 @@ const io = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal,.stagger').forEach(el => io.observe(el));
 </script>
 
+
+<script>
+(function(){
+  const q = new URLSearchParams(location.search);
+  const prod = q.get('produkt');
+  if(!prod) return;
+  const id = q.get('id');
+  const url = 'https://www.messeprofil.no/produkt.html' + (id ? '?id='+id : '');
+  const msg = document.getElementById('f-msg');
+  if(msg && !msg.value) msg.value = 'Jeg ønsker tilbud på: '+prod+'\nProduktlenke: '+url+'\n\n';
+  const h = document.querySelector('.section-head h2, h1');
+  if(h) h.insertAdjacentHTML('afterend', '<p style="font:600 14px var(--font-body);color:var(--red);margin-top:6px">Gjelder produkt: '+prod.replace(/</g,'&lt;')+'</p>');
+})();
+</script>
 </body>
 </html>
