@@ -17,7 +17,11 @@ llms.txt og sitemap.xml. Det eneste som holder søkemotorer og AI ute i dag er r
    /produkt/..., /produktkategori/...) må videresendes til butikk.html, ellers mister dere
    opparbeidet SEO-verdi og besøkende møter 404. Lag redirectliste fra Search Console
    («Sider» → indekserte URLer) eller gammel sitemap.
-6. **Stage etter lansering**: la stage.messeprofil.no beholde `Disallow: /` slik at den aldri
+6. **Typeform-redirect tilbake til www**: takkesiden i Typeform-skjemaet (MESSEPROFIL,
+   hGGF7wQ7) peker i dag midlertidig på `https://stage.messeprofil.no/tusen-takk/`
+   (fordi www fortsatt viser gammel WordPress-side). Ved lansering: endre redirect-URL
+   til `https://www.messeprofil.no/tusen-takk/` og publiser skjemaet på nytt.
+7. **Stage etter lansering**: la stage.messeprofil.no beholde `Disallow: /` slik at den aldri
    konkurrerer med hovedsiden i søk.
 
 ## Etter lansering (fortløpende)
