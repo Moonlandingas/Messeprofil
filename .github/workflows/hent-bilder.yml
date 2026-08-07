@@ -1,0 +1,53 @@
+name: Hent produktbilder
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Last ned bilder fra WordPress
+        run: |
+          python3 - <<'PYEOF'
+          import re, os, urllib.request, urllib.parse
+          html = open('butikk.html', encoding='utf-8').read()
+          paths = sorted(set(re.findall(r'"(20\d\d/\d\d/[^"]+?\.(?:jpg|jpeg|png|webp))"', html, re.I)))
+          feil = []
+          def hent(url, dest):
+              os.makedirs(os.path.dirname(dest), exist_ok=True)
+              try:
+                  req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+                  with urllib.request.urlopen(req, timeout=30) as r, open(dest, 'wb') as f:
+                      f.write(r.read())
+              except Exception as e:
+                  feil.append(url + ' -> ' + str(e))
+          for p in paths:
+              hent('https://www.messeprofil.no/wp-content/uploads/' + urllib.parse.quote(p), 'bilder/' + p)
+          beta = ["2026/04/Logo-1.png","2026/04/Hvordan_img.webp","2026/04/Klassisk_messeutstyr_img-300x241.webp","2026/04/Lyskasser_img-300x241.webp","2026/04/Messepakke-og-stands_img-300x241.webp","2026/04/Messevegger-Tekstil_img-300x241.webp","2026/04/Utendors-profilering_img-300x241.webp","2026/04/Utstillingsbord-og-disker_1st_product-img-300x240.webp","2026/04/blog_post-img.webp"]
+          for p in beta:
+              hent('https://beta.moonlandingsite.no/messeprofil/wp-content/uploads/' + urllib.parse.quote(p), 'bilder/beta/' + p.rsplit('/', 1)[-1])
+          print('Produktbilder:', len(paths), '| Beta-bilder:', len(beta), '| Feil:', len(feil))
+          print('\n'.join(feil))
+          PYEOF
+
+      - name: Skaler ned store bilder
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q imagemagick webp
+          find bilder -type f -size +150k \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) -exec mogrify -resize '1200x1200>' -quality 82 {} + || true
+          du -sh bilder || true
+          find bilder -type f | wc -l
+
+      - name: Commit og push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bilder
+          git commit -m "Produktbilder hentet fra WordPress - serveres naa lokalt fra /bilder" || echo "Ingen endringer"
+          git push
