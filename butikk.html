@@ -357,6 +357,7 @@ html,body{overflow-x:hidden}
     </div>
     <div class="pgrid" id="grid"></div>
     <p id="tomt" style="display:none;text-align:center;color:var(--grey-500);padding:40px 0">Ingen produkter matcher søket. <a href="kontakt.html" style="color:var(--red);font-weight:600">Send oss en forespørsel</a> – vi skaffer det meste.</p>
+    <div style="text-align:center;padding:30px 0 10px"><button id="visFlere" type="button" style="display:none;font:700 15px var(--font-head);color:#fff;background:var(--red);border:none;border-radius:999px;padding:14px 34px;cursor:pointer;box-shadow:0 8px 24px rgba(200,16,46,.25)">Vis flere produkter</button></div>
   </div>
 </div>
 
@@ -467,9 +468,13 @@ function chips(){
     CATS.map((c,i)=>'<a class="chip'+(cat===i?' active':'')+'" data-c="'+i+'">'+c+'</a>').join('');
   el.querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{cat=parseInt(ch.dataset.c);chips();render()});
 }
-function render(){
+const PAGE = 24;
+let vis = PAGE;
+function render(behold){
+  if(!behold) vis = PAGE;
   const hits = PRODS.filter(p=>(cat===-1||p[2].includes(cat)) && (!q||p[1].toLowerCase().includes(q)||p[2].some(i=>CATS[i].toLowerCase().includes(q))));
-  document.getElementById('grid').innerHTML = hits.map(p=>
+  const show = hits.slice(0, vis);
+  document.getElementById('grid').innerHTML = show.map(p=>
     '<article class="pcard">'+
     '<a class="im" href="produkt.html?id='+p[0]+'"><img loading="lazy" src="'+IMG+p[3]+'" alt="'+p[1].replace(/"/g,'&quot;')+'"></a>'+
     '<div class="bd">'+
@@ -478,10 +483,16 @@ function render(){
     (p[4]>0?'<span class="var">'+p[4]+' varianter/størrelser</span>':'')+
     '<a class="go" href="produkt.html?id='+p[0]+'">Se produkt <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>'+
     '</div></article>').join('');
-  document.getElementById('count').innerHTML = 'Viser <strong>'+hits.length+'</strong> av <strong>'+PRODS.length+'</strong> produkter';
+  document.getElementById('count').innerHTML = 'Viser <strong>'+show.length+'</strong> av <strong>'+hits.length+'</strong> produkter';
   document.getElementById('tomt').style.display = hits.length ? 'none' : 'block';
+  const vf = document.getElementById('visFlere');
+  if(vf){
+    if(hits.length > vis){ vf.style.display='inline-block'; vf.textContent='Vis flere produkter ('+(hits.length-show.length)+' igjen)'; }
+    else { vf.style.display='none'; }
+  }
 }
 document.getElementById('q').addEventListener('input', e=>{q=e.target.value.toLowerCase();render()});
+document.getElementById('visFlere').addEventListener('click', ()=>{vis += PAGE; render(true);});
 chips(); render();
 </script>
 

@@ -145,8 +145,9 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.15}
 .related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .product-card{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;position:relative}
 .product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-.product-thumb{background:var(--grey-100);aspect-ratio:1/.82;display:grid;place-items:center;padding:20px}
+.product-thumb{background:#fff;aspect-ratio:1/.82;display:grid;place-items:center;padding:20px}
 .product-thumb svg{width:100%;height:100%;max-height:110px}
+.product-thumb img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
 .product-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1;gap:4px}
 .product-body h3{font-size:14.5px;font-weight:700;font-family:var(--font-body)}
 .product-price{color:var(--grey-500);font-size:13.5px}
@@ -292,10 +293,11 @@ html,body{overflow-x:hidden}
 .faqstripe summary::after{content:"+";font:700 20px var(--font-head);color:var(--red);transition:transform .2s}
 .faqstripe details[open] summary::after{transform:rotate(45deg)}
 .faqstripe .a{padding:0 20px 16px;color:#3d3538;font-size:14.5px;line-height:1.7}
-.feature-icons{display:flex;flex-wrap:wrap;gap:16px 26px;margin:14px 0 20px}
-.fi{display:flex;flex-direction:column;align-items:center;gap:6px;width:74px;text-align:center}
-.fi svg{width:40px;height:40px;color:var(--red);border:1.6px solid currentColor;border-radius:50%;padding:8px}
-.fi span{font:600 10.5px var(--font-head);letter-spacing:.04em;text-transform:uppercase;color:#4C4245;line-height:1.25}
+.feature-icons{display:flex;flex-wrap:nowrap;gap:8px 12px;margin:14px 0 20px}
+.fi{display:flex;flex-direction:column;align-items:center;gap:5px;flex:1 1 0;min-width:0;text-align:center}
+.fi svg{width:28px;height:28px;color:var(--red);border:1.4px solid currentColor;border-radius:50%;padding:6px}
+.fi span{font:600 9px var(--font-head);letter-spacing:.03em;text-transform:uppercase;color:#4C4245;line-height:1.25}
+@media (max-width:480px){.feature-icons{flex-wrap:wrap}.fi{flex:0 0 auto;width:56px}}
 .sticky-cta{display:none}
 @media (max-width:720px){
   .sticky-cta{display:grid;grid-template-columns:1fr 1fr;gap:1px;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--grey-200);border-top:1px solid var(--grey-200);padding-bottom:env(safe-area-inset-bottom)}
@@ -494,48 +496,7 @@ html,body{overflow-x:hidden}
 <section class="related">
   <div class="container">
     <h2>Andre har også sett på</h2>
-    <div class="related-grid">
-      <article class="product-card">
-        <div class="product-thumb" aria-hidden="true">
-          <svg viewBox="0 0 160 110"><rect x="18" y="8" width="124" height="80" rx="7" fill="#D51D29"/><rect x="32" y="22" width="60" height="36" rx="4" fill="#fff"/><text x="62" y="44" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="12" fill="#D51D29">M</text><rect x="30" y="88" width="7" height="12" rx="3" fill="#B01523"/><rect x="124" y="88" width="7" height="12" rx="3" fill="#B01523"/></svg>
-        </div>
-        <div class="product-body">
-          <h3>Messevegg tekstil rett 4×3</h3>
-          <p class="product-price">Be om pris</p>
-          <a class="btn btn-dark" href="produkt.html">Se produkt</a>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-thumb" aria-hidden="true">
-          <svg viewBox="0 0 160 110"><rect x="56" y="6" width="48" height="84" rx="5" fill="#D51D29"/><circle cx="80" cy="28" r="12" fill="#fff"/><text x="80" y="33" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="12" fill="#D51D29">M</text><rect x="48" y="90" width="64" height="10" rx="5" fill="#16161A"/></svg>
-        </div>
-        <div class="product-body">
-          <h3>Roll-up Premium 85×200</h3>
-          <p class="product-price">Be om pris</p>
-          <a class="btn btn-dark" href="produkt.html">Se produkt</a>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-thumb" aria-hidden="true">
-          <svg viewBox="0 0 160 110"><path d="M52 38 h56 a7 7 0 0 1 7 7 v55 h-70 v-55 a7 7 0 0 1 7-7Z" fill="#D51D29"/><rect x="40" y="28" width="80" height="12" rx="6" fill="#fff" stroke="#DADAE0" stroke-width="2"/><circle cx="80" cy="72" r="16" fill="#fff"/><text x="80" y="78" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="16" fill="#D51D29">M</text></svg>
-        </div>
-        <div class="product-body">
-          <h3>Messedisk med trykk</h3>
-          <p class="product-price">Be om pris</p>
-          <a class="btn btn-dark" href="produkt.html">Se produkt</a>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-thumb" aria-hidden="true">
-          <svg viewBox="0 0 160 110"><rect x="30" y="8" width="100" height="86" rx="8" fill="#16161A"/><rect x="38" y="16" width="84" height="70" rx="5" fill="#D51D29"/><rect x="48" y="28" width="64" height="26" rx="4" fill="#fff" opacity=".95"/><text x="80" y="45" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="9" fill="#D51D29">LYSKASSE</text></svg>
-        </div>
-        <div class="product-body">
-          <h3>Lyskasse LED 2×2</h3>
-          <p class="product-price">Be om pris</p>
-          <a class="btn btn-dark" href="produkt.html">Se produkt</a>
-        </div>
-      </article>
-    </div>
+    <div class="related-grid" id="relatedGrid"></div>
   </div>
 </section>
 
@@ -608,6 +569,31 @@ const IMGBASE = "bilder/";
   const og = document.querySelectorAll('.options')[0]; if(og) og.style.display='none';
   const req = document.getElementById('sendReq');
   if(req && window.typeformLenke) req.href = window.typeformLenke(name);
+})();
+(function(){
+  const grid = document.getElementById('relatedGrid');
+  if(!grid) return;
+  const id = parseInt(new URLSearchParams(location.search).get('id')||'');
+  const cur = PRODS.find(x=>x[0]===id);
+  const dec = s=>{const t=document.createElement('textarea');t.innerHTML=s;return t.value;};
+  let pool = [];
+  if(cur){
+    pool = PRODS.filter(x=>x[0]!==cur[0] && x[1]!==cur[1] && x[2].some(c=>cur[2].includes(c)));
+  }
+  for(const x of PRODS){
+    if(pool.length>=4) break;
+    if((!cur || (x[0]!==cur[0] && x[1]!==cur[1])) && !pool.includes(x)) pool.push(x);
+  }
+  grid.innerHTML = pool.slice(0,4).map(x=>{
+    const n = dec(x[1]);
+    return '<article class="product-card">'+
+      '<a class="product-thumb" href="produkt.html?id='+x[0]+'"><img loading="lazy" src="'+IMGBASE+x[3]+'" alt="'+n.replace(/"/g,'&quot;')+'"></a>'+
+      '<div class="product-body">'+
+      '<h3><a href="produkt.html?id='+x[0]+'" style="color:inherit">'+n+'</a></h3>'+
+      '<p class="product-price">Be om pris</p>'+
+      '<a class="btn btn-dark" href="produkt.html?id='+x[0]+'">Se produkt</a>'+
+      '</div></article>';
+  }).join('');
 })();
 </script>
 </body>
