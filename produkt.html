@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Messevegg tekstil buet 3×3 – messevegg med eget trykk | Messeprofil.no</title>
+<script src="typeform-produkter.js"></script>
 <link rel="canonical" href="https://www.messeprofil.no/produkt.html">
 <meta property="og:title" content="Messevegg tekstil buet 3×3 – messevegg med eget trykk | Messeprofil.no">
 <meta property="og:description" content="Buet messevegg i tekstil 3×3 med ditt design. Lett å frakte, montert på minutter – perfekt til messestand, event og butikk. Rask levering i hele Norge.">
@@ -439,7 +440,7 @@ html,body{overflow-x:hidden}
         <input type="text" id="qtyInput" value="1" inputmode="numeric" aria-label="Antall">
         <button type="button" aria-label="Øk antall" onclick="qty(1)">+</button>
       </div>
-      <a class="btn btn-red" id="sendReq" href="kontakt.html?produkt=Messevegg%20tekstil%20buet%203%C3%973">
+      <a class="btn btn-red" id="sendReq" href="https://416jbe00upv.typeform.com/to/hGGF7wQ7">
         Send forespørsel
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
@@ -606,7 +607,7 @@ const IMGBASE = "bilder/";
   const ol = document.querySelectorAll('.option-label')[0]; if(ol) ol.style.display='none';
   const og = document.querySelectorAll('.options')[0]; if(og) og.style.display='none';
   const req = document.getElementById('sendReq');
-  if(req) req.href = 'kontakt.html?produkt='+encodeURIComponent(name)+'&id='+id;
+  if(req && window.typeformLenke) req.href = window.typeformLenke(name);
 })();
 </script>
 </body>

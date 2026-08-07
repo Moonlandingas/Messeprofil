@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kontakt oss – tilbud på messeutstyr og messestand | Messeprofil.no</title>
+<script src="typeform-produkter.js"></script>
 <link rel="canonical" href="https://www.messeprofil.no/kontakt.html">
 <meta property="og:title" content="Kontakt oss – tilbud på messeutstyr og messestand | Messeprofil.no">
 <meta property="og:description" content="Få tilbud samme dag på messevegger, rollups, messetelt og komplett messestand. Ring +47 911 68 911 eller send forespørsel – vi hjelper deg fra idé til ferdig stand.">
@@ -493,14 +494,18 @@ details.faq .a{padding:0 20px 18px;color:#3d3538;font-size:14.5px;line-height:1.
     <div class="contact-card reveal">
       <h2>Send oss en melding</h2>
       <p class="sub">Vi kontakter deg innen 1 virkedag med pristilbud og forslag.</p>
-      <form id="contactForm" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('takk').style.display='block'">
-        <div class="field"><label for="f-navn">Navn *</label><input id="f-navn" type="text" required autocomplete="name"></div>
-        <div class="field"><label for="f-firma">Firma</label><input id="f-firma" type="text" autocomplete="organization"></div>
-        <div class="field"><label for="f-epost">E-post *</label><input id="f-epost" type="email" required autocomplete="email"></div>
-        <div class="field"><label for="f-tlf">Telefon</label><input id="f-tlf" type="tel" autocomplete="tel"></div>
-        <div class="field"><label for="f-msg">Hva kan vi hjelpe deg med? *</label><textarea id="f-msg" required placeholder="Fortell kort om arrangementet, produkter du vurderer, antall og ønsket leveringsdato …"></textarea></div>
-        <button class="btn btn-red" type="submit" style="width:100%">Send forespørsel</button>
-      </form>
+      <div id="tfEmbed" style="border-radius:14px;overflow:hidden;border:1px solid var(--grey-200);min-height:520px"></div>
+      <script>
+      (function(){
+        var q = new URLSearchParams(location.search);
+        var url = window.typeformLenke ? window.typeformLenke(q.get('produkt')) : "https://416jbe00upv.typeform.com/to/hGGF7wQ7";
+        var f = document.createElement('iframe');
+        f.src = url; f.title = 'Send forespørsel';
+        f.style.cssText = 'width:100%;height:520px;border:0;display:block';
+        f.allow = 'camera; microphone; autoplay; encrypted-media;';
+        document.getElementById('tfEmbed').appendChild(f);
+      })();
+      </script>
       <div id="takk" style="display:none;text-align:center;padding:30px 10px">
         <div style="width:64px;height:64px;border-radius:50%;background:var(--red-soft);display:grid;place-items:center;margin:0 auto 16px"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2.6" style="width:30px;height:30px"><path d="M20 6 9 17l-5-5"/></svg></div>
         <h3 style="font-size:19px;margin-bottom:6px">Takk for din henvendelse!</h3>
