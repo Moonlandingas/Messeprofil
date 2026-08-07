@@ -457,6 +457,8 @@ const IMG = "bilder/";
 let cat = -1;
 const params = new URLSearchParams(location.search);
 let q = (params.get('q') || '').toLowerCase();
+const katParam = params.get('kat');
+if (katParam) { const ki = CATS.findIndex(c => c.toLowerCase() === katParam.toLowerCase()); if (ki >= 0) cat = ki; }
 document.getElementById('q').value = params.get('q') || '';
 
 function chips(){
