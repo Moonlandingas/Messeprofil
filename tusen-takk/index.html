@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://moonlandingsite.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '38']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://cdn.matomo.cloud/moonlandingsite.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQTKCM9D');</script>
 <!-- End Google Tag Manager -->
@@ -37,6 +52,14 @@ h1{font:800 clamp(26px,4vw,34px)/1.15 Montserrat,sans-serif;letter-spacing:-.02e
 .kontakt a{color:var(--red);font-weight:600;text-decoration:none}
 footer{padding:18px;text-align:center;font-size:12.5px;color:var(--grey)}
 footer a{color:var(--grey)}
+
+@media (max-width:640px){
+  header{flex-direction:column;gap:10px;padding:14px 18px;text-align:center}
+  header nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px}
+  header nav a{margin-left:0}
+  main{padding:28px 18px 60px}
+  h1{font-size:clamp(26px,7vw,34px)}
+}
 </style>
 </head>
 <body>
@@ -65,6 +88,7 @@ footer a{color:var(--grey)}
   window.dataLayer = window.dataLayer || [];
   function push(ev, method, label){
     window.dataLayer.push({event:ev, kontakt_metode:method, kontakt_verdi:label||'', side:location.pathname});
+    if(window._paq){ window._paq.push(['trackEvent','Kontakt', method, label||'', 1]); }
   }
   document.addEventListener('click', function(e){
     var a = e.target && e.target.closest ? e.target.closest('a') : null;
@@ -87,6 +111,7 @@ footer a{color:var(--grey)}
     lead_produkt: p.get('produkt') || '',
     lead_id: p.get('response_id') || p.get('rid') || ''
   });
+  if(window._paq){ window._paq.push(['trackEvent','Lead','Skjema fullfoert', p.get('produkt')||'', 1]); }
 })();
 </script>
 </body>
