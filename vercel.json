@@ -1,6 +1,1256 @@
 {
   "redirects": [
     {
+      "source": "/product/adblanket",
+      "destination": "/produkt.html?id=20822",
+      "permanent": true
+    },
+    {
+      "source": "/product/adboard-hips",
+      "destination": "/produkt.html?id=19553",
+      "permanent": true
+    },
+    {
+      "source": "/product/adboard-led",
+      "destination": "/produkt.html?id=19561",
+      "permanent": true
+    },
+    {
+      "source": "/product/adbox-elypse",
+      "destination": "/produkt.html?id=19639",
+      "permanent": true
+    },
+    {
+      "source": "/product/adbox-elypse-mini",
+      "destination": "/produkt.html?id=19741",
+      "permanent": true
+    },
+    {
+      "source": "/product/adbox-hit",
+      "destination": "/produkt.html?id=20765",
+      "permanent": true
+    },
+    {
+      "source": "/product/adbox-hit-c",
+      "destination": "/produkt.html?id=19748",
+      "permanent": true
+    },
+    {
+      "source": "/product/adbox-hit-mini",
+      "destination": "/produkt.html?id=19729",
+      "permanent": true
+    },
+    {
+      "source": "/product/adbox-ring",
+      "destination": "/produkt.html?id=19632",
+      "permanent": true
+    },
+    {
+      "source": "/product/adbox-standard",
+      "destination": "/produkt.html?id=19757",
+      "permanent": true
+    },
+    {
+      "source": "/product/adcolumn-air",
+      "destination": "/produkt.html?id=19497",
+      "permanent": true
+    },
+    {
+      "source": "/product/addeck",
+      "destination": "/produkt.html?id=19547",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-blade-pro",
+      "destination": "/produkt.html?id=10320",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-cross-base",
+      "destination": "/produkt.html?id=20294",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-drop-pro",
+      "destination": "/produkt.html?id=19527",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-hook-pro",
+      "destination": "/produkt.html?id=19517",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-kryssfot-for-beachflag",
+      "destination": "/produkt.html?id=20294",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-plate-12kg",
+      "destination": "/produkt.html?id=20307",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-plate-4kg",
+      "destination": "/produkt.html?id=20297",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-plate-6kg",
+      "destination": "/produkt.html?id=20300",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-plate-8kg",
+      "destination": "/produkt.html?id=20304",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-rotator",
+      "destination": "/produkt.html?id=20290",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-spike",
+      "destination": "/produkt.html?id=20287",
+      "permanent": true
+    },
+    {
+      "source": "/product/adflag-standard-pro",
+      "destination": "/produkt.html?id=19507",
+      "permanent": true
+    },
+    {
+      "source": "/product/adfoam-cube",
+      "destination": "/produkt.html?id=20131",
+      "permanent": true
+    },
+    {
+      "source": "/product/adfoam-forma",
+      "destination": "/produkt.html?id=20153",
+      "permanent": true
+    },
+    {
+      "source": "/product/adfoam-roller",
+      "destination": "/produkt.html?id=20158",
+      "permanent": true
+    },
+    {
+      "source": "/product/adfoam-roller-mini",
+      "destination": "/produkt.html?id=20137",
+      "permanent": true
+    },
+    {
+      "source": "/product/adfoam-via",
+      "destination": "/produkt.html?id=20147",
+      "permanent": true
+    },
+    {
+      "source": "/product/adfolder-a4",
+      "destination": "/produkt.html?id=20172",
+      "permanent": true
+    },
+    {
+      "source": "/product/adfolder-premium",
+      "destination": "/produkt.html?id=20186",
+      "permanent": true
+    },
+    {
+      "source": "/product/adfolder-prestige",
+      "destination": "/produkt.html?id=20178",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe",
+      "destination": "/produkt.html?id=12641",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-battery",
+      "destination": "/produkt.html?id=19575",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-ctf",
+      "destination": "/produkt.html?id=13279",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-ctf-hanging-led",
+      "destination": "/produkt.html?id=20121",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-dtf",
+      "destination": "/produkt.html?id=10371",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-flex-led",
+      "destination": "/produkt.html?id=21194",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-flex-led-modulaer-lyskasse-for-messer",
+      "destination": "/produkt.html?id=21194",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-lmd",
+      "destination": "/produkt.html?id=12799",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-lmd-70x100-b1-pd-hanging",
+      "destination": "/produkt.html?id=20111",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-lms-100x100-nk",
+      "destination": "/produkt.html?id=20091",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-lpo",
+      "destination": "/produkt.html?id=20101",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-pop-up",
+      "destination": "/produkt.html?id=17580",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-popup",
+      "destination": "/produkt.html?id=17580",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-poster",
+      "destination": "/produkt.html?id=20082",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-quick-2-0",
+      "destination": "/produkt.html?id=19581",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-single",
+      "destination": "/produkt.html?id=12641",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-slim",
+      "destination": "/produkt.html?id=20068",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-slim-with-double-sided-printing",
+      "destination": "/produkt.html?id=20068",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-smart-1x1",
+      "destination": "/produkt.html?id=21121",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-smart-2x1",
+      "destination": "/produkt.html?id=21125",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-smart-3x2-l",
+      "destination": "/produkt.html?id=21147",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-smart-3x2-l1",
+      "destination": "/produkt.html?id=21135",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-smart-3x2-u",
+      "destination": "/produkt.html?id=21131",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-smart-3x3-l",
+      "destination": "/produkt.html?id=21152",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-smart-3x3-u",
+      "destination": "/produkt.html?id=21156",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-smart-4x2-l",
+      "destination": "/produkt.html?id=21160",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-smart-4x2-u",
+      "destination": "/produkt.html?id=21139",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-smart-4x3-u",
+      "destination": "/produkt.html?id=21143",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-stf",
+      "destination": "/produkt.html?id=10954",
+      "permanent": true
+    },
+    {
+      "source": "/product/adframe-stfl",
+      "destination": "/produkt.html?id=10954",
+      "permanent": true
+    },
+    {
+      "source": "/product/adgate-air-square",
+      "destination": "/produkt.html?id=19461",
+      "permanent": true
+    },
+    {
+      "source": "/product/adgate-air-triangle",
+      "destination": "/produkt.html?id=10713",
+      "permanent": true
+    },
+    {
+      "source": "/product/adsacco",
+      "destination": "/produkt.html?id=20142",
+      "permanent": true
+    },
+    {
+      "source": "/product/adstand-eco",
+      "destination": "/produkt.html?id=20050",
+      "permanent": true
+    },
+    {
+      "source": "/product/adstand-l",
+      "destination": "/produkt.html?id=19404",
+      "permanent": true
+    },
+    {
+      "source": "/product/adstand-light",
+      "destination": "/produkt.html?id=19388",
+      "permanent": true
+    },
+    {
+      "source": "/product/adstand-premium",
+      "destination": "/produkt.html?id=19416",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-air-anchor",
+      "destination": "/produkt.html?id=20279",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-air-backpack-4x4-5x5",
+      "destination": "/produkt.html?id=20230",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-air-premium",
+      "destination": "/produkt.html?id=10639",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-air-spiral-anchor",
+      "destination": "/produkt.html?id=20283",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-express",
+      "destination": "/produkt.html?id=10832",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-express-pro",
+      "destination": "/produkt.html?id=19469",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-led-3x3",
+      "destination": "/produkt.html?id=20272",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-led-6x6",
+      "destination": "/produkt.html?id=20261",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-v",
+      "destination": "/produkt.html?id=19487",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-vario",
+      "destination": "/produkt.html?id=19478",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-vektlodd-10kg",
+      "destination": "/produkt.html?id=20226",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtent-weight-10kg",
+      "destination": "/produkt.html?id=20226",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtowel",
+      "destination": "/produkt.html?id=20818",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-adcolumn-adtent-air-elektrisk-pumpe",
+      "destination": "/produkt.html?id=19246",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-adcolumn-adtent-air-elektrisk-pumpe-kopi",
+      "destination": "/produkt.html?id=19332",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-adcolumn-adtent-air-handpumpe",
+      "destination": "/produkt.html?id=19257",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-air",
+      "destination": "/produkt.html?id=20829",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-air-%e2%88%8560x100-tribune",
+      "destination": "/produkt.html?id=20829",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-air-2-0",
+      "destination": "/produkt.html?id=19716",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-big-oval",
+      "destination": "/produkt.html?id=19689",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-big-quick",
+      "destination": "/produkt.html?id=10735",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-big-quick-led",
+      "destination": "/produkt.html?id=10732",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-case",
+      "destination": "/produkt.html?id=12783",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-conference-podium",
+      "destination": "/produkt.html?id=19683",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-elypse",
+      "destination": "/produkt.html?id=19664",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-elypse-mini",
+      "destination": "/produkt.html?id=19658",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-expo",
+      "destination": "/produkt.html?id=13386",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-hit",
+      "destination": "/produkt.html?id=19652",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-hit-c",
+      "destination": "/produkt.html?id=19670",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-hit-mini",
+      "destination": "/produkt.html?id=19645",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-oval",
+      "destination": "/produkt.html?id=10738",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-pop-up",
+      "destination": "/produkt.html?id=17583",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-popup",
+      "destination": "/produkt.html?id=17583",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-quick",
+      "destination": "/produkt.html?id=19695",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-seg",
+      "destination": "/produkt.html?id=19703",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-sego",
+      "destination": "/produkt.html?id=19723",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-shell",
+      "destination": "/produkt.html?id=19614",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-shell-2in1",
+      "destination": "/produkt.html?id=19620",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-smart-led-sf",
+      "destination": "/produkt.html?id=19711",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-standard",
+      "destination": "/produkt.html?id=19626",
+      "permanent": true
+    },
+    {
+      "source": "/product/adtribune-starter",
+      "destination": "/produkt.html?id=19676",
+      "permanent": true
+    },
+    {
+      "source": "/product/adup-vario-clover-maxi",
+      "destination": "/produkt.html?id=19992",
+      "permanent": true
+    },
+    {
+      "source": "/product/adup-vario-quadfloat",
+      "destination": "/produkt.html?id=19455",
+      "permanent": true
+    },
+    {
+      "source": "/product/adup-vario-ringfloat",
+      "destination": "/produkt.html?id=19441",
+      "permanent": true
+    },
+    {
+      "source": "/product/adup-vario-trapfloat",
+      "destination": "/produkt.html?id=19440",
+      "permanent": true
+    },
+    {
+      "source": "/product/adup-vario-trifloat",
+      "destination": "/produkt.html?id=20000",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-edge",
+      "destination": "/produkt.html?id=19805",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-presto-outdoor",
+      "destination": "/produkt.html?id=21187",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-smart-curved",
+      "destination": "/produkt.html?id=19823",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-smart-straight",
+      "destination": "/produkt.html?id=19815",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-add-left",
+      "destination": "/produkt.html?id=19852",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-add-right",
+      "destination": "/produkt.html?id=19857",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-arch",
+      "destination": "/produkt.html?id=19966",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-arch-a",
+      "destination": "/produkt.html?id=19954",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-arch-b",
+      "destination": "/produkt.html?id=19960",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-arch-c",
+      "destination": "/produkt.html?id=19972",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-big-island",
+      "destination": "/produkt.html?id=20045",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-bow",
+      "destination": "/produkt.html?id=19978",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-buet-lys",
+      "destination": "/produkt.html?id=19340",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-c-wall",
+      "destination": "/produkt.html?id=20020",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-changing-room",
+      "destination": "/produkt.html?id=20013",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-classic",
+      "destination": "/produkt.html?id=19785",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-classic-light",
+      "destination": "/produkt.html?id=19378",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-cone",
+      "destination": "/produkt.html?id=19839",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-craft",
+      "destination": "/produkt.html?id=19948",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-crown",
+      "destination": "/produkt.html?id=19844",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-curved-43fi",
+      "destination": "/produkt.html?id=20852",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-curved-light",
+      "destination": "/produkt.html?id=19354",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-curved-premium",
+      "destination": "/produkt.html?id=19775",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-fall",
+      "destination": "/produkt.html?id=19921",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-flat-ring",
+      "destination": "/produkt.html?id=19867",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-gate",
+      "destination": "/produkt.html?id=19984",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-horizontal",
+      "destination": "/produkt.html?id=19898",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-in",
+      "destination": "/produkt.html?id=20030",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-island",
+      "destination": "/produkt.html?id=20037",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-kite",
+      "destination": "/produkt.html?id=19893",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-lukowa-240-o43-unilateral",
+      "destination": "/produkt.html?id=20852",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-peak",
+      "destination": "/produkt.html?id=19886",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-presto",
+      "destination": "/produkt.html?id=12423",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-presto-light",
+      "destination": "/produkt.html?id=12423",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-qring",
+      "destination": "/produkt.html?id=19874",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-ring",
+      "destination": "/produkt.html?id=19880",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-s",
+      "destination": "/produkt.html?id=19429",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-serpentine",
+      "destination": "/produkt.html?id=19904",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-slope",
+      "destination": "/produkt.html?id=19914",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-straight-light",
+      "destination": "/produkt.html?id=17594",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-straight-light-baerbar-tekstil-messevegg-for-messer-kampanjer-og-photoshoots",
+      "destination": "/produkt.html?id=17594",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-straight-premium",
+      "destination": "/produkt.html?id=19764",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-tower",
+      "destination": "/produkt.html?id=19831",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-tunnel",
+      "destination": "/produkt.html?id=20007",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-twist",
+      "destination": "/produkt.html?id=19927",
+      "permanent": true
+    },
+    {
+      "source": "/product/adwall-vario-wave",
+      "destination": "/produkt.html?id=19942",
+      "permanent": true
+    },
+    {
+      "source": "/product/bravo-elektrisk-pumpe",
+      "destination": "/produkt.html?id=19242",
+      "permanent": true
+    },
+    {
+      "source": "/product/chill-zone",
+      "destination": "/produkt.html?id=21175",
+      "permanent": true
+    },
+    {
+      "source": "/product/coat-topper-adbox-hit",
+      "destination": "/produkt.html?id=20765",
+      "permanent": true
+    },
+    {
+      "source": "/product/conference-podium",
+      "destination": "/produkt.html?id=19683",
+      "permanent": true
+    },
+    {
+      "source": "/product/double-dtf-trade-show-set",
+      "destination": "/produkt.html?id=21117",
+      "permanent": true
+    },
+    {
+      "source": "/product/dtf-premium-event-set",
+      "destination": "/produkt.html?id=21075",
+      "permanent": true
+    },
+    {
+      "source": "/product/economic-vario-conference-set",
+      "destination": "/produkt.html?id=21080",
+      "permanent": true
+    },
+    {
+      "source": "/product/economic-vario-event-set",
+      "destination": "/produkt.html?id=21064",
+      "permanent": true
+    },
+    {
+      "source": "/product/economic-vario-promotion-set",
+      "destination": "/produkt.html?id=21058",
+      "permanent": true
+    },
+    {
+      "source": "/product/economy-set",
+      "destination": "/produkt.html?id=21164",
+      "permanent": true
+    },
+    {
+      "source": "/product/fan-zone",
+      "destination": "/produkt.html?id=21172",
+      "permanent": true
+    },
+    {
+      "source": "/product/foldable-komplett-pakke",
+      "destination": "/produkt.html?id=17751",
+      "permanent": true
+    },
+    {
+      "source": "/product/hammer",
+      "destination": "/produkt.html?id=19239",
+      "permanent": true
+    },
+    {
+      "source": "/product/heavy-duty-set",
+      "destination": "/produkt.html?id=21169",
+      "permanent": true
+    },
+    {
+      "source": "/product/led-belysning-116-solv",
+      "destination": "/produkt.html?id=20216",
+      "permanent": true
+    },
+    {
+      "source": "/product/led-belysning-116-svart",
+      "destination": "/produkt.html?id=20221",
+      "permanent": true
+    },
+    {
+      "source": "/product/led-belysning-50-solv",
+      "destination": "/produkt.html?id=20206",
+      "permanent": true
+    },
+    {
+      "source": "/product/led-lamp-led-116w-srebrna",
+      "destination": "/produkt.html?id=20809",
+      "permanent": true
+    },
+    {
+      "source": "/product/led-lamp-led-60w-srebrna",
+      "destination": "/produkt.html?id=20806",
+      "permanent": true
+    },
+    {
+      "source": "/product/led-lampe-50w-svart",
+      "destination": "/produkt.html?id=20211",
+      "permanent": true
+    },
+    {
+      "source": "/product/led-lighting-116w-silver",
+      "destination": "/produkt.html?id=20809",
+      "permanent": true
+    },
+    {
+      "source": "/product/led-lighting-60w-silver",
+      "destination": "/produkt.html?id=20806",
+      "permanent": true
+    },
+    {
+      "source": "/product/lumina-stick",
+      "destination": "/produkt.html?id=20076",
+      "permanent": true
+    },
+    {
+      "source": "/product/lyskasse-quick-single",
+      "destination": "/produkt.html?id=19581",
+      "permanent": true
+    },
+    {
+      "source": "/product/messedisk-led-adtribune-big-quick",
+      "destination": "/produkt.html?id=10732",
+      "permanent": true
+    },
+    {
+      "source": "/product/messedisk-med-led-adtribune-expo",
+      "destination": "/produkt.html?id=13386",
+      "permanent": true
+    },
+    {
+      "source": "/product/mframe-ready-made-sets",
+      "destination": "/produkt.html?id=19592",
+      "permanent": true
+    },
+    {
+      "source": "/product/mframe-utstillingssystem",
+      "destination": "/produkt.html?id=19592",
+      "permanent": true
+    },
+    {
+      "source": "/product/mlotek",
+      "destination": "/produkt.html?id=19239",
+      "permanent": true
+    },
+    {
+      "source": "/product/multiframe-messesystem",
+      "destination": "/produkt.html?id=19602",
+      "permanent": true
+    },
+    {
+      "source": "/product/pop-up-combo",
+      "destination": "/produkt.html?id=21042",
+      "permanent": true
+    },
+    {
+      "source": "/product/pop-up-led-event-set",
+      "destination": "/produkt.html?id=21085",
+      "permanent": true
+    },
+    {
+      "source": "/product/premium-bag-for-adtent-air-5x5-og-6x6",
+      "destination": "/produkt.html?id=19260",
+      "permanent": true
+    },
+    {
+      "source": "/product/premium-chill-zone",
+      "destination": "/produkt.html?id=21179",
+      "permanent": true
+    },
+    {
+      "source": "/product/premium-dtf-conference-set",
+      "destination": "/produkt.html?id=21100",
+      "permanent": true
+    },
+    {
+      "source": "/product/premium-dtf-promotional-set",
+      "destination": "/produkt.html?id=21053",
+      "permanent": true
+    },
+    {
+      "source": "/product/premium-dtf-trade-show-set",
+      "destination": "/produkt.html?id=21113",
+      "permanent": true
+    },
+    {
+      "source": "/product/premium-led-conference-set",
+      "destination": "/produkt.html?id=21090",
+      "permanent": true
+    },
+    {
+      "source": "/product/quick-led-promotion-set",
+      "destination": "/produkt.html?id=21069",
+      "permanent": true
+    },
+    {
+      "source": "/product/seg-exhibition-wall",
+      "destination": "/produkt.html?id=19796",
+      "permanent": true
+    },
+    {
+      "source": "/product/sego-komplett-pakke",
+      "destination": "/produkt.html?id=17719",
+      "permanent": true
+    },
+    {
+      "source": "/product/sego-led-trade-show-set",
+      "destination": "/produkt.html?id=21108",
+      "permanent": true
+    },
+    {
+      "source": "/product/sego-led-utstillingssystemet",
+      "destination": "/produkt.html?id=20163",
+      "permanent": true
+    },
+    {
+      "source": "/product/standard-dtf-conference-set",
+      "destination": "/produkt.html?id=21096",
+      "permanent": true
+    },
+    {
+      "source": "/product/standard-dtf-trade-show-set",
+      "destination": "/produkt.html?id=21104",
+      "permanent": true
+    },
+    {
+      "source": "/product/transportveske-l-xl",
+      "destination": "/produkt.html?id=20237",
+      "permanent": true
+    },
+    {
+      "source": "/product/transportveske-s-m",
+      "destination": "/produkt.html?id=20234",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/klassisk-messestand/pop-up-vegger",
+      "destination": "/butikk.html?kat=Pop-up%20vegger",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/utendors-reklamemateriell/kombo-pakker-for-events-og-messer",
+      "destination": "/butikk.html?kat=Kampanje%20pakker",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/messestand",
+      "destination": "/butikk.html?kat=Messestand%20-%20Ferdige%20sett%20med%20vegger",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/utendors-reklamemateriell/oppblasbare-produkter",
+      "destination": "/butikk.html?kat=Oppbl%C3%A5sbare%20produkter",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/reklame-mobler",
+      "destination": "/butikk.html?kat=Reklame%20m%C3%B8bler",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/klassisk-messestand",
+      "destination": "/butikk.html?kat=Klassisk%20Messestand",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/klassisk-messestand/rollups",
+      "destination": "/butikk.html?kat=RollUps",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/messevegg-tekstil",
+      "destination": "/butikk.html?kat=Messevegg%20tekstil",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/messebord-og-disker",
+      "destination": "/butikk.html?kat=Messebord%20og%20disker",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/utendors-reklamemateriell/reklameflagg",
+      "destination": "/butikk.html?kat=Reklameflagg",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/tilbehor",
+      "destination": "/butikk.html?kat=Tilbeh%C3%B8r",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/utendors-reklamemateriell/reklametelt-med-profilering",
+      "destination": "/butikk.html?kat=Reklame%20telt%20med%20profilering",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/tekstilrammer",
+      "destination": "/butikk.html?kat=Tekstilrammer",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/tekstilrammer/tekstilrammer-med-led-lys",
+      "destination": "/butikk.html?kat=Tekstilrammer%20med%20LED-lys",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/tekstilrammer/tekstilramme-uten-belysning",
+      "destination": "/butikk.html?kat=Tekstilramme%20uten%20belysning",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/utendors-reklamemateriell",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/shop",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/shop-page",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/nettbutikk-apner-snart",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/cart",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/wishlist",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/kasse",
+      "destination": "/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/my-account",
+      "destination": "/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/kundehjelp",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/vanlige-sporsmal-messeutstyr",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/kjopsvilkar.html",
+      "permanent": true
+    },
+    {
+      "source": "/kundehjelp/kjops-og-salgsbetinger-hos-messeprofil-as",
+      "destination": "/kjopsvilkar.html",
+      "permanent": true
+    },
+    {
+      "source": "/om-oss-og-vare-verdier",
+      "destination": "/om-oss.html",
+      "permanent": true
+    },
+    {
+      "source": "/om-oss-og-vare-verdier/baerekraft",
+      "destination": "/baerekraft.html",
+      "permanent": true
+    },
+    {
+      "source": "/baerekraft-og-miljo-migrate",
+      "destination": "/baerekraft.html",
+      "permanent": true
+    },
+    {
+      "source": "/ide-og-design",
+      "destination": "/ide-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt-oss-for-informasjon-veiledning-og-tilbud",
+      "destination": "/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/verdt-a-vite-draft",
+      "destination": "/verdt-a-vite.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/verdt-a-vite.html",
+      "permanent": true
+    },
+    {
+      "source": "/category/tips-triks",
+      "destination": "/verdt-a-vite.html",
+      "permanent": true
+    },
+    {
+      "source": "/category/uncategorized",
+      "destination": "/verdt-a-vite.html",
+      "permanent": true
+    },
+    {
+      "source": "/ad-tent-pdf",
+      "destination": "/butikk.html?kat=Reklame%20telt%20med%20profilering",
+      "permanent": true
+    },
+    {
+      "source": "/open-pdf",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/landingsside-partnere",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/hvordan-velge-riktig-lyskasse",
+      "destination": "/guide-til-frittstaende-lyskasser/",
+      "permanent": true
+    },
+    {
+      "source": "/product/:slug*",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/produkt-kategori/:slug*",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
       "source": "/produkt/:slug*",
       "destination": "/butikk.html",
       "permanent": true
@@ -8,26 +1258,6 @@
     {
       "source": "/produktkategori/:slug*",
       "destination": "/butikk.html",
-      "permanent": true
-    },
-    {
-      "source": "/butikk",
-      "destination": "/butikk.html",
-      "permanent": true
-    },
-    {
-      "source": "/kontakt",
-      "destination": "/kontakt.html",
-      "permanent": true
-    },
-    {
-      "source": "/om-oss",
-      "destination": "/om-oss.html",
-      "permanent": true
-    },
-    {
-      "source": "/faq",
-      "destination": "/faq.html",
       "permanent": true
     }
   ]
