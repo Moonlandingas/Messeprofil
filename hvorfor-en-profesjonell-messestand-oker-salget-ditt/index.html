@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://moonlandingsite.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '38']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://cdn.matomo.cloud/moonlandingsite.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQTKCM9D');</script>
+<!-- End Google Tag Manager -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hvorfor en profesjonell messestand øker salget ditt | Messeprofil.no</title>
@@ -40,9 +59,21 @@ article a:hover{text-decoration:underline}
 .btn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 28px;border-radius:999px;font:700 14.5px Montserrat,sans-serif;text-decoration:none;background:var(--red);color:#fff}
 .btn:hover{background:var(--red-dark)}
 footer{border-top:1px solid var(--grey-200);padding:20px;text-align:center;font-size:12.5px;color:var(--grey)}
+
+@media (max-width:640px){
+  header{flex-direction:column;gap:10px;padding:14px 18px;text-align:center}
+  header nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px}
+  header nav a{margin-left:0}
+  main{padding:28px 18px 60px}
+  h1{font-size:clamp(26px,7vw,34px)}
+}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTKCM9D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <header>
   <a href="../index.html"><img src="../logo-messeprofil.svg" alt="Messeprofil.no"></a>
   <nav><a href="../butikk.html">Nettbutikk</a><a href="../verdt-a-vite.html">Verdt å vite</a><a href="../kontakt.html">Kontakt</a></nav>
@@ -84,5 +115,23 @@ footer{border-top:1px solid var(--grey-200);padding:20px;text-align:center;font-
   </div>
 </main>
 <footer>© 2026 Messeprofil AS · Storgata 6, 2050 Jessheim · <a href="../index.html" style="color:var(--grey)">messeprofil.no</a></footer>
+<script>
+/* Klikksporing: telefon, e-post og forespørsel -> dataLayer (GTM -> Google Ads + Matomo) */
+(function(){
+  window.dataLayer = window.dataLayer || [];
+  function push(ev, method, label){
+    window.dataLayer.push({event:ev, kontakt_metode:method, kontakt_verdi:label||'', side:location.pathname});
+    if(window._paq){ window._paq.push(['trackEvent','Kontakt', method, label||'', 1]); }
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var h = a.getAttribute('href') || '';
+    if(h.indexOf('tel:') === 0){ push('kontakt_telefon','telefon', h.replace('tel:','')); }
+    else if(h.indexOf('mailto:') === 0){ push('kontakt_epost','epost', h.replace('mailto:','')); }
+    else if(h.indexOf('typeform.com') > -1){ push('skjema_apnet','skjema', h); }
+  }, true);
+})();
+</script>
 </body>
 </html>
