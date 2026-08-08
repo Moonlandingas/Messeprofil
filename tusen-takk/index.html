@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQTKCM9D');</script>
+<!-- End Google Tag Manager -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tusen takk! Vi har mottatt forespørselen din | Messeprofil.no</title>
@@ -36,6 +40,10 @@ footer a{color:var(--grey)}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTKCM9D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <header><a href="../index.html"><img src="../logo-messeprofil.svg" alt="Messeprofil.no"></a></header>
 <main>
   <div class="card">
@@ -51,5 +59,35 @@ footer a{color:var(--grey)}
   </div>
 </main>
 <footer>© 2026 Messeprofil AS · Storgata 6, 2050 Jessheim</footer>
+<script>
+/* Klikksporing: telefon, e-post og forespørsel -> dataLayer (GTM -> Google Ads + Matomo) */
+(function(){
+  window.dataLayer = window.dataLayer || [];
+  function push(ev, method, label){
+    window.dataLayer.push({event:ev, kontakt_metode:method, kontakt_verdi:label||'', side:location.pathname});
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var h = a.getAttribute('href') || '';
+    if(h.indexOf('tel:') === 0){ push('kontakt_telefon','telefon', h.replace('tel:','')); }
+    else if(h.indexOf('mailto:') === 0){ push('kontakt_epost','epost', h.replace('mailto:','')); }
+    else if(h.indexOf('typeform.com') > -1){ push('skjema_apnet','skjema', h); }
+  }, true);
+})();
+</script>
+<script>
+/* Konvertering: innsendt forespørsel (Typeform redirecter hit) */
+(function(){
+  window.dataLayer = window.dataLayer || [];
+  var p = new URLSearchParams(location.search);
+  window.dataLayer.push({
+    event: 'lead_skjema_fullfort',
+    lead_kilde: 'typeform',
+    lead_produkt: p.get('produkt') || '',
+    lead_id: p.get('response_id') || p.get('rid') || ''
+  });
+})();
+</script>
 </body>
 </html>
