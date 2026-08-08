@@ -2701,6 +2701,136 @@
       "permanent": true
     },
     {
+      "source": "/kontakt",
+      "destination": "/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt/",
+      "destination": "/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/faq/",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/om-oss",
+      "destination": "/om-oss.html",
+      "permanent": true
+    },
+    {
+      "source": "/om-oss/",
+      "destination": "/om-oss.html",
+      "permanent": true
+    },
+    {
+      "source": "/baerekraft",
+      "destination": "/baerekraft.html",
+      "permanent": true
+    },
+    {
+      "source": "/baerekraft/",
+      "destination": "/baerekraft.html",
+      "permanent": true
+    },
+    {
+      "source": "/ide-design",
+      "destination": "/ide-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/ide-design/",
+      "destination": "/ide-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/verdt-a-vite",
+      "destination": "/verdt-a-vite.html",
+      "permanent": true
+    },
+    {
+      "source": "/verdt-a-vite/",
+      "destination": "/verdt-a-vite.html",
+      "permanent": true
+    },
+    {
+      "source": "/kjopsvilkar",
+      "destination": "/kjopsvilkar.html",
+      "permanent": true
+    },
+    {
+      "source": "/kjopsvilkar/",
+      "destination": "/kjopsvilkar.html",
+      "permanent": true
+    },
+    {
+      "source": "/butikk",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/butikk/",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/produkt",
+      "destination": "/produkt.html",
+      "permanent": true
+    },
+    {
+      "source": "/produkt/",
+      "destination": "/produkt.html",
+      "permanent": true
+    },
+    {
+      "source": "/vilkar",
+      "destination": "/kjopsvilkar.html",
+      "permanent": true
+    },
+    {
+      "source": "/vilkar/",
+      "destination": "/kjopsvilkar.html",
+      "permanent": true
+    },
+    {
+      "source": "/sporsmal",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/sporsmal/",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/design",
+      "destination": "/ide-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/design/",
+      "destination": "/ide-design.html",
+      "permanent": true
+    },
+    {
+      "source": "/blogg",
+      "destination": "/verdt-a-vite.html",
+      "permanent": true
+    },
+    {
+      "source": "/blogg/",
+      "destination": "/verdt-a-vite.html",
+      "permanent": true
+    },
+    {
       "source": "/product/:slug*",
       "destination": "/butikk.html",
       "permanent": true
@@ -2739,6 +2869,45 @@
       "source": "/produktkategori/:slug*/",
       "destination": "/butikk.html",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors 'self' https://*.typeform.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin-allow-popups"
+        },
+        {
+          "key": "X-DNS-Prefetch-Control",
+          "value": "on"
+        }
+      ]
     }
   ]
 }
