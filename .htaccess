@@ -1,0 +1,8 @@
+# Gjelder bare stage.messeprofil.no (Hostinger). Vercel ignorerer denne filen.
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^robots\.txt$ robots-stage.txt [L]
+</IfModule>

@@ -1,13 +1,34 @@
 {
-  "rewrites": [
-    { "source": "/robots.txt", "destination": "/robots-prod.txt" }
-  ],
   "redirects": [
-    { "source": "/produkt/:slug*", "destination": "/butikk.html", "permanent": true },
-    { "source": "/produktkategori/:slug*", "destination": "/butikk.html", "permanent": true },
-    { "source": "/butikk", "destination": "/butikk.html", "permanent": true },
-    { "source": "/kontakt", "destination": "/kontakt.html", "permanent": true },
-    { "source": "/om-oss", "destination": "/om-oss.html", "permanent": true },
-    { "source": "/faq", "destination": "/faq.html", "permanent": true }
+    {
+      "source": "/produkt/:slug*",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/produktkategori/:slug*",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/butikk",
+      "destination": "/butikk.html",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt",
+      "destination": "/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/om-oss",
+      "destination": "/om-oss.html",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq.html",
+      "permanent": true
+    }
   ]
 }
