@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
+
 <!-- Matomo -->
 <script>
   var _paq = window._paq = window._paq || [];
@@ -635,7 +636,7 @@ document.querySelectorAll('.reveal,.stagger').forEach(el => io.observe(el));
   window.dataLayer = window.dataLayer || [];
   function push(ev, method, label){
     window.dataLayer.push({event:ev, kontakt_metode:method, kontakt_verdi:label||'', side:location.pathname});
-    if(window._paq){ window._paq.push(['trackEvent','Kontakt', method, label||'', 1]); }
+    if(window.fbq){ window.fbq('track','Contact',{metode:method}); }
   }
   document.addEventListener('click', function(e){
     var a = e.target && e.target.closest ? e.target.closest('a') : null;
