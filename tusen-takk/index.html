@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
+
 <!-- Matomo -->
 <script>
   var _paq = window._paq = window._paq || [];
@@ -88,7 +89,7 @@ footer a{color:var(--grey)}
   window.dataLayer = window.dataLayer || [];
   function push(ev, method, label){
     window.dataLayer.push({event:ev, kontakt_metode:method, kontakt_verdi:label||'', side:location.pathname});
-    if(window._paq){ window._paq.push(['trackEvent','Kontakt', method, label||'', 1]); }
+    if(window.fbq){ window.fbq('track','Contact',{metode:method}); }
   }
   document.addEventListener('click', function(e){
     var a = e.target && e.target.closest ? e.target.closest('a') : null;
@@ -112,6 +113,7 @@ footer a{color:var(--grey)}
     lead_id: p.get('response_id') || p.get('rid') || ''
   });
   if(window._paq){ window._paq.push(['trackEvent','Lead','Skjema fullfoert', p.get('produkt')||'', 1]); }
+  if(window.fbq){ window.fbq('track','Lead',{content_name: p.get('produkt')||'forespoersel'}); }
 })();
 </script>
 </body>
