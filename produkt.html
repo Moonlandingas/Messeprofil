@@ -585,6 +585,16 @@ const IMGBASE = "bilder/";
   const name = dec(p[1]);
   const cat = CATS[p[2][0]] || 'Messeutstyr';
   document.title = name+' – '+cat+' | Messeprofil.no';
+  /* SEO: hver produkt-URL skal kanonisere til seg selv, ikke til bar produkt.html */
+  const canonUrl = 'https://www.messeprofil.no/produkt.html?id='+p[0];
+  const canon = document.querySelector('link[rel="canonical"]');
+  if(canon) canon.href = canonUrl;
+  const ogu = document.querySelector('meta[property="og:url"]');
+  if(ogu) ogu.content = canonUrl;
+  const ogt = document.querySelector('meta[property="og:title"]');
+  if(ogt) ogt.content = name+' – '+cat+' | Messeprofil.no';
+  const ogi = document.querySelector('meta[property="og:image"]');
+  if(ogi) ogi.content = 'https://www.messeprofil.no/bilder/'+p[3];
   const md = document.querySelector('meta[name="description"]');
   if(md) md.content = name+' ('+cat+') med ditt eget design fra Messeprofil. Be om pris – du får tilbud samme dag. Rask levering i hele Norge.';
   const h1 = document.querySelector('.p-info h1'); if(h1) h1.textContent = name;
