@@ -25,6 +25,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Messevegg tekstil buet 3×3 – messevegg med eget trykk | Messeprofil.no</title>
 <script src="typeform-produkter.js"></script>
+<script src="produktdata.js"></script>
 <link rel="canonical" href="https://www.messeprofil.no/produkt.html">
 <meta property="og:title" content="Messevegg tekstil buet 3×3 – messevegg med eget trykk | Messeprofil.no">
 <meta property="og:description" content="Buet messevegg i tekstil 3×3 med ditt design. Lett å frakte, montert på minutter – perfekt til messestand, event og butikk. Rask levering i hele Norge.">
@@ -496,26 +497,19 @@ html,body{overflow-x:hidden}
     <button role="tab" aria-selected="false" onclick="tab(this,1)">Spesifikasjoner</button>
     <button role="tab" aria-selected="false" onclick="tab(this,2)">Levering og filkrav</button>
   </div>
-  <div class="tab-panel active" role="tabpanel">
-    <h3>Bygget for å brukes igjen og igjen</h3>
-    <p>Den buede tekstilveggen er vår mest populære messevegg – og det er ikke tilfeldig. Rammen i aluminium klikkes sammen uten verktøy, tekstilduken trekkes over som en sokk, og hele standen står klar på rundt ti minutter.</p>
-    <p>Trykket er sømløst over hele flaten, så designet ditt vises uten skjøter eller synlige overganger. Duken tåler maskinvask, og når du skal fornye profilen bestiller du bare ny duk til samme ramme.</p>
-    <p>Alt pakkes i den medfølgende transportbaggen som får plass i bagasjerommet på en vanlig personbil.</p>
+  <div class="tab-panel active" role="tabpanel" id="descPanel">
+    <h3>Produsert med ditt design</h3>
+    <p>Alle produktene våre leveres med ditt eget trykk, produsert i samme europeiske fabrikk. Send en forespørsel, så får du pris, designforslag og leveringstid samme dag.</p>
+    <p>Detaljert produktbeskrivelse vises når du velger et produkt fra nettbutikken.</p>
   </div>
-  <div class="tab-panel" role="tabpanel">
+  <div class="tab-panel" role="tabpanel" id="specPanel">
     <table class="spec-table">
-      <tr><th>Mål montert (3×3)</th><td>Ca. 300 × 228 cm</td></tr>
-      <tr><th>Ramme</th><td>Aluminium, 30 mm rør med klikklås</td></tr>
-      <tr><th>Duk</th><td>Polyester-tekstil 260 g/m², sømløst sublimasjonstrykk</td></tr>
-      <tr><th>Vekt inkl. bag</th><td>Ca. 11 kg</td></tr>
-      <tr><th>Pakkemål</th><td>Ca. 80 × 30 × 30 cm</td></tr>
-      <tr><th>Montering</th><td>1 person, ca. 10 minutter, uten verktøy</td></tr>
-      <tr><th>Garanti</th><td>2 år på ramme</td></tr>
+      <tr><th>Spesifikasjoner</th><td>Velg et produkt i nettbutikken for detaljerte mål og vekt – eller kontakt oss, så hjelper vi deg.</td></tr>
     </table>
   </div>
   <div class="tab-panel" role="tabpanel">
     <h3>Levering</h3>
-    <p>Normal leveringstid er 3–5 virkedager etter at designet er godkjent. Trenger du det raskere? Ekspressproduksjon på 1–2 dager kan velges i kassen.</p>
+    <p>Normal produksjonstid er 3–4 virkedager fra godkjent trykkfil. I tillegg kommer frakt: standard 7–8 virkedager, eller ekspress på ca. 3 dager om du har dårlig tid – si fra i forespørselen, så setter vi opp raskeste løp.</p>
     <h3>Filkrav</h3>
     <p>Last opp trykkeklar PDF i målestokk 1:10 med 3 mm utfall, CMYK og minimum 150 dpi i full størrelse. Ferdige maler ligger klare for nedlasting – eller la oss sette opp designet for deg, helt uten ekstra kostnad.</p>
   </div>
@@ -610,6 +604,42 @@ const IMGBASE = "bilder/";
   const og = document.querySelectorAll('.options')[0]; if(og) og.style.display='none';
   const req = document.getElementById('sendReq');
   if(req && window.typeformLenke) req.href = window.typeformLenke(name);
+
+  /* Per-produkt beskrivelse og spesifikasjoner fra adSystem-feeden (produktdata.js) */
+  const PD = (window.PRODUKTDATA || {})[String(id)];
+  const esc = s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const descPanel = document.getElementById('descPanel');
+  if(descPanel && PD && PD.d){
+    const blocks = PD.d.split(/\n\s*\n/).map(b=>b.trim()).filter(Boolean);
+    descPanel.innerHTML = blocks.map(b=>{
+      const lines=b.split('\n').map(l=>l.trim()).filter(Boolean);
+      return lines.map(l=>
+        (l.length<75 && !/[.!?:,]$/.test(l)) ? '<h3>'+esc(l)+'</h3>' : '<p>'+esc(l)+'</p>'
+      ).join('');
+    }).join('');
+  } else if(descPanel && !PD){
+    descPanel.innerHTML = '<h3>'+esc(name)+'</h3>'+
+      '<p>'+esc(name)+' leveres med ditt eget design og trykk. Send en forespørsel, så får du pris, produktdetaljer og leveringstid samme dag.</p>'+
+      '<p>Lurer du på mål, vekt eller varianter? Kontakt oss – vi svarer raskt.</p>';
+  }
+  const specPanel = document.getElementById('specPanel');
+  if(specPanel){
+    const rows=[];
+    if(PD && PD.s && PD.s.length){
+      rows.push(['Tilgjengelige størrelser (cm)', PD.s.join(', ')]);
+    } else if(p[4]>0){
+      rows.push(['Varianter/størrelser', p[4]+' – se forespørselsskjemaet']);
+    }
+    if(PD && PD.wmin){
+      rows.push(['Vekt', PD.wmin===PD.wmax ? PD.wmin+' kg' : PD.wmin+'–'+PD.wmax+' kg (avhengig av størrelse)']);
+    }
+    if(PD && PD.v>1) rows.push(['Antall varianter', String(PD.v)]);
+    if(PD && PD.ean) rows.push(['EAN', PD.ean]);
+    rows.push(['Kategori', cat]);
+    rows.push(['Produsent', 'adSystem – trykk og montering via Messeprofil']);
+    specPanel.innerHTML = '<table class="spec-table">'+
+      rows.map(r=>'<tr><th>'+esc(r[0])+'</th><td>'+esc(r[1])+'</td></tr>').join('')+'</table>';
+  }
 })();
 (function(){
   const grid = document.getElementById('relatedGrid');
