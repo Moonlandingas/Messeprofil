@@ -105,8 +105,8 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.15}
 /* Product layout */
 .product{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;padding:32px 0 80px;align-items:start}
 
-.gallery-main{background:var(--grey-100);border-radius:var(--radius);aspect-ratio:1/.85;display:grid;place-items:center;padding:44px;border:1px solid var(--grey-200)}
-.gallery-main svg{width:100%;height:100%}
+.gallery-main{position:relative;background:#fff;border-radius:var(--radius);aspect-ratio:1/.85;overflow:hidden;border:1px solid var(--grey-200)}
+.gallery-main svg{position:absolute;inset:44px;width:calc(100% - 88px);height:calc(100% - 88px)}
 .gallery-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
 .gallery-thumbs button{background:var(--grey-100);border:1.5px solid var(--grey-200);border-radius:10px;aspect-ratio:1/.8;display:grid;place-items:center;padding:12px;transition:border-color .15s}
 .gallery-thumbs button:hover{border-color:var(--grey-500)}
@@ -165,9 +165,9 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.15}
 .related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .product-card{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;position:relative}
 .product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-.product-thumb{background:#fff;aspect-ratio:1/.82;display:grid;place-items:center;padding:20px}
-.product-thumb svg{width:100%;height:100%;max-height:110px}
-.product-thumb img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.product-thumb{position:relative;background:#fff;aspect-ratio:1/.82;overflow:hidden}
+.product-thumb svg{position:absolute;inset:20px;width:calc(100% - 40px);height:calc(100% - 40px);max-height:110px;margin:auto}
+.product-thumb img{position:absolute;inset:20px;width:calc(100% - 40px);height:calc(100% - 40px);object-fit:contain;object-position:center}
 .product-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1;gap:4px}
 .product-body h3{font-size:14.5px;font-weight:700;font-family:var(--font-body)}
 .product-price{color:var(--grey-500);font-size:13.5px}
@@ -592,7 +592,7 @@ const IMGBASE = "bilder/";
   const bc = document.querySelector('.breadcrumb span[aria-current]'); if(bc) bc.textContent = name;
   const bcs = document.querySelectorAll('.breadcrumb a'); if(bcs[2]) bcs[2].textContent = cat;
   const gm = document.getElementById('galleryMain');
-  if(gm){ gm.innerHTML=''; const im=document.createElement('img'); im.src=IMGBASE+p[3]; im.alt=name+' – '+cat; im.style.cssText='width:100%;height:100%;object-fit:contain;display:block'; gm.appendChild(im); }
+  if(gm){ gm.innerHTML=''; const im=document.createElement('img'); im.src=IMGBASE+p[3]; im.alt=name+' – '+cat; im.style.cssText='position:absolute;inset:24px;width:calc(100% - 48px);height:calc(100% - 48px);object-fit:contain;object-position:center;display:block'; gm.appendChild(im); }
   const th = document.querySelector('.gallery-thumbs'); if(th) th.style.display='none';
   const lead = document.querySelector('.p-lead');
   if(lead) lead.textContent = (p[4]>0 ? p[4]+' varianter/størrelser tilgjengelig. ' : '')+'Produseres med ditt eget design. Send forespørsel, så får du pris, forslag og leveringstid samme dag.';

@@ -390,7 +390,7 @@ html,body{overflow-x:hidden}
   <div class="container">
     <span class="insp-kicker">Inspirasjon</span>
     <h2>Messestands og profilering i praksis</h2>
-    <p class="insp-lead">Se hvordan messevegger, lyskasser, messedisker og rollups fra Messeprofil ser ut i bruk – ekte oppsett fra messer, events og butikker i Norge og Europa. Klikk på et bilde for flere detaljer og enda mer inspirasjon på Pinterest-profilen vår.</p>
+    <p class="insp-lead">Her finner du inspirasjon og eksempler på hvordan produktene vi tilbyr kan se ut i bruk. Bildene viser ulike løsninger og oppsett fra våre leverandører og deres kundenettverk. Klikk på et bilde for flere detaljer og enda mer inspirasjon på Pinterest-profilen vår.</p>
         <div class="insp-group">
       <h3>Messevegger</h3>
       <div class="insp-grid"><a class="insp-tile" href="https://no.pinterest.com/pin/1124351863252352860/" target="_blank" rel="noopener"><img loading="lazy" src="https://i.pinimg.com/564x/02/d4/cc/02d4ccdf93524a54de5a209dd196332f.jpg" alt="Messevegg med eget trykk – tekstilvegg for messestand – eksempel 1"></a><a class="insp-tile" href="https://no.pinterest.com/pin/1124351863252352828/" target="_blank" rel="noopener"><img loading="lazy" src="https://i.pinimg.com/564x/d3/81/47/d38147f1c0402ab0205166a2f8169753.jpg" alt="Messevegg med eget trykk – tekstilvegg for messestand – eksempel 2"></a><a class="insp-tile" href="https://no.pinterest.com/pin/1124351863252352819/" target="_blank" rel="noopener"><img loading="lazy" src="https://i.pinimg.com/564x/f2/3e/7d/f23e7d00bd2a5bad4ed8fa912c337821.jpg" alt="Messevegg med eget trykk – tekstilvegg for messestand – eksempel 3"></a><a class="insp-tile" href="https://no.pinterest.com/pin/1124351863252352806/" target="_blank" rel="noopener"><img loading="lazy" src="https://i.pinimg.com/564x/a7/f9/81/a7f9812f321dd7a29be71f106d9a705a.jpg" alt="Messevegg med eget trykk – tekstilvegg for messestand – eksempel 4"></a></div>
@@ -443,8 +443,8 @@ html,body{overflow-x:hidden}
 @media (max-width:560px){.pgrid{grid-template-columns:1fr}}
 .pcard{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
 .pcard:hover{box-shadow:var(--shadow-md,0 10px 30px rgba(26,26,26,.10));transform:translateY(-3px)}
-.pcard .im{aspect-ratio:5/4;background:var(--grey-50,#F7F5F6);display:grid;place-items:center;overflow:hidden}
-.pcard .im img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.pcard .im{position:relative;aspect-ratio:5/4;background:#fff;overflow:hidden}
+.pcard .im img{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);object-fit:contain;object-position:center}
 .pcard .bd{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
 .pcard .cat{font:700 10.5px var(--font-head);letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
 .pcard h3{font:700 16px var(--font-head);letter-spacing:-.01em;line-height:1.3}
