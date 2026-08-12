@@ -497,7 +497,18 @@ function chips(){
   const el = document.getElementById('chips');
   el.innerHTML = '<a class="chip'+(cat===-1?' active':'')+'" data-c="-1">Alle produkter</a>' +
     CATS.map((c,i)=>'<a class="chip'+(cat===i?' active':'')+'" data-c="'+i+'">'+c+'</a>').join('');
-  el.querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{cat=parseInt(ch.dataset.c);chips();render()});
+  el.querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{cat=parseInt(ch.dataset.c);chips();render();scrollTilProdukter()});
+}
+/* Etter kategorivalg skal produktene være synlige - spesielt viktig på mobil,
+   der chip-listen er lang og resultatet ellers havner under folden. */
+function scrollTilProdukter(){
+  const grid = document.getElementById('grid');
+  if(!grid) return;
+  const r = grid.getBoundingClientRect();
+  if(r.top > window.innerHeight*0.55 || r.top < 0){
+    const y = window.scrollY + r.top - 130; /* plass til sticky header */
+    window.scrollTo({top:y, behavior:'smooth'});
+  }
 }
 const PAGE = 24;
 let vis = PAGE;
@@ -525,6 +536,7 @@ function render(behold){
 document.getElementById('q').addEventListener('input', e=>{q=e.target.value.toLowerCase();render()});
 document.getElementById('visFlere').addEventListener('click', ()=>{vis += PAGE; render(true);});
 chips(); render();
+if(katParam || q) setTimeout(scrollTilProdukter, 150);
 </script>
 
 </main>

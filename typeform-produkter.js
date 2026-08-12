@@ -190,5 +190,6 @@ window.TYPEFORM_PRODUKTREF = {
 };
 window.typeformLenke = function(navn){
   var r = navn && window.TYPEFORM_PRODUKTREF[navn];
-  return window.TYPEFORM_URL + (r ? "#answers-produkt-dropdown=" + r : "");
+  /* Begge prefill-formater sendes; Typeform ignorerer det den ikke kjenner. */
+  return window.TYPEFORM_URL + (r ? "#answers-produkt-dropdown=" + r + "&produkt-dropdown=" + r : "");
 };

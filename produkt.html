@@ -544,10 +544,34 @@ function pick(btn, group){
   if(group === 'size'){
         document.getElementById('sizeLabel').textContent = btn.dataset.size;
   }
+  updateReqLink();
 }
 function qty(d){
   const i = document.getElementById('qtyInput');
   i.value = Math.max(1, (parseInt(i.value)||1) + d);
+  updateReqLink();
+}
+/* Bygger forespørselslenken slik at valgte opsjoner følger med inn i Typeform-skjemaet
+   (forhåndsutfylles i kommentarfeltet) og dermed videre i e-post/Pipedrive. */
+const TF_KOMMENTAR_REF = '681ba83a-7541-4b12-b478-679e1cd75a23';
+function updateReqLink(){
+  const req = document.getElementById('sendReq');
+  if(!req || !window.typeformLenke || !window.__prodName) return;
+  const deler = [];
+  const groups = document.querySelectorAll('.options');
+  groups.forEach(g=>{
+    if(g.style.display==='none') return;
+    const a=g.querySelector('.opt.active');
+    const label=g.getAttribute('aria-label')||'';
+    if(a) deler.push(label.replace('Velg ','').replace(/^./,c=>c.toUpperCase())+': '+a.textContent.trim());
+  });
+  const q=document.getElementById('qtyInput');
+  if(q && parseInt(q.value)>0) deler.push('Antall: '+q.value);
+  deler.push('Produktside: https://www.messeprofil.no/produkt.html?id='+new URLSearchParams(location.search).get('id'));
+  const sammendrag = window.__prodName + ' – ' + deler.join(' · ');
+  var enc = encodeURIComponent(sammendrag);
+  req.href = window.typeformLenke(window.__prodName) +
+    '&answers-' + TF_KOMMENTAR_REF + '=' + enc + '&' + TF_KOMMENTAR_REF + '=' + enc;
 }
 function tab(btn, i){
   document.querySelectorAll('.tab-nav button').forEach((b,j)=>{
@@ -600,10 +624,20 @@ const IMGBASE = "bilder/";
   const th = document.querySelector('.gallery-thumbs'); if(th) th.style.display='none';
   const lead = document.querySelector('.p-lead');
   if(lead) lead.textContent = (p[4]>0 ? p[4]+' varianter/størrelser tilgjengelig. ' : '')+'Produseres med ditt eget design. Send forespørsel, så får du pris, forslag og leveringstid samme dag.';
-  const ol = document.querySelectorAll('.option-label')[0]; if(ol) ol.style.display='none';
-  const og = document.querySelectorAll('.options')[0]; if(og) og.style.display='none';
-  const req = document.getElementById('sendReq');
-  if(req && window.typeformLenke) req.href = window.typeformLenke(name);
+  /* Størrelsesvelger: ekte størrelser fra feeden når vi har dem, ellers skjules raden */
+  const ol = document.querySelectorAll('.option-label')[0];
+  const og = document.querySelectorAll('.options')[0];
+  const PDx = (window.PRODUKTDATA || {})[String(id)];
+  if(og && PDx && PDx.s && PDx.s.length){
+    og.innerHTML = PDx.s.map((s,i)=>
+      '<button class="opt'+(i===0?' active':'')+'" data-size="'+s+' cm" onclick="pick(this,\'size\')">'+s+' cm</button>').join('');
+    const sl=document.getElementById('sizeLabel'); if(sl) sl.textContent = PDx.s[0]+' cm';
+  } else {
+    if(ol) ol.style.display='none';
+    if(og) og.style.display='none';
+  }
+  window.__prodName = name;
+  if(window.updateReqLink) window.updateReqLink();
 
   /* Per-produkt beskrivelse og spesifikasjoner fra adSystem-feeden (produktdata.js) */
   const PD = (window.PRODUKTDATA || {})[String(id)];
