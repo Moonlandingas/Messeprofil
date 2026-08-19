@@ -2,8 +2,42 @@
 <html lang="no">
 <head>
 
-<!-- Matomo -->
+<!-- Bot-vakt: MÅ ligge FØR all sporing (Matomo, GTM, Google Ads, Meta).
+     Blokkerer alle tracking-tagger når URL-en inneholder den utgåtte WooCommerce-
+     parameteren «add-to-cart» (brukes ikke av den nye siden – ren bot-markør),
+     eller når nettleseren er automatisert (navigator.webdriver).
+     Rydder samtidig URL-en: beholder gyldige parametre (kat, q, id), dropper
+     add-to-cart, min_price, max_price m.m. Vanlige besøk påvirkes ikke.
+     Hosting-nivå-blokkering finnes i tillegg i .htaccess (301 før HTML serveres). -->
 <script>
+(function(){
+  var bot = (navigator.webdriver === true);
+  try{
+    var p = new URLSearchParams(location.search);
+    if (p.has('add-to-cart')) {
+      bot = true;
+      var behold = ['kat','q','id'], ny = new URLSearchParams();
+      for (var i=0;i<behold.length;i++){ if (p.has(behold[i])) ny.set(behold[i], p.get(behold[i])); }
+      var s = ny.toString();
+      history.replaceState(null, '', location.pathname + (s ? '?'+s : '') + location.hash);
+    }
+  }catch(e){}
+  window.__mpBot = bot;
+})();
+</script>
+<!-- Fokusring kun ved tastaturnavigasjon: klikk/tap skal ikke gi ring rundt knapper -->
+<script>
+(function(){
+  var d=document;
+  d.addEventListener('mousedown',function(){if(d.body)d.body.classList.add('bruker-mus')},true);
+  d.addEventListener('touchstart',function(){if(d.body)d.body.classList.add('bruker-mus')},true);
+  d.addEventListener('keydown',function(e){if(e.key==='Tab'&&d.body)d.body.classList.remove('bruker-mus')},true);
+})();
+</script>
+
+<!-- Matomo (hoppes over hvis bot-vakten over har slått til) -->
+<script>
+if (!window.__mpBot) {
   var _paq = window._paq = window._paq || [];
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
@@ -14,11 +48,12 @@
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src='https://cdn.matomo.cloud/moonlandingsite.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
   })();
+}
 </script>
 <!-- End Matomo Code -->
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQTKCM9D');</script>
+<!-- Google Tag Manager (hoppes over hvis bot-vakten har slått til) -->
+<script>if(!window.__mpBot){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQTKCM9D');}</script>
 <!-- End Google Tag Manager -->
 
 <meta charset="UTF-8">
@@ -71,7 +106,7 @@ a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer}
 h1,h2,h3,h4{font-family:var(--font-head);line-height:1.2}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-:focus-visible{outline:3px solid var(--red);outline-offset:2px;border-radius:4px}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
 
 /* ---------- Scroll reveal ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
@@ -318,6 +353,8 @@ h2.sec-title{font-size:clamp(25px,3.1vw,36px);font-weight:800;letter-spacing:-.0
   .footer-grid{grid-template-columns:1fr;gap:32px;padding:48px 0 36px}
   .footer-bottom{flex-direction:column;align-items:flex-start}
 }
+
+body.bruker-mus :focus{outline:none}
 </style>
 <style>
 /* Undersider */

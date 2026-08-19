@@ -2,8 +2,42 @@
 <html lang="no">
 <head>
 
-<!-- Matomo -->
+<!-- Bot-vakt: MÅ ligge FØR all sporing (Matomo, GTM, Google Ads, Meta).
+     Blokkerer alle tracking-tagger når URL-en inneholder den utgåtte WooCommerce-
+     parameteren «add-to-cart» (brukes ikke av den nye siden – ren bot-markør),
+     eller når nettleseren er automatisert (navigator.webdriver).
+     Rydder samtidig URL-en: beholder gyldige parametre (kat, q, id), dropper
+     add-to-cart, min_price, max_price m.m. Vanlige besøk påvirkes ikke.
+     Hosting-nivå-blokkering finnes i tillegg i .htaccess (301 før HTML serveres). -->
 <script>
+(function(){
+  var bot = (navigator.webdriver === true);
+  try{
+    var p = new URLSearchParams(location.search);
+    if (p.has('add-to-cart')) {
+      bot = true;
+      var behold = ['kat','q','id'], ny = new URLSearchParams();
+      for (var i=0;i<behold.length;i++){ if (p.has(behold[i])) ny.set(behold[i], p.get(behold[i])); }
+      var s = ny.toString();
+      history.replaceState(null, '', location.pathname + (s ? '?'+s : '') + location.hash);
+    }
+  }catch(e){}
+  window.__mpBot = bot;
+})();
+</script>
+<!-- Fokusring kun ved tastaturnavigasjon: klikk/tap skal ikke gi ring rundt knapper -->
+<script>
+(function(){
+  var d=document;
+  d.addEventListener('mousedown',function(){if(d.body)d.body.classList.add('bruker-mus')},true);
+  d.addEventListener('touchstart',function(){if(d.body)d.body.classList.add('bruker-mus')},true);
+  d.addEventListener('keydown',function(e){if(e.key==='Tab'&&d.body)d.body.classList.remove('bruker-mus')},true);
+})();
+</script>
+
+<!-- Matomo (hoppes over hvis bot-vakten over har slått til) -->
+<script>
+if (!window.__mpBot) {
   var _paq = window._paq = window._paq || [];
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
@@ -14,11 +48,12 @@
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src='https://cdn.matomo.cloud/moonlandingsite.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
   })();
+}
 </script>
 <!-- End Matomo Code -->
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQTKCM9D');</script>
+<!-- Google Tag Manager (hoppes over hvis bot-vakten har slått til) -->
+<script>if(!window.__mpBot){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQTKCM9D');}</script>
 <!-- End Google Tag Manager -->
 
 <meta charset="UTF-8">
@@ -53,7 +88,7 @@ a{color:inherit;text-decoration:none}
 button,select{font-family:inherit;cursor:pointer}
 h1,h2,h3{font-family:var(--font-head);line-height:1.15}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-:focus-visible{outline:3px solid var(--red);outline-offset:2px;border-radius:4px}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
 
 .topbar{background:var(--ink);color:#D6D6DC;font-size:13px}
 .topbar .container{display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:16px}
@@ -215,6 +250,8 @@ body.drawer-open .drawer-backdrop{opacity:1;pointer-events:auto}
   .buy-row .btn{flex-basis:100%}
   .related-grid{grid-template-columns:repeat(2,1fr);gap:14px}
 }
+
+body.bruker-mus :focus{outline:none}
 </style>
 <style>
 /* Figma-restyle: rød header, hvit logo, lys footer, mobil-fix */
@@ -551,9 +588,12 @@ function qty(d){
   i.value = Math.max(1, (parseInt(i.value)||1) + d);
   updateReqLink();
 }
-/* Bygger forespørselslenken slik at valgte opsjoner følger med inn i Typeform-skjemaet
-   (forhåndsutfylles i kommentarfeltet) og dermed videre i e-post/Pipedrive. */
-const TF_KOMMENTAR_REF = '681ba83a-7541-4b12-b478-679e1cd75a23';
+/* Bygger forespørselslenken slik at valgte opsjoner følger med inn i Typeform.
+   NB: Typeform kan IKKE forhåndsutfylle tekstfelt via URL – bare forhåndsvelge
+   choice-felt (#answers-<ref>=<choice-ref>) og motta SKJULTE felt (#felt=verdi).
+   Valgene sendes derfor som skjult felt «konfig», som følger innsendingen videre
+   til e-postvarsler og integrasjoner. Krever at «konfig» er definert som
+   hidden field i skjemaet hGGF7wQ7 (Typeform-bygger → Create → Hidden fields). */
 function updateReqLink(){
   const req = document.getElementById('sendReq');
   if(!req || !window.typeformLenke || !window.__prodName) return;
@@ -569,9 +609,9 @@ function updateReqLink(){
   if(q && parseInt(q.value)>0) deler.push('Antall: '+q.value);
   deler.push('Produktside: https://www.messeprofil.no/produkt.html?id='+new URLSearchParams(location.search).get('id'));
   const sammendrag = window.__prodName + ' – ' + deler.join(' · ');
-  var enc = encodeURIComponent(sammendrag);
-  req.href = window.typeformLenke(window.__prodName) +
-    '&answers-' + TF_KOMMENTAR_REF + '=' + enc + '&' + TF_KOMMENTAR_REF + '=' + enc;
+  var u = window.typeformLenke(window.__prodName);
+  u += (u.indexOf('#') >= 0 ? '&' : '#') + 'konfig=' + encodeURIComponent(sammendrag);
+  req.href = u;
 }
 function tab(btn, i){
   document.querySelectorAll('.tab-nav button').forEach((b,j)=>{

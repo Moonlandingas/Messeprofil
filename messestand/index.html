@@ -2,8 +2,42 @@
 <html lang="no">
 <head>
 
-<!-- Matomo -->
+<!-- Bot-vakt: MÅ ligge FØR all sporing (Matomo, GTM, Google Ads, Meta).
+     Blokkerer alle tracking-tagger når URL-en inneholder den utgåtte WooCommerce-
+     parameteren «add-to-cart» (brukes ikke av den nye siden – ren bot-markør),
+     eller når nettleseren er automatisert (navigator.webdriver).
+     Rydder samtidig URL-en: beholder gyldige parametre (kat, q, id), dropper
+     add-to-cart, min_price, max_price m.m. Vanlige besøk påvirkes ikke.
+     Hosting-nivå-blokkering finnes i tillegg i .htaccess (301 før HTML serveres). -->
 <script>
+(function(){
+  var bot = (navigator.webdriver === true);
+  try{
+    var p = new URLSearchParams(location.search);
+    if (p.has('add-to-cart')) {
+      bot = true;
+      var behold = ['kat','q','id'], ny = new URLSearchParams();
+      for (var i=0;i<behold.length;i++){ if (p.has(behold[i])) ny.set(behold[i], p.get(behold[i])); }
+      var s = ny.toString();
+      history.replaceState(null, '', location.pathname + (s ? '?'+s : '') + location.hash);
+    }
+  }catch(e){}
+  window.__mpBot = bot;
+})();
+</script>
+<!-- Fokusring kun ved tastaturnavigasjon: klikk/tap skal ikke gi ring rundt knapper -->
+<script>
+(function(){
+  var d=document;
+  d.addEventListener('mousedown',function(){if(d.body)d.body.classList.add('bruker-mus')},true);
+  d.addEventListener('touchstart',function(){if(d.body)d.body.classList.add('bruker-mus')},true);
+  d.addEventListener('keydown',function(e){if(e.key==='Tab'&&d.body)d.body.classList.remove('bruker-mus')},true);
+})();
+</script>
+
+<!-- Matomo (hoppes over hvis bot-vakten over har slått til) -->
+<script>
+if (!window.__mpBot) {
   var _paq = window._paq = window._paq || [];
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
@@ -14,11 +48,12 @@
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src='https://cdn.matomo.cloud/moonlandingsite.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
   })();
+}
 </script>
 <!-- End Matomo Code -->
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQTKCM9D');</script>
+<!-- Google Tag Manager (hoppes over hvis bot-vakten har slått til) -->
+<script>if(!window.__mpBot){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQTKCM9D');}</script>
 <!-- End Google Tag Manager -->
 
 <meta charset="UTF-8">
@@ -51,7 +86,7 @@ a{color:inherit;text-decoration:none}
 button,select{font-family:inherit;cursor:pointer}
 h1,h2,h3{font-family:var(--font-head);line-height:1.15}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-:focus-visible{outline:3px solid var(--red);outline-offset:2px;border-radius:4px}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
 
 .topbar{background:var(--ink);color:#D6D6DC;font-size:13px}
 .topbar .container{display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:16px}
@@ -189,6 +224,23 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.15}
   .grid{grid-template-columns:repeat(2,1fr);gap:14px}
   .product-body{padding:14px 14px 16px}
 }
+
+/* Produktkort (samme som butikk.html) */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media (max-width:1000px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.pgrid{grid-template-columns:1fr}}
+.pcard{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.pcard:hover{box-shadow:var(--shadow-md,0 10px 30px rgba(26,26,26,.10));transform:translateY(-3px)}
+.pcard .im{position:relative;aspect-ratio:5/4;background:#fff;overflow:hidden;display:block}
+.pcard .im img{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);object-fit:contain;object-position:center}
+.pcard .bd{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pcard h3{font:700 16px var(--font-head);letter-spacing:-.01em;line-height:1.3}
+.pcard .var{font-size:12.5px;color:var(--grey-500)}
+.pcard .go{margin-top:auto;padding-top:10px;font:700 13.5px var(--font-head);color:var(--red);display:flex;align-items:center;gap:6px}
+.pcard .go svg{width:15px;height:15px;transition:transform .15s}
+.pcard:hover .go svg{transform:translateX(3px)}
+
+body.bruker-mus :focus{outline:none}
 </style>
 <style>
 /* Figma-restyle: rød header, hvit logo, lys footer, mobil-fix */

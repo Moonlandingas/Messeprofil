@@ -1,6 +1,17 @@
 {
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "add-to-cart"
+        }
+      ],
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
       "source": "/product/adblanket",
       "destination": "/produkt.html?id=20822",
       "permanent": true
