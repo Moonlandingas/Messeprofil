@@ -10,7 +10,7 @@ RewriteEngine On
 # 301 til samme path UTEN query-streng, foer HTML serveres - ingen tracking-tagger lastes.
 # Speiles som foerste oppfoering i "redirects" i vercel.json.
 RewriteCond %{QUERY_STRING} (^|&)add-to-cart(=|&|$) [NC]
-RewriteRule ^ %{REQUEST_URI}? [R=301,L]
+RewriteRule ^ %{REQUEST_URI}? [QSD,R=301,L]
 
 # --- Stage-blokkering: KUN stage.messeprofil.no (hostbetinget) ---
 RewriteCond %{HTTP_HOST} ^stage\. [NC]
