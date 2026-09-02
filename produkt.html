@@ -379,6 +379,22 @@ html,body{overflow-x:hidden}
   .cta-inner{padding:48px 0 60px}
   .cta-actions{margin-bottom:6px}
 }
+/* Galleri med ekte produktbilder + tilbehør (adSystem-feed) */
+.gallery-main img.gm{position:absolute;inset:24px;width:calc(100% - 48px);height:calc(100% - 48px);object-fit:contain;object-position:center;display:block}
+.gallery-thumbs.real{grid-template-columns:repeat(auto-fill,minmax(64px,1fr))}
+.gallery-thumbs.real button{padding:6px;aspect-ratio:1/1;background:#fff;overflow:hidden}
+.gallery-thumbs.real button img{width:100%;height:100%;object-fit:contain;display:block}
+.tilbehor{border-top:1px solid var(--grey-200);padding:56px 0 8px}
+.tilbehor h2{font-size:clamp(22px,2.6vw,28px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.tilbehor-sub{color:var(--grey-500);font-size:15px;margin-bottom:24px;max-width:70ch}
+.tilbehor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+.tb{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius-sm,12px);padding:14px;display:flex;flex-direction:column;gap:10px;text-align:center}
+.tb .im{aspect-ratio:1/1;background:#fff;display:grid;place-items:center;overflow:hidden;border-radius:8px}
+.tb .im img{width:100%;height:100%;object-fit:contain}
+.tb .im.ph{background:var(--grey-100);color:var(--grey-500);font-size:12px}
+.tb h3{font:700 14px var(--font-head);line-height:1.3;margin:0}
+.tb a.go{font:600 13px var(--font-body);color:var(--red);text-decoration:underline;margin-top:auto}
+.fi.hide{display:none}
 </style>
 </head>
 <body>
@@ -538,6 +554,13 @@ html,body{overflow-x:hidden}
   </div>
 </div>
 
+<!-- Tilbehør (fylles fra produktdata.js) -->
+<section class="tilbehor" id="tilbehor" hidden>
+  <h2>Tilbehør til dette produktet</h2>
+  <p class="tilbehor-sub">Flere av produktene trenger tilleggsutstyr for å bli komplette – velg det du trenger, så tar vi det med i tilbudet.</p>
+  <div class="tilbehor-grid" id="tilbehorGrid"></div>
+</section>
+
 <!-- Tabs -->
 <section class="tabs" id="omtaler">
   <div class="tab-nav" role="tablist">
@@ -559,7 +582,7 @@ html,body{overflow-x:hidden}
     <h3>Levering</h3>
     <p>Normal produksjonstid er 3–4 virkedager fra godkjent trykkfil. I tillegg kommer frakt: standard 7–8 virkedager, eller ekspress på ca. 3 dager om du har dårlig tid – si fra i forespørselen, så setter vi opp raskeste løp.</p>
     <h3>Filkrav</h3>
-    <p>Last opp trykkeklar PDF i målestokk 1:10 med 3 mm utfall, CMYK og minimum 150 dpi i full størrelse. Ferdige maler ligger klare for nedlasting – eller la oss sette opp designet for deg, helt uten ekstra kostnad.</p>
+    <p>Last opp trykkeklar PDF i målestokk 1:10 med 3 mm utfall, CMYK og minimum 150 dpi i full størrelse. Ferdige maler ligger klare for nedlasting – eller velg «Jeg trenger designhjelp» over, så setter designerne våre opp filene for deg – vi tar kontakt om løsning og pris.</p>
   </div>
 </section>
 
@@ -679,16 +702,108 @@ const IMGBASE = "bilder/";
   const gm = document.getElementById('galleryMain');
   if(gm){ gm.innerHTML=''; const im=document.createElement('img'); im.src=IMGBASE+p[3]; im.alt=name+' – '+cat; im.style.cssText='position:absolute;inset:24px;width:calc(100% - 48px);height:calc(100% - 48px);object-fit:contain;object-position:center;display:block'; gm.appendChild(im); }
   const th = document.querySelector('.gallery-thumbs'); if(th) th.style.display='none';
+  /* Bildegalleri fra adSystem-feeden (produktdata.js -> imgs). Faller tilbake til det gamle bildet hvis fila mangler. */
+  const PDg = (window.PRODUKTDATA || {})[String(id)];
+  if(gm && PDg && PDg.imgs && PDg.imgs.length){
+    const main = gm.querySelector('img');
+    const setMain = src => { main.src = IMGBASE+src; };
+    main.onerror = function(){ this.onerror=null; this.src = IMGBASE+p[3]; };
+    setMain(PDg.imgs[0]);
+    if(ogi) ogi.content = 'https://www.messeprofil.no/bilder/'+PDg.imgs[0];
+    if(th && PDg.imgs.length>1){
+      th.innerHTML=''; th.classList.add('real'); th.style.display='';
+      PDg.imgs.forEach((src,i)=>{
+        const b=document.createElement('button'); b.type='button'; b.className=i===0?'active':''; b.setAttribute('aria-label','Bilde '+(i+1)+' av '+PDg.imgs.length);
+        const im=document.createElement('img'); im.loading='lazy'; im.src=IMGBASE+src; im.alt='';
+        im.onerror=function(){ b.remove(); if(th.children.length<2) th.style.display='none'; };
+        b.appendChild(im);
+        b.onclick=()=>{ [...th.children].forEach(x=>x.classList.remove('active')); b.classList.add('active'); setMain(src); };
+        th.appendChild(b);
+      });
+    }
+  }
+  /* Trykkvalg: «Dobbeltsidig» vises bare når produktet faktisk finnes dobbeltsidig hos leverandøren */
+  const trykk = document.querySelector('.options[aria-label="Velg trykk"]');
+  if(trykk){
+    const lbl = trykk.previousElementSibling;
+    if(!(PDg && PDg.ds)){ trykk.style.display='none'; if(lbl && lbl.classList.contains('option-label')) lbl.style.display='none'; }
+  }
+  /* Egenskapsikoner per produktgruppe (feedens product_type) */
+  const fiRow = document.querySelector('.feature-icons');
+  if(fiRow){
+    const pt = (PDg && PDg.pt) || '';
+    const grp = pt.split(' > ')[0];
+    const sub = pt.split(' > ')[1] || '';
+    const nm = name.toLowerCase();
+    const tekstil = /Display walls|Original Shapes|Textile frames|Roll-up|Exhibition stands|Exhibition Booths/.test(grp) || /Textile counters|Tasting stands/.test(sub);
+    const lys = /Lightboxes/.test(grp) || /Backlit|LED|SEGO/.test(pt) || /led|lumina|sego/.test(nm);
+    const ute = /Outdoor/.test(grp);
+    const tilbehor = /Accessories|Panel B2B|Multimedia/.test(grp) || (!pt && (p[2].includes(4) || !p[2].length));
+    if(tilbehor){
+      /* Tilbehør/reservedeler leveres uten trykk: skjul designvalg og trykk-tekster */
+      const dg = document.querySelector('.options[aria-label="Velg design"]');
+      if(dg){ dg.style.display='none'; const l=dg.previousElementSibling; if(l && l.classList.contains('option-label')) l.style.display='none'; }
+      const dh = document.getElementById('designHelp'); if(dh) dh.hidden = true;
+      const ps = document.querySelector('.p-price span'); if(ps) ps.textContent = '– du får tilbud samme dag';
+      window.__erTilbehor = true;
+      const ld = document.querySelector('.p-lead'); if(ld) ld.textContent = 'Tilbehør til messeutstyret vårt. Send forespørsel, så får du pris og leveringstid samme dag – legg gjerne ved hvilket produkt det skal brukes til.';
+      document.querySelectorAll('.usp-list li').forEach(li=>{ if(/designgodkjenning/.test(li.textContent)) li.lastChild.textContent = 'Levering 8–10 arbeidsdager'; });
+    }
+    const show = {
+      'Uten verktøy': !tilbehor,
+      'Glidelås': /Display walls|Original Shapes|Textile rollup/.test(pt) && /vario|presto/.test(nm),
+      'Dobbeltsidig': !!(PDg && PDg.ds),
+      '32 mm rør': /Textile walls|Original Shapes|Textile gates|textile totems/.test(pt) && /light|presto/.test(nm),
+      'Gjenbrukbar': !tilbehor,
+      'Vaskbart trykk': tekstil && !ute
+    };
+    fiRow.querySelectorAll('.fi').forEach(el=>{
+      const t = el.querySelector('span').textContent.trim();
+      if(t in show && !show[t]) el.classList.add('hide');
+    });
+    if(lys){
+      const el=document.createElement('div'); el.className='fi';
+      el.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></svg><span>LED-belysning</span>';
+      fiRow.insertBefore(el, fiRow.children[1]||null);
+    }
+    if(ute){
+      const el=document.createElement('div'); el.className='fi';
+      el.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><span>Utendørs</span>';
+      fiRow.insertBefore(el, fiRow.firstChild);
+    }
+    if(!fiRow.querySelector('.fi:not(.hide)')) fiRow.style.display='none';
+    /* USP-listen: tekstil-punktene gjelder ikke tilbehør */
+    if(tilbehor || ute){
+      document.querySelectorAll('.usp-list li').forEach(li=>{
+        const t=li.textContent;
+        if(/Vaskbar tekstil/.test(t) && !tekstil) li.remove();
+        if(/garanti på ramme/.test(t) && tilbehor) li.remove();
+        if(/Transportbag/.test(t) && tilbehor) li.remove();
+      });
+    }
+  }
+  /* Tilbehør fra feeden */
+  const tbSec = document.getElementById('tilbehor'), tbGrid = document.getElementById('tilbehorGrid');
+  if(tbSec && tbGrid && PDg && PDg.acc && PDg.acc.length){
+    const escq = s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+    tbGrid.innerHTML = PDg.acc.map(a=>{
+      const img = a.img ? '<div class="im"><img loading="lazy" src="'+IMGBASE+a.img+'" alt="'+escq(a.n)+'" onerror="this.parentNode.className=\'im ph\';this.remove()"></div>' : '<div class="im ph">Tilbehør</div>';
+      const link = a.id ? '<a class="go" href="produkt.html?id='+a.id+'">Se produkt →</a>' : '<a class="go" href="#" onclick="document.getElementById(\'sendReq\').click();return false;">Ta med i forespørsel →</a>';
+      return '<article class="tb">'+img+'<h3>'+escq(a.n)+'</h3>'+link+'</article>';
+    }).join('');
+    tbSec.hidden = false;
+  }
   const lead = document.querySelector('.p-lead');
-  if(lead) lead.textContent = (p[4]>0 ? p[4]+' varianter/størrelser tilgjengelig. ' : '')+'Produseres med ditt eget design. Send forespørsel, så får du pris, forslag og leveringstid samme dag.';
+  if(lead && !window.__erTilbehor) lead.textContent = (p[4]>0 ? p[4]+' varianter/størrelser tilgjengelig. ' : '')+'Produseres med ditt eget design. Send forespørsel, så får du pris, forslag og leveringstid samme dag.';
   /* Størrelsesvelger: ekte størrelser fra feeden når vi har dem, ellers skjules raden */
   const ol = document.querySelectorAll('.option-label')[0];
   const og = document.querySelectorAll('.options')[0];
   const PDx = (window.PRODUKTDATA || {})[String(id)];
   if(og && PDx && PDx.s && PDx.s.length){
+    const unit = s => (s.split('×').every(n=>parseInt(n)<20) ? ' m' : ' cm');
     og.innerHTML = PDx.s.map((s,i)=>
-      '<button class="opt'+(i===0?' active':'')+'" data-size="'+s+' cm" onclick="pick(this,\'size\')">'+s+' cm</button>').join('');
-    const sl=document.getElementById('sizeLabel'); if(sl) sl.textContent = PDx.s[0]+' cm';
+      '<button class="opt'+(i===0?' active':'')+'" data-size="'+s+unit(s)+'" onclick="pick(this,\'size\')">'+s+unit(s)+'</button>').join('');
+    const sl=document.getElementById('sizeLabel'); if(sl) sl.textContent = PDx.s[0]+unit(PDx.s[0]);
   } else {
     if(ol) ol.style.display='none';
     if(og) og.style.display='none';
@@ -725,6 +840,8 @@ const IMGBASE = "bilder/";
       rows.push(['Vekt', PD.wmin===PD.wmax ? PD.wmin+' kg' : PD.wmin+'–'+PD.wmax+' kg (avhengig av størrelse)']);
     }
     if(PD && PD.v>1) rows.push(['Antall varianter', String(PD.v)]);
+    if(PD && (PD.ds || PD.ss)) rows.push(['Trykk', PD.ds ? 'Enkeltsidig eller dobbeltsidig' : 'Enkeltsidig']);
+    if(PD && PD.wp) rows.push(['Uten trykk', 'Kan også leveres uten trykk (kun konstruksjon)']);
     if(PD && PD.ean) rows.push(['EAN', PD.ean]);
     rows.push(['Kategori', cat]);
     rows.push(['Produsent', 'adSystem – trykk og montering via Messeprofil']);
