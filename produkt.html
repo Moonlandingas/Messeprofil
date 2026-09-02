@@ -173,6 +173,10 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.15}
 .qty input{width:44px;text-align:center;border:none;font:600 16px var(--font-body);color:var(--ink)}
 .qty input:focus{outline:none}
 .buy-row .btn{flex:1;height:54px;font-size:16px}
+.design-help{margin:-8px 0 24px;padding:20px 22px;border-radius:14px;background:var(--red-soft);border:1px solid #F3C9CD}
+.design-help h3{font:700 16px var(--font-head);margin-bottom:6px}
+.design-help p{font-size:14.5px;line-height:1.55;color:#5C5054;margin-bottom:14px}
+.design-help .btn{height:44px}
 .buy-alt{font-size:14px;color:var(--grey-500);margin-bottom:26px}
 .buy-alt a{color:var(--red);font-weight:600;text-decoration:underline}
 
@@ -501,8 +505,15 @@ html,body{overflow-x:hidden}
 
     <div class="option-label">Design</div>
     <div class="options" role="group" aria-label="Velg design">
-      <button class="opt active" onclick="pick(this,'design')">Jeg laster opp eget design</button>
-      <button class="opt" onclick="pick(this,'design')">Gratis designhjelp</button>
+      <button class="opt active" data-design="eget" onclick="pick(this,'design')">Jeg har eget design</button>
+      <button class="opt" data-design="hjelp" onclick="pick(this,'design')">Jeg trenger designhjelp</button>
+    </div>
+    <div class="design-help" id="designHelp" hidden>
+      <h3>Vi hjelper deg med designet</h3>
+      <p>Våre designere hjelper deg med å tilpasse logo, tekst og grafikk og lager produksjonsklare filer til produktene du trenger. Send oss det du har, så tar vi kontakt for å avklare løsning og pris.</p>
+      <a class="btn btn-red" id="designHelpBtn" href="https://416jbe00upv.typeform.com/to/hGGF7wQ7">Få hjelp med design
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
 
     <div class="buy-row">
@@ -581,6 +592,10 @@ function pick(btn, group){
   if(group === 'size'){
         document.getElementById('sizeLabel').textContent = btn.dataset.size;
   }
+  if(group === 'design'){
+    const dh = document.getElementById('designHelp');
+    if(dh) dh.hidden = btn.dataset.design !== 'hjelp';
+  }
   updateReqLink();
 }
 function qty(d){
@@ -612,6 +627,8 @@ function updateReqLink(){
   var u = window.typeformLenke(window.__prodName);
   u += (u.indexOf('#') >= 0 ? '&' : '#') + 'konfig=' + encodeURIComponent(sammendrag);
   req.href = u;
+  const dhb = document.getElementById('designHelpBtn');
+  if(dhb) dhb.href = u;
 }
 function tab(btn, i){
   document.querySelectorAll('.tab-nav button').forEach((b,j)=>{
