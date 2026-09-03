@@ -1,0 +1,73 @@
+name: Hent adSystem-tekster
+
+# Henter produktbeskrivelser (engelsk) fra produktsidene på adsystem.pl for familiene i import/hent-tekster.json
+# og lagrer dem i import/adsystem-tekster-en.json. Oversettes deretter til norsk i import/beskrivelser-no.json.
+
+on:
+  push:
+    branches: [main]
+    paths: ['import/hent-tekster.json']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install --quiet beautifulsoup4 lxml
+      - name: Hent beskrivelser
+        run: |
+          python3 - <<'PYEOF'
+          import json, urllib.request, re, time
+          from bs4 import BeautifulSoup
+          need = json.load(open('import/hent-tekster.json'))
+          try:
+              out = json.load(open('import/adsystem-tekster-en.json'))
+          except FileNotFoundError:
+              out = {}
+          UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128.0 Safari/537.36'}
+          def hent(url):
+              req = urllib.request.Request(url, headers=UA)
+              with urllib.request.urlopen(req, timeout=60) as r:
+                  return r.read().decode('utf-8', 'ignore')
+          for g, v in need.items():
+              if out.get(g): continue
+              urls = [v['url']]
+              base = re.sub(r'-(without-print|bez-wydruku).*$', '', v['url'])
+              if base != v['url']: urls.append(base)
+              txt = ''
+              for u in urls:
+                  try:
+                      html = hent(u)
+                  except Exception as e:
+                      print('FEIL', g, u, e); continue
+                  soup = BeautifulSoup(html, 'lxml')
+                  for s in soup(['script', 'style', 'nav', 'header', 'footer']): s.decompose()
+                  cand = []
+                  for sel in ['[class*="description"]', '[id*="description"]', '[class*="product-desc"]', '[class*="tab-content"]', '[class*="details"]', 'article', 'main']:
+                      for el in soup.select(sel):
+                          t = el.get_text('\n', strip=True)
+                          if len(t) > 300: cand.append(t)
+                  if cand:
+                      txt = max(cand, key=len); break
+              if txt:
+                  txt = re.sub(r'\n{3,}', '\n\n', txt)
+                  out[g] = {'navn': v['navn'], 'url': u, 'en': txt[:12000]}
+                  print('OK', g, v['navn'], len(txt))
+              else:
+                  print('TOM', g, v['navn'])
+              time.sleep(1)
+          json.dump(out, open('import/adsystem-tekster-en.json', 'w'), ensure_ascii=False, indent=1)
+          print('totalt', len(out))
+          PYEOF
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add import/adsystem-tekster-en.json
+          if git diff --cached --quiet; then echo "Ingen endringer"; exit 0; fi
+          git commit -m "Import: hentet produkttekster fra adsystem.pl"
+          git push
