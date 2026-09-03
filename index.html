@@ -492,6 +492,19 @@ body.bruker-mus :focus{outline:none}
   .ide-inner{grid-template-columns:1fr;gap:32px;padding:48px 0}
   .trykk-inner{grid-template-columns:1fr;gap:20px;padding:44px 0}
 }
+/* Hero-video: lesbar tekst uten å skjule videoen – mørk «scrim» bak tekstblokken + skygge på teksten */
+.hero--video .hero-veil{background:linear-gradient(100deg,rgba(18,8,10,.72) 0%,rgba(18,8,10,.42) 40%,rgba(18,8,10,.08) 75%,rgba(18,8,10,0) 100%)}
+.hero--video .hero-inner>div{position:relative}
+.hero--video .hero-inner>div::before{content:"";position:absolute;inset:-48px -90px -48px -120px;z-index:-1;border-radius:48px;background:radial-gradient(ellipse at 40% 50%,rgba(12,5,7,.9) 0%,rgba(12,5,7,.72) 40%,rgba(12,5,7,.35) 65%,rgba(12,5,7,0) 82%);filter:blur(14px)}
+.hero--video h1{text-shadow:0 2px 6px rgba(0,0,0,.55),0 6px 30px rgba(0,0,0,.45)}
+.hero--video .hero-inner>div>p,.hero--video .trust-line{text-shadow:0 1px 4px rgba(0,0,0,.6),0 3px 14px rgba(0,0,0,.4)}
+.hero--video .hero-inner>div>p{color:#fff}
+.hero--video .btn-ghost-w{background:rgba(0,0,0,.28);backdrop-filter:blur(4px)}
+.hero--video .btn-ghost-w:hover{background:rgba(0,0,0,.45)}
+@media (max-width:640px){
+  .hero--video .hero-veil{background:linear-gradient(180deg,rgba(18,8,10,.6) 0%,rgba(18,8,10,.45) 60%,rgba(18,8,10,.15) 100%)}
+  .hero--video .hero-inner>div::before{inset:-24px -24px -24px -24px}
+}
 </style>
 </head>
 <body>
