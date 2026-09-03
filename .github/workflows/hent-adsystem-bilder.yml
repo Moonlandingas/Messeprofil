@@ -8,7 +8,7 @@ name: Hent adSystem-bilder
 on:
   push:
     branches: [main]
-    paths: ['import/bilder-manifest.json']
+    paths: ['import/bilder-manifest.json', 'import/eksterne-bilder.json']
   workflow_dispatch:
 
 permissions:
@@ -29,15 +29,26 @@ jobs:
           import json, os, io, urllib.request, time
           from PIL import Image
           man = json.load(open('import/bilder-manifest.json'))
+          # eksterne-bilder.json: lokal sti -> liste med kandidat-URLer (første som svarer brukes), maks 1600 px
+          try:
+              ekst = json.load(open('import/eksterne-bilder.json'))
+          except FileNotFoundError:
+              ekst = {}
+          for loc, urls in ekst.items():
+              man[loc] = urls
           ok = skip = feil = 0
           for loc, url in man.items():
+              kandidater = url if isinstance(url, list) else [url]
+              maks = 1600 if isinstance(url, list) else 1000
               dest = os.path.join('bilder', loc)
               if os.path.exists(dest):
                   skip += 1; continue
               os.makedirs(os.path.dirname(dest), exist_ok=True)
-              for forsok in range(3):
+              forsok_n = max(3, len(kandidater))
+              for forsok in range(forsok_n):
                   try:
-                      req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (messeprofil.no bildeimport)'})
+                      url = kandidater[min(forsok, len(kandidater)-1)]
+                      req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128.0 Safari/537.36 (messeprofil.no bildeimport)'})
                       with urllib.request.urlopen(req, timeout=60) as r:
                           raw = r.read()
                       im = Image.open(io.BytesIO(raw))
@@ -47,16 +58,16 @@ jobs:
                           im = bg
                       else:
                           im = im.convert('RGB')
-                      im.thumbnail((1000, 1000))
+                      im.thumbnail((maks, maks))
                       im.save(dest, 'WEBP', quality=80, method=6)
                       ok += 1
                       break
                   except Exception as e:
-                      if forsok == 2:
+                      if forsok == forsok_n - 1:
                           feil += 1
                           print('FEIL', loc, url, e)
                       else:
-                          time.sleep(2)
+                          time.sleep(1)
           print(f'lastet ned: {ok}, fantes fra før: {skip}, feil: {feil}')
           PYEOF
 
@@ -64,7 +75,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add bilder/adsystem
+          git add bilder/adsystem bilder/grupper
           if git diff --cached --quiet; then echo "Ingen nye bilder"; exit 0; fi
           git commit -m "Bilder: hentet adSystem-produktbilder fra manifest"
           git push
