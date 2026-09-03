@@ -59,13 +59,12 @@ jobs:
                       print('FEIL', g, u, e); continue
                   soup = BeautifulSoup(html, 'lxml')
                   for s in soup(['script', 'style', 'nav', 'header', 'footer']): s.decompose()
-                  cand = []
-                  for sel in ['[class*="description"]', '[id*="description"]', '[class*="product-desc"]', '[class*="tab-content"]', '[class*="details"]', 'article', 'main']:
-                      for el in soup.select(sel):
-                          t = el.get_text('\n', strip=True)
-                          if len(t) > 300: cand.append(t)
-                  if cand:
-                      txt = max(cand, key=len); break
+                  deler = []
+                  for el in soup.select('.blog-section'):
+                      t = el.get_text('\n', strip=True)
+                      if len(t) > 40 and t not in deler: deler.append(t)
+                  if deler:
+                      txt = '\n\n'.join(deler); break
               if txt:
                   txt = re.sub(r'\n{3,}', '\n\n', txt)
                   out[g] = {'navn': v['navn'], 'url': u, 'en': txt[:12000]}
