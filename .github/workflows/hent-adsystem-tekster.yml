@@ -21,7 +21,7 @@ jobs:
       - name: Hent beskrivelser
         run: |
           python3 - <<'PYEOF'
-          import json, urllib.request, re, time
+          import json, urllib.request, urllib.error, re, time
           from bs4 import BeautifulSoup
           need = json.load(open('import/hent-tekster.json'))
           try:
@@ -29,10 +29,22 @@ jobs:
           except FileNotFoundError:
               out = {}
           UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128.0 Safari/537.36'}
+          logg = []
+          sample_saved = False
           def hent(url):
+              global sample_saved
               req = urllib.request.Request(url, headers=UA)
-              with urllib.request.urlopen(req, timeout=60) as r:
-                  return r.read().decode('utf-8', 'ignore')
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as r:
+                      h = r.read().decode('utf-8', 'ignore')
+                      logg.append(f'{r.status} {len(h)} {url}')
+                      if not sample_saved:
+                          open('import/hent-tekster-sample.html', 'w').write(h[:300000]); sample_saved = True
+                      return h
+              except urllib.error.HTTPError as e:
+                  body = e.read().decode('utf-8', 'ignore')
+                  logg.append(f'HTTP {e.code} {len(body)} {url} :: {body[:200]!r}')
+                  raise
           for g, v in need.items():
               if out.get(g): continue
               urls = [v['url']]
@@ -61,13 +73,14 @@ jobs:
                   print('TOM', g, v['navn'])
               time.sleep(1)
           json.dump(out, open('import/adsystem-tekster-en.json', 'w'), ensure_ascii=False, indent=1)
+          open('import/hent-tekster-logg.txt', 'w').write('\n'.join(logg))
           print('totalt', len(out))
           PYEOF
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add import/adsystem-tekster-en.json
+          git add import/adsystem-tekster-en.json import/hent-tekster-logg.txt import/hent-tekster-sample.html
           if git diff --cached --quiet; then echo "Ingen endringer"; exit 0; fi
           git commit -m "Import: hentet produkttekster fra adsystem.pl"
           git push
