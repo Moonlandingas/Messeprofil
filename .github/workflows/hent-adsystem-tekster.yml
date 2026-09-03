@@ -46,6 +46,7 @@ jobs:
                   logg.append(f'HTTP {e.code} {len(body)} {url} :: {body[:200]!r}')
                   raise
           for g, v in need.items():
+              if g.startswith('_'): continue
               if out.get(g): continue
               urls = [v['url']]
               base = re.sub(r'-(without-print|bez-wydruku).*$', '', v['url'])
