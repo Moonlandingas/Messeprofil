@@ -60,17 +60,38 @@ jobs:
           for u in re.findall(r'<loc>\s*(.*?)\s*</loc>', catxml):
               if '/en/' in u:
                   kat[u.rstrip('/').split('/')[-1]] = u
-          struktur = {}
-          for slug, url in kat.items():
+          import xml.etree.ElementTree as ET
+          feed_urls = set(o.attrib.get('url','') for o in ET.parse('import/adsystem-feed.xml').getroot().findall('.//o'))
+          IGNORE = {'/en/about','/en/new-in','/en/promotions','/en/adpro','/en/digital','/en/contact','/en/help-center','/en/blog'}
+          def les(url):
               h = hent(url)
-              if not h: continue
+              if not h: return []
               soup = BeautifulSoup(h, 'lxml')
               links = []
               for a in soup.select('a[href]'):
                   href = a['href']
-                  if re.match(r'^(https?://adsystem\.pl)?/en/[a-z0-9-]+/?$', href) and href not in links:
-                      links.append(href)
+                  if not re.match(r'^(https?://adsystem\.pl)?/en/[a-z0-9-]+/?$', href): continue
+                  href = '/' + href.split('adsystem.pl/')[-1].strip('/') if 'adsystem.pl' in href else href.rstrip('/')
+                  t = a.get_text(' ', strip=True)
+                  if href in [l['href'] for l in links]: continue
+                  links.append({'href': href, 'tekst': t, 'produkt': href[3:] in feed_urls or href[3:]+'/' in feed_urls})
+              return links
+          struktur = {}
+          hoved = list(kat.keys())
+          for slug, url in kat.items():
+              links = les(url)
               struktur[slug] = {'url': url, 'lenker': links}
+              time.sleep(1)
+          # undergrupper = lenker på hovedkategorisidene som verken er produkter, hovedkategorier eller IGNORE
+          under = []
+          for slug in hoved:
+              for l in struktur[slug]['lenker']:
+                  if not l['produkt'] and l['href'] not in IGNORE and l['href'][4:] not in kat and l['href'] not in under:
+                      under.append(l['href'])
+          for href in under:
+              slug = href[4:]
+              if slug in struktur: continue
+              struktur[slug] = {'url': 'https://adsystem.pl' + href, 'lenker': les('https://adsystem.pl' + href), 'undergruppe': True}
               time.sleep(1)
           json.dump(struktur, open('import/adsystem-struktur/kategorier.json', 'w'), ensure_ascii=False, indent=1)
           open('import/adsystem-struktur/logg.txt', 'w').write('\n'.join(logg))
