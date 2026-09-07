@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install --quiet beautifulsoup4 lxml
+      - run: pip install --quiet beautifulsoup4 lxml pillow
       - name: Hent beskrivelser
         run: |
           python3 - <<'PYEOF'
@@ -69,6 +69,30 @@ jobs:
                   txt = re.sub(r'\n{3,}', '\n\n', txt)
                   out[g] = {'navn': v['navn'], 'url': u, 'en': txt[:12000]}
                   print('OK', g, v['navn'], len(txt))
+                  # produktbilder (kun når oppføringen ber om det): shop-api-bilder på siden, maks 8
+                  if v.get('bilder'):
+                      import io, os, hashlib
+                      from PIL import Image
+                      srcs = []
+                      for im in soup.select('img[src]'):
+                          src = im['src']
+                          if 'shop-api.adsystem.pl/file/image' in src and '_1000_1000' in src and src not in srcs:
+                              srcs.append(src)
+                      lokale = []
+                      for src in srcs[:8]:
+                          h = hashlib.sha1(src.split('&v=')[0].encode()).hexdigest()[:12]
+                          loc = f'adsystem/m{g}/{h}.webp'; dest = 'bilder/' + loc
+                          if not os.path.exists(dest):
+                              try:
+                                  req = urllib.request.Request(src, headers=UA)
+                                  with urllib.request.urlopen(req, timeout=60) as r:
+                                      raw = r.read()
+                                  pic = Image.open(io.BytesIO(raw)).convert('RGB'); pic.thumbnail((1000, 1000))
+                                  os.makedirs(os.path.dirname(dest), exist_ok=True); pic.save(dest, 'WEBP', quality=80, method=6)
+                              except Exception as e:
+                                  print('BILDEFEIL', g, src, e); continue
+                          lokale.append(loc)
+                      out[g]['imgs'] = lokale
               else:
                   print('TOM', g, v['navn'])
               time.sleep(1)
@@ -80,7 +104,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add import/adsystem-tekster-en.json import/hent-tekster-logg.txt import/hent-tekster-sample.html
+          git add import/adsystem-tekster-en.json import/hent-tekster-logg.txt import/hent-tekster-sample.html bilder/adsystem
           if git diff --cached --quiet; then echo "Ingen endringer"; exit 0; fi
           git commit -m "Import: hentet produkttekster fra adsystem.pl"
           git push
