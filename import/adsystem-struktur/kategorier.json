@@ -2,341 +2,2235 @@
  "display-walls": {
   "url": "https://adsystem.pl/en/display-walls",
   "lenker": [
-   "/en/about",
-   "/en/backlit-walls",
-   "/en/outdoor-advertising-walls",
-   "/en/adwall-vario-straight-light-240-soft-bag-single-sided",
-   "/en/adwall-vario-presto-light-060-single-sided",
-   "/en/adwall-vario-curved-light-240-soft-bag-single-sided",
-   "/en/adwall-vario-curved-240-43-in-a-wheeled-bag-doublesided",
-   "/en/adwall-vario-straight-240-43-in-a-wheeled-bag-singlesided",
-   "/en/adwall-l-200",
-   "/en/adwall-edge-plus-1x3s-ss",
-   "/en/adwall-smart-curved-4x3",
-   "/en/adframe-flex-led-200x250",
-   "/en/adframe-smart-100x200-1",
-   "/en/adframe-lmd-200x250-nd",
-   "/en/sego-light-box-300x250-1",
-   "/en/adwall-presto-outdoor-single-sided"
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/backlit-walls",
+    "tekst": "Backlit walls",
+    "produkt": false
+   },
+   {
+    "href": "/en/outdoor-advertising-walls",
+    "tekst": "Outdoor advertising walls",
+    "produkt": false
+   },
+   {
+    "href": "/en/adwall-vario-straight-light-240-soft-bag-single-sided",
+    "tekst": "Bestseller product-card.vario-proste-light Textile walls PLN 1,199.00 240x230 300x230 400x230 500x230 +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-presto-light-060-single-sided",
+    "tekst": "Bestseller adWall Vario Presto Light Textile walls PLN 590.00 60 x 230 90 x 230 120x230 120 x 230 +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-curved-light-240-soft-bag-single-sided",
+    "tekst": "adWall Vario Curved Light Textile walls PLN 1,229.00 240x230 300x230 400x230 500x230 +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-curved-240-43-in-a-wheeled-bag-doublesided",
+    "tekst": "New adWall Vario Curved Premium Textile walls PLN 1,699.00 240x230 300x230 400x230 500x230 +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-straight-240-43-in-a-wheeled-bag-singlesided",
+    "tekst": "New adWall Vario Straight Premium Textile walls PLN 1,499.00 240x230 300x230 400x230 500x230 +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-l-200",
+    "tekst": "adWall L Textile walls PLN 494.00 200x204",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-edge-plus-1x3s-ss",
+    "tekst": "adWall EDGE Pop-up walls PLN 765.75 PLN 1,021.00 -25% 1x3 (75x225 cm) 2x3 (150x225 cm) 3x3 (225x225 cm) 150x225",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-smart-curved-4x3",
+    "tekst": "adWall Smart Curved Pop-up walls Individual pricing 4x3",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-flex-led-200x250",
+    "tekst": "Bestseller New adFrame Flex LED Backlit walls PLN 2,655.00 200x250 300x250 400x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-100x200-1",
+    "tekst": "Bestseller Backlit wall Smart Backlit walls PLN 1,870.00 100x200 200x250 300x250 200x200",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-lmd-200x250-nd",
+    "tekst": "Backlit wall LMD Backlit walls PLN 4,102.00 200x250 300x200 300x250 150x200 +8",
+    "produkt": true
+   },
+   {
+    "href": "/en/sego-light-box-300x250-1",
+    "tekst": "Backlit wall SEGO Backlit walls PLN 5,879.00 300x250",
+    "produkt": false
+   },
+   {
+    "href": "/en/adwall-presto-outdoor-single-sided",
+    "tekst": "adWall Presto Outdoor Outdoor advertising walls PLN 999.00 100x230",
+    "produkt": true
+   }
   ]
  },
  "kasetony-podswietlane": {
   "url": "https://adsystem.pl/en/kasetony-podswietlane",
   "lenker": [
-   "/en/about",
-   "/en/kasetony-pop-up",
-   "/en/pop-up-lightbox-100x200",
-   "/en/adframe-quick-safe-case-black-100x200",
-   "/en/adframe-slim-65mm-doublesided",
-   "/en/adframe-smart-r3-100x200",
-   "/en/adframe-quick-battery-100x200",
-   "/en/adframe-lumina-rgb-100x200cm-double-sided",
-   "/en/luminastick",
-   "/en/adframe-flex-led-200x250",
-   "/en/adframe-smart-85x250",
-   "/en/adframe-quick-85x200-version-20",
-   "/en/adframe-lmd-150x200-nk",
-   "/en/print-sego-light-box-85x200-keder-9x3mm-1",
-   "/en/print-adframe-quick-single-100x200",
-   "/en/adframe-poster-70x100",
-   "/en/adframe-lpo-100x100",
-   "/en/adframe-lmsm",
-   "/en/adframe-lmsm-60x100-nk",
-   "/en/adframe-lms",
-   "/en/adframe-lms-100x100-nk",
-   "/en/adframe-lmd-70x100-b1-nd-hanging",
-   "/en/adframe-ctf-100x50x100-hanging-led",
-   "/en/adframe-lmd-lcd",
-   "/en/adframe-lmsm-mframe",
-   "/en/adframe-lmd",
-   "/en/popup-combo-counter-lightbox-100x100-incl-charging"
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/kasetony-pop-up",
+    "tekst": "Pop-up Lightboxes",
+    "produkt": false
+   },
+   {
+    "href": "/en/pop-up-lightbox-100x200",
+    "tekst": "Bestseller New dimensions adFrame Pop-up Pop-up Lightboxes PLN 1,499.00 100x200 100x225 100x250 120x200 +3",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-quick-safe-case-black-100x200",
+    "tekst": "New adFrame Quick Safe Case Free-standing lightboxes PLN 1,450.00 100x200 100x250 85x200",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-slim-65mm-doublesided",
+    "tekst": "Bestseller adFrame Slim Free-standing lightboxes PLN 999.00 100x200 100x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-r3-100x200",
+    "tekst": "Bestseller adFrame Smart R3 Free-standing lightboxes PLN 1,870.00 100x200 300x250 200x250 200x200 +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-quick-battery-100x200",
+    "tekst": "adFrame Quick Battery Free-standing lightboxes PLN 3,050.00 100x200",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-lumina-rgb-100x200cm-double-sided",
+    "tekst": "adFrame Lumina RGB Free-standing lightboxes PLN 3,519.20 PLN 4,399.00 -20% 100x200 100x250 300x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/luminastick",
+    "tekst": "LuminaStick Free-standing lightboxes PLN 3,199.20 PLN 3,999.00 -20% 8x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-flex-led-200x250",
+    "tekst": "Bestseller New adFrame Flex LED Backlit walls PLN 2,655.00 200x250 300x250 400x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-85x250",
+    "tekst": "adFrame Smart Free-standing lightboxes PLN 1,466.25 PLN 1,955.00 -25% 85x250 100x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-quick-85x200-version-20",
+    "tekst": "adFrame Quick 2.0 Free-standing lightboxes PLN 881.25 PLN 1,175.00 -25% 85x200 85x250 100x200 100x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-lmd-150x200-nk",
+    "tekst": "adFrame LMD Free-standing lightboxes PLN 2,928.00 150x200 150x250 200x200 200x250 +8",
+    "produkt": true
+   },
+   {
+    "href": "/en/print-sego-light-box-85x200-keder-9x3mm-1",
+    "tekst": "Product discontinued Only prints available Sego Single Free-standing lightboxes PLN 170.00 85x200",
+    "produkt": false
+   },
+   {
+    "href": "/en/print-adframe-quick-single-100x200",
+    "tekst": "Product discontinued Only prints available adFrame Single Free-standing lightboxes PLN 176.00 100x200 100x250 85x200",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-poster-70x100",
+    "tekst": "Bestseller adFrame Poster Wall-hung lightboxes PLN 639.00 PLN 852.00 -25% 70x100 100x100 100x150 100x200 +2",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-lpo-100x100",
+    "tekst": "Bestseller adFrame LPO Wall-hung lightboxes PLN 876.00 PLN 1,168.00 -25% 100x100 100x200 100x293",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-lmsm",
+    "tekst": "adFrame LMSM RFQ Wall-hung lightboxes Individual pricing Individual pricing",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-lmsm-60x100-nk",
+    "tekst": "adFrame LMSM Wall-hung lightboxes Individual pricing 60x100 70x120 80x140 100x100 +3",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-lms",
+    "tekst": "adFrame LMS RFQ Wall-hung lightboxes Individual pricing 0x0",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-lms-100x100-nk",
+    "tekst": "adFrame LMS Wall-hung lightboxes Individual pricing 100x100 100x200 100x250 150x200 +11",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-lmd-70x100-b1-nd-hanging",
+    "tekst": "adFrame LMD Hanging Suspended lightboxes PLN 1,617.00 70x100 85x200 100x100 100x150 +3",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-ctf-100x50x100-hanging-led",
+    "tekst": "adFrame CTF Hanging LED Suspended lightboxes PLN 1,690.00 100x50x100 100x100x100 150x100x150 150x150x150",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-lmd-lcd",
+    "tekst": "adFrame LMD/LCD hanging cube RFQ Suspended lightboxes Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-lmsm-mframe",
+    "tekst": "adFrame LMSM hanging cube RFQ Suspended lightboxes Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-lmd",
+    "tekst": "adFrame LMD RFQ Custom lightboxes Individual pricing Indywidualny rozmiar",
+    "produkt": false
+   },
+   {
+    "href": "/en/popup-combo-counter-lightbox-100x100-incl-charging",
+    "tekst": "Pop-up Combo Pop-up Lightboxes PLN 2,788.00 100x200",
+    "produkt": true
+   }
   ]
  },
  "trybunki": {
   "url": "https://adsystem.pl/en/trybunki",
   "lenker": [
-   "/en/about",
-   "/en/quick-counters",
-   "/en/adtribune-quick-max",
-   "/en/adtribune-flex-lock",
-   "/en/adtribune-flex-expo",
-   "/en/adtribune-quick-round",
-   "/en/adtribune-popup-battery",
-   "/en/adtribune-quick-square",
-   "/en/adtribune-expo-100x100",
-   "/en/adtribune-quick-kidney",
-   "/en/adtribune-big-quick-led-auto",
-   "/en/adtribune-big-quick",
-   "/en/adtribune-quick",
-   "/en/adtribune-tube-oval",
-   "/en/adtribune-tube-square",
-   "/en/adtribune-sego-cubic-lock",
-   "/en/adtribune-smart-led-sf",
-   "/en/adtribune-oval",
-   "/en/adtribune-oval-maxi",
-   "/en/adtribune-starter",
-   "/en/adtribune-seg-new",
-   "/en/adtribune-cubic",
-   "/en/multiframe-tribune-black",
-   "/en/combo-adframe-starter-100x200-and-adtribune-starter",
-   "/en/print-adtribune-case",
-   "/en/popup-combo-counter-lightbox-100x100-incl-charging",
-   "/en/adtribune-lumina-rgb",
-   "/en/popup-charger",
-   "/en/sego-light-box-counter-100x100",
-   "/en/adtribune-hit",
-   "/en/adtribune-elypse",
-   "/en/adtribune-elypse-mini",
-   "/en/adtribune-hit-c",
-   "/en/adtribune-hit-mini",
-   "/en/adtribune-shell",
-   "/en/adtribune-shell-2in1",
-   "/en/adtribune-standard",
-   "/en/adbox-elypse",
-   "/en/adbox-elypse-mini",
-   "/en/adbox-hit",
-   "/en/adbox-hit-mini",
-   "/en/adbox-hit-c"
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/quick-counters",
+    "tekst": "Quick pneumatic counters",
+    "produkt": false
+   },
+   {
+    "href": "/en/adtribune-quick-max",
+    "tekst": "New adTribune Quick Max Textile counters PLN 1,515.00 100x100x52",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-flex-lock",
+    "tekst": "New adTribune Flex Lock Textile counters PLN 2,770.00 100x101x43",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-flex-expo",
+    "tekst": "New adTribune Flex Expo LED counters PLN 1,990.00 104x102x35",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-quick-round",
+    "tekst": "New adTribune Quick Round Textile counters PLN 699.00 60x100",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-popup-battery",
+    "tekst": "New adTribune Pop-up Battery Textile counters PLN 2,999.00 100x100",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-quick-square",
+    "tekst": "New adTribune Quick Square Textile counters PLN 645.00 70x100x40",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-expo-100x100",
+    "tekst": "While stocks last adTribune Expo LED counters PLN 1,550.00 100x95x40 150x95x40 100x95x27 150x95x27",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-quick-kidney",
+    "tekst": "New adTribune Quick Kidney Textile counters PLN 799.00 90x100x40",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-big-quick-led-auto",
+    "tekst": "adTribune Big Quick LED Auto Textile counters PLN 1,799.00 96x97x48",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-big-quick",
+    "tekst": "Bestseller adTribune Big Quick Textile counters PLN 1,009.00 80x100x48",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-quick",
+    "tekst": "Bestseller adTribune Quick Textile counters PLN 957.00 70x100x40",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-tube-oval",
+    "tekst": "adTribune Tube Oval Textile counters PLN 499.00 60x96x40",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-tube-square",
+    "tekst": "adTribune Tube Square Textile counters PLN 599.00 78x96x38",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-sego-cubic-lock",
+    "tekst": "New adTribune SEGO Cubic lock Textile counters PLN 1,877.00 100x100x38 100x100",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-smart-led-sf",
+    "tekst": "adTribune Smart LED SF LED counters PLN 1,669.00 100x100",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-oval",
+    "tekst": "adTribune Oval Textile counters PLN 889.00 92x97x42",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-oval-maxi",
+    "tekst": "adTribune Big Oval Textile counters PLN 1,059.00 90x115x50",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-starter",
+    "tekst": "adTribune Starter Textile counters PLN 699.00 100x100x34",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-seg-new",
+    "tekst": "adTribune SEG Textile counters PLN 1,449.00 90x90x50 Version before 2023",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-cubic",
+    "tekst": "Conference podium adTribune Cubic Textile counters PLN 1,098.00 52x102",
+    "produkt": true
+   },
+   {
+    "href": "/en/multiframe-tribune-black",
+    "tekst": "Multiframe Stand Textile counters PLN 1,999.00 PLN 3,007.00 -34% Komplet Sama konstrukcja Wydruk Przód",
+    "produkt": true
+   },
+   {
+    "href": "/en/combo-adframe-starter-100x200-and-adtribune-starter",
+    "tekst": "Starter Combo Set Textile counters PLN 1,250.00 100x200 100x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/print-adtribune-case",
+    "tekst": "adTribune Case Textile counters PLN 212.00 90x95x50",
+    "produkt": true
+   },
+   {
+    "href": "/en/popup-combo-counter-lightbox-100x100-incl-charging",
+    "tekst": "Pop-up Combo Pop-up Lightboxes PLN 2,788.00 100x200",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-lumina-rgb",
+    "tekst": "New adTribune Lumina RGB LED counters PLN 2,399.20 PLN 2,999.00 -20% 100x105x45",
+    "produkt": true
+   },
+   {
+    "href": "/en/popup-charger",
+    "tekst": "Bestseller adTribune Pop-up LED counters PLN 1,399.00 100x100",
+    "produkt": true
+   },
+   {
+    "href": "/en/sego-light-box-counter-100x100",
+    "tekst": "SEGO Tribune SEGO - illuminated exhibition system PLN 1,900.00 100x100",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-hit",
+    "tekst": "adTribune Hit Classic counters PLN 862.00 90x95x65",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-elypse",
+    "tekst": "Bestseller adTribune Elypse Classic counters PLN 959.00 120x95x50",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-elypse-mini",
+    "tekst": "adTribune Elypse Mini Classic counters PLN 879.00 95x95x50 95x215x50",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-hit-c",
+    "tekst": "adTribune Hit C Classic counters PLN 967.00 90x95x65",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-hit-mini",
+    "tekst": "adTribune Hit Mini Classic counters PLN 699.00 66x95x46",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-shell",
+    "tekst": "adTribune Shell Classic counters PLN 1,625.00 125x97x60",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-shell-2in1",
+    "tekst": "adTribune Shell 2in1 Classic counters PLN 3,499.00 200x97x80",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-standard",
+    "tekst": "adTribune Standard Classic counters PLN 1,659.00 90x95x50",
+    "produkt": true
+   },
+   {
+    "href": "/en/adbox-elypse",
+    "tekst": "adBox Elypse Tasting stands PLN 999.00 120x215x50",
+    "produkt": true
+   },
+   {
+    "href": "/en/adbox-elypse-mini",
+    "tekst": "adBox Elypse Mini Tasting stands PLN 939.00 95x215x50",
+    "produkt": true
+   },
+   {
+    "href": "/en/adbox-hit",
+    "tekst": "adBox Hit Tasting stands PLN 919.00 90x215x62",
+    "produkt": true
+   },
+   {
+    "href": "/en/adbox-hit-mini",
+    "tekst": "adBox Hit Mini Tasting stands PLN 749.00 65x215x46",
+    "produkt": true
+   },
+   {
+    "href": "/en/adbox-hit-c",
+    "tekst": "AdBox Hit C Tasting stands PLN 999.00 90x215x62",
+    "produkt": true
+   }
   ]
  },
  "outdoor": {
   "url": "https://adsystem.pl/en/outdoor",
   "lenker": [
-   "/en/about",
-   "/en/ready-made-outdoor-set",
-   "/en/adtent-air-premium-3x3-automatic-frame-roof",
-   "/en/adtent-air-premium-3x3-frameroof",
-   "/en/adtent-express-3x3m-frameprint-roof",
-   "/en/adtent-express-pro-3x3m",
-   "/en/adtent-vario-3x3-frameroof",
-   "/en/adtent-v",
-   "/en/print-adtent-express-3x3m-wall",
-   "/en/print-adtent-vario-3x3-single-sided-wall",
-   "/en/wydruk-adtent-air-premium-3x3-sciana-boczna-jednostronna-wariant",
-   "/en/adgate-air-big-square",
-   "/en/adgate-round",
-   "/en/adgate-air-triangle-6-8m",
-   "/en/adcolumn-air-60x100-ver2",
-   "/en/print-air-column-60x100",
-   "/en/adflag-standard-s",
-   "/en/adflag-blade-s",
-   "/en/adflag-hook-s",
-   "/en/adflag-drop-s",
-   "/en/adflag-standard-pro-s",
-   "/en/adflag-blade-pro-s",
-   "/en/adflag-hook-pro-s",
-   "/en/adflag-drop-pro-s",
-   "/en/economy-set-outdoor",
-   "/en/heavy-duty-set-outdoor",
-   "/en/fan-zone-set-outdoor",
-   "/en/chill-zone-set-outdoor",
-   "/en/premium-chill-zone-set-outdoor",
-   "/en/addeck",
-   "/en/adboard-owz-b2",
-   "/en/adboard-hips-58x100",
-   "/en/adboard-led-65x100",
-   "/en/adpuff-inflate",
-   "/en/adchair-inflate",
-   "/en/cube",
-   "/en/miniroller",
-   "/en/beanbag",
-   "/en/sacco",
-   "/en/via",
-   "/en/forma",
-   "/en/roller"
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/ready-made-outdoor-set",
+    "tekst": "Outdoor Advertising Sets",
+    "produkt": false
+   },
+   {
+    "href": "/en/adtent-air-premium-3x3-automatic-frame-roof",
+    "tekst": "New adTent Air Premium Automatic Advertising tents PLN 5,999.00 3 x 3 4 x 4 5 x 5 6 x 6",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-air-premium-3x3-frameroof",
+    "tekst": "Bestseller adTent Air Premium Advertising tents PLN 4,795.00 3x3 4x4 4x6 5x5 +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-express-3x3m-frameprint-roof",
+    "tekst": "Bestseller adTent Express Advertising tents PLN 2,400.00 3 x 3 3 x 4,5 3 x 6",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-express-pro-3x3m",
+    "tekst": "adTent Express Pro Advertising tents PLN 2,799.00 3 x 3 3 x 6",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-vario-3x3-frameroof",
+    "tekst": "adTent Vario Advertising tents PLN 3,449.00 3x3 4x4",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-v",
+    "tekst": "adTent V Advertising tents PLN 6,999.00 4 x 4 5 x 5 6 x 6",
+    "produkt": true
+   },
+   {
+    "href": "/en/print-adtent-express-3x3m-wall",
+    "tekst": "Prints for adTent Express Advertising tents PLN 350.00 Wall 3x3 Roof 3x3 Wall 3x4,5 Roof 3x4,5 +2",
+    "produkt": true
+   },
+   {
+    "href": "/en/print-adtent-vario-3x3-single-sided-wall",
+    "tekst": "Prints for adTent Vario Advertising tents PLN 450.00 3x3 - wall 3x3 - roof 4x4 - wall 4x4 - roof",
+    "produkt": true
+   },
+   {
+    "href": "/en/wydruk-adtent-air-premium-3x3-sciana-boczna-jednostronna-wariant",
+    "tekst": "Prints for adTent Air Premium Advertising tents PLN 450.00 3x3 wall 4x4 wall 5x5 wall 6x6 wall +5",
+    "produkt": true
+   },
+   {
+    "href": "/en/adgate-air-big-square",
+    "tekst": "adGate Air Square Advertising gates PLN 4,995.00 670x465x60 4,5x3,2 320x450x40",
+    "produkt": true
+   },
+   {
+    "href": "/en/adgate-round",
+    "tekst": "adGate Round Advertising gates PLN 4,999.00 620x350x60",
+    "produkt": true
+   },
+   {
+    "href": "/en/adgate-air-triangle-6-8m",
+    "tekst": "adGate Air Triangle Advertising gates PLN 4,180.00 6,8m 6,5m",
+    "produkt": true
+   },
+   {
+    "href": "/en/adcolumn-air-60x100-ver2",
+    "tekst": "adColumn Air 2.0 Advertising collumns PLN 729.00 60x100 60x220 60x320",
+    "produkt": true
+   },
+   {
+    "href": "/en/print-air-column-60x100",
+    "tekst": "Only prints available Prints for adColumn Air 1.0 Advertising collumns Individual pricing 60x100 60x220 60x300 60x320",
+    "produkt": false
+   },
+   {
+    "href": "/en/adflag-standard-s",
+    "tekst": "Product update adFlag Standard Advertising flags and winders PLN 129.00 S (63x260 cm) M (68x310 cm) L (83x410 cm) XL (93x520 cm)",
+    "produkt": true
+   },
+   {
+    "href": "/en/adflag-blade-s",
+    "tekst": "Product update adFlag Blade Advertising flags and winders PLN 129.00 S (63x260 cm) M (68x310 cm) L (83x410 cm) XL (93x520 cm)",
+    "produkt": true
+   },
+   {
+    "href": "/en/adflag-hook-s",
+    "tekst": "Product update adFlag Hook Advertising flags and winders PLN 129.00 S (63x260 cm) M (68x310 cm) L (83x410 cm) XL (93x520 cm)",
+    "produkt": true
+   },
+   {
+    "href": "/en/adflag-drop-s",
+    "tekst": "Product update adFlag Drop Advertising flags and winders PLN 128.00 S (63x260 cm) M (68x310 cm) L (83x410 cm) XL (93x520 cm)",
+    "produkt": true
+   },
+   {
+    "href": "/en/adflag-standard-pro-s",
+    "tekst": "While stocks last adFlag Standard PRO Advertising flags and winders PLN 131.00 S (63x260 cm) M (68x310 cm) L (83x410 cm) XL (93x520 cm) +2",
+    "produkt": true
+   },
+   {
+    "href": "/en/adflag-blade-pro-s",
+    "tekst": "While stocks last adFlag Blade PRO Advertising flags and winders PLN 131.00 S (63x260 cm) M (68x310 cm) L (83x410 cm) XL (93x520 cm) +3",
+    "produkt": true
+   },
+   {
+    "href": "/en/adflag-hook-pro-s",
+    "tekst": "While stocks last adFlag Hook PRO Advertising flags and winders PLN 131.00 S (63 x 260 cm) M (68 x 310 cm) L (83x410 cm) XL (93 x 520 cm) +3",
+    "produkt": true
+   },
+   {
+    "href": "/en/adflag-drop-pro-s",
+    "tekst": "While stocks last adFlag Drop PRO Advertising flags and winders PLN 131.00 S (63x260 cm) M (68x310 cm) L (83x410 cm) XL (93x520 cm)",
+    "produkt": true
+   },
+   {
+    "href": "/en/economy-set-outdoor",
+    "tekst": "Free delivery Economy Set Outdoor Advertising Sets PLN 3,100.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/heavy-duty-set-outdoor",
+    "tekst": "Free delivery Heavy-Duty Set Outdoor Advertising Sets PLN 4,600.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/fan-zone-set-outdoor",
+    "tekst": "Free delivery Fan Zone Outdoor Advertising Sets PLN 7,200.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/chill-zone-set-outdoor",
+    "tekst": "Free delivery Chill Zone Outdoor Advertising Sets PLN 8,200.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/premium-chill-zone-set-outdoor",
+    "tekst": "Free delivery Premium Chill Zone Outdoor Advertising Sets PLN 12,000.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/addeck",
+    "tekst": "Product update adDeck Advertising deck chairs PLN 119.00 58x118",
+    "produkt": true
+   },
+   {
+    "href": "/en/adboard-owz-b2",
+    "tekst": "adBoard Snap A-boards PLN 337.00 70.7x50 84.1x118.9",
+    "produkt": true
+   },
+   {
+    "href": "/en/adboard-hips-58x100",
+    "tekst": "adBoard Hips A-boards PLN 300.00 58x100 68x120",
+    "produkt": true
+   },
+   {
+    "href": "/en/adboard-led-65x100",
+    "tekst": "LED A-Board A-boards PLN 1,556.00 65x100 85x120",
+    "produkt": true
+   },
+   {
+    "href": "/en/adpuff-inflate",
+    "tekst": "New adPuff Inflate Advertising furniture PLN 229.00 68x38",
+    "produkt": true
+   },
+   {
+    "href": "/en/adchair-inflate",
+    "tekst": "New adChair Inflate Advertising furniture PLN 375.00 60x85x80",
+    "produkt": true
+   },
+   {
+    "href": "/en/cube",
+    "tekst": "adFoam Cube Advertising furniture PLN 299.00 45x45x45",
+    "produkt": true
+   },
+   {
+    "href": "/en/miniroller",
+    "tekst": "adFoam Miniroller Advertising furniture PLN 374.00 45x45x45",
+    "produkt": true
+   },
+   {
+    "href": "/en/beanbag",
+    "tekst": "adBeanbag Advertising furniture PLN 780.00 110x100x120",
+    "produkt": false
+   },
+   {
+    "href": "/en/sacco",
+    "tekst": "AdSacco Advertising furniture PLN 780.00 170x40x130",
+    "produkt": false
+   },
+   {
+    "href": "/en/via",
+    "tekst": "adFoam Via Advertising furniture PLN 1,455.00 70x60x180",
+    "produkt": false
+   },
+   {
+    "href": "/en/forma",
+    "tekst": "adFoam Forma Advertising furniture PLN 1,530.00 80x75x95",
+    "produkt": false
+   },
+   {
+    "href": "/en/roller",
+    "tekst": "AdFoam Roller Advertising furniture PLN 2,507.00 130x45x130",
+    "produkt": false
+   }
   ]
  },
  "stoiska-targowe-wystawowe": {
   "url": "https://adsystem.pl/en/stoiska-targowe-wystawowe",
   "lenker": [
-   "/en/about",
-   "/en/readymade-trade-show-booth-custom-2",
-   "/en/readymade-trade-show-boothcustom-3",
-   "/en/readymade-trade-show-booth-custom-1",
-   "/en/readymade-multiframe-stand-mt1-with-accessories",
-   "/en/sego-light-box-2x3-i-stand",
-   "/en/multiframe-250-2x3-l-stand",
-   "/en/foldable-3x2-l-stand",
-   "/en/readymade-multiframe-stand-mt2-with-accessories",
-   "/en/readymade-multiframe-stand-mt3-with-accessories",
-   "/en/readymade-multiframe-stand-mt4-with-accessories",
-   "/en/readymade-multiframe-stand-mt5-with-accessories",
-   "/en/readymade-multiframe-stand-mt6-with-accessories",
-   "/en/adframe-lmd-3x2-i-stand",
-   "/en/mframe-counter-with-doors-100x50",
-   "/en/mframe-glass-wall-992x2480",
-   "/en/mframe-frame-496x496",
-   "/en/mframe-arched-frame-496x496",
-   "/en/mframe-frame-arch-pannel",
-   "/en/mframe-printing-on-textiles-49-6x99-2cm",
-   "/en/mframe-print-on-textiles-arch-75x1984-cm-internal-bonded",
-   "/en/mframe-l-connector-90",
-   "/en/mfframe-pin-nut-door",
-   "/en/mframe-i-connector-180-4-pin",
-   "/en/mframe-t-connector",
-   "/en/mframe-x-connector",
-   "/en/mframe-3x-out-connector",
-   "/en/mframe-pin-fat-4cm",
-   "/en/mframe-foot-set",
-   "/en/mframe-flat-cover",
-   "/en/mframe-shelf-bracket-pin-set",
-   "/en/mframe-display-panel",
-   "/en/mframe-monitor-bracket",
-   "/en/mframe-clamp-connector",
-   "/en/mframe-led-lamp",
-   "/en/mframe-trolley-6-frames-locking-strap",
-   "/en/multiframe-tribune-black",
-   "/en/multiframe-250-set1-black-without-print",
-   "/en/print-multiframe-250cm-set1-single-sided",
-   "/en/multiframe-vertical-pole-extension-100cm"
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/readymade-trade-show-booth-custom-2",
+    "tekst": "Custom exhibition stands Trade show booth with unlimited customization mFrame, LMD, adTribune Expo PLN 0.00",
+    "produkt": false
+   },
+   {
+    "href": "/en/readymade-trade-show-boothcustom-3",
+    "tekst": "Custom exhibition stands Trade show booth with designated zones Booth mFrame PLN 0.00",
+    "produkt": false
+   },
+   {
+    "href": "/en/readymade-trade-show-booth-custom-1",
+    "tekst": "Custom exhibition stands Stoisko targowe w nowoczesnym wydaniu mFrame, Lumina, LMSM, adVideo Wall PLN 0.00",
+    "produkt": false
+   },
+   {
+    "href": "/en/readymade-multiframe-stand-mt1-with-accessories",
+    "tekst": "Custom exhibition stands Ready-to-use Multiframe display stand - MT1 (with accessories) Multiframe system stand MT1 PLN 33,896.00",
+    "produkt": true
+   },
+   {
+    "href": "/en/sego-light-box-2x3-i-stand",
+    "tekst": "Sego Ready-Made Sets Ready-made exhibition stand kits PLN 5,293.00 3 x 2 3 x 3 5 x 4 4 x 3",
+    "produkt": true
+   },
+   {
+    "href": "/en/multiframe-250-2x3-l-stand",
+    "tekst": "Multiframe Ready-made sets Ready-made exhibition stand kits PLN 11,306.00 3 x 2 3 x 3 5 x 4 4 x 3",
+    "produkt": true
+   },
+   {
+    "href": "/en/foldable-3x2-l-stand",
+    "tekst": "Foldable Ready-Made Sets Ready-made exhibition stand kits PLN 3,223.00 3x2 3x3 4x3 5x4 +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/readymade-multiframe-stand-mt2-with-accessories",
+    "tekst": "Multiframe system stand MT2 Ready-made exhibition stand kits PLN 37,066.00 400x250x400",
+    "produkt": true
+   },
+   {
+    "href": "/en/readymade-multiframe-stand-mt3-with-accessories",
+    "tekst": "Multiframe system stand MT3 Ready-made exhibition stand kits PLN 30,409.00 400x250x400",
+    "produkt": true
+   },
+   {
+    "href": "/en/readymade-multiframe-stand-mt4-with-accessories",
+    "tekst": "Multiframe system stand MT4 Ready-made exhibition stand kits PLN 25,968.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/readymade-multiframe-stand-mt5-with-accessories",
+    "tekst": "Multiframe system stand MT5 Ready-made exhibition stand kits PLN 10,026.00 300x250x300",
+    "produkt": true
+   },
+   {
+    "href": "/en/readymade-multiframe-stand-mt6-with-accessories",
+    "tekst": "Multiframe system stand MT6 Ready-made exhibition stand kits PLN 15,460.00 300x250x200",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-lmd-3x2-i-stand",
+    "tekst": "LMD Ready-made kits Ready-made exhibition stand kits Individual pricing 3x2 3x3 4x3 5x4",
+    "produkt": false
+   },
+   {
+    "href": "/en/mframe-counter-with-doors-100x50",
+    "tekst": "mFrame Tribune mFrame - modular exhibition system PLN 6,653.00 100x50x100 Wydruk przód Wydruk bok",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-glass-wall-992x2480",
+    "tekst": "mFrame Glass Profile mFrame - modular exhibition system PLN 2,094.00 Frame Door",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-frame-496x496",
+    "tekst": "mFrame Straight frames mFrame - modular exhibition system PLN 476.00 496x496mm 496x992 496x1240 496x1488 +11",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-arched-frame-496x496",
+    "tekst": "mFrame Arched frames mFrame - modular exhibition system PLN 976.00 496x496mm 496x992 496x1240mm 496x1488mm +5",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-frame-arch-pannel",
+    "tekst": "Finishing frame for mFrame mFrame - modular exhibition system PLN 880.00 Arch Pannel 992x992 496x496",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-printing-on-textiles-49-6x99-2cm",
+    "tekst": "MFrame Prints mFrame - modular exhibition system PLN 50.00 49,6x99,2 cm 49,6x248 cm 49,6 x 297,6 cm 99,2x99,2 cm +18",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-print-on-textiles-arch-75x1984-cm-internal-bonded",
+    "tekst": "mFrame Arched Frame Prints mFrame - modular exhibition system PLN 300.00 WEW (R49,6 x 198,4 cm) WEW (R49,6 x 99,2 cm) IN (R49,6x248cm) IN (R49,6x148,8cm) +9",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-l-connector-90",
+    "tekst": "mFrame L Connectors mFrame - modular exhibition system PLN 112.00 L connector Adjustable angle Adjustable length",
+    "produkt": true
+   },
+   {
+    "href": "/en/mfframe-pin-nut-door",
+    "tekst": "mFrame Nuts mFrame - modular exhibition system PLN 34.00 Door connector nut Nut FAT",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-i-connector-180-4-pin",
+    "tekst": "mFrame I Connectors mFrame - modular exhibition system PLN 103.00 4 PIN 2 PIN 6 PIN 12 PIN +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-t-connector",
+    "tekst": "mFrame T Connectors mFrame - modular exhibition system PLN 176.00 286x18x164",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-x-connector",
+    "tekst": "mFrame X Connectors mFrame - modular exhibition system PLN 215.00 290x18x290",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-3x-out-connector",
+    "tekst": "mFrame Standard Connectors mFrame - modular exhibition system PLN 65.00 1x1 ŁĄCZNIK WEW/ZEW 90 STOPNI 2x ZEW",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-pin-fat-4cm",
+    "tekst": "mFrame Pins mFrame - modular exhibition system PLN 34.00 1x1",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-foot-set",
+    "tekst": "mFrame Supporting feet mFrame - modular exhibition system PLN 400.00 1x1 SHORT SHEET METAL SHEET METAL",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-flat-cover",
+    "tekst": "mFrame Covers mFrame - modular exhibition system PLN 60.00 FLAT STRAIGHT FLAT ARCH SQUARE CORNER QUARTER CORNER +3",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-shelf-bracket-pin-set",
+    "tekst": "mFrame Shelf Brackets mFrame - modular exhibition system PLN 305.00 Shelf pin holder set Shelf pin holder LED set LED shelf",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-display-panel",
+    "tekst": "mFrame Panels mFrame - modular exhibition system PLN 636.00 PANEL PANEL HOOKS",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-monitor-bracket",
+    "tekst": "mFrame TV Holder mFrame - modular exhibition system PLN 370.00 PANEL TV",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-clamp-connector",
+    "tekst": "mFrame Clamps mFrame - modular exhibition system PLN 73.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-led-lamp",
+    "tekst": "mFrame LED Lighting mFrame - modular exhibition system PLN 430.00 LED LAMP 60 LEDs SILVER 60 LEDs BLACK 116 LEDs SILVER +2",
+    "produkt": true
+   },
+   {
+    "href": "/en/mframe-trolley-6-frames-locking-strap",
+    "tekst": "mFrame Transport Accessories mFrame - modular exhibition system PLN 26.00 LOCKING STRAP 6 FRAMES BAG ON WHEELS 125CM BAG ON WHEELS 150CM 6 FRAMES TROLLEY +3",
+    "produkt": true
+   },
+   {
+    "href": "/en/multiframe-tribune-black",
+    "tekst": "Multiframe Stand Textile counters PLN 1,999.00 PLN 3,007.00 -34% Komplet Sama konstrukcja Wydruk Przód",
+    "produkt": true
+   },
+   {
+    "href": "/en/multiframe-250-set1-black-without-print",
+    "tekst": "Multiframe Frames Multiframe - modular exhibition system PLN 3,160.00 SET1 (100x250cm) SET2 (195x250cm) SET3 (290x250cm) SET4 (385x250cm) +11",
+    "produkt": true
+   },
+   {
+    "href": "/en/print-multiframe-250cm-set1-single-sided",
+    "tekst": "Multiframe Prints Multiframe - modular exhibition system PLN 250.00 Set1 100 x 250 Set2 195 x 250 Set3 290 x 250 Set4 385 x 250 +14",
+    "produkt": true
+   },
+   {
+    "href": "/en/multiframe-vertical-pole-extension-100cm",
+    "tekst": "Multiframe Profiles Multiframe - modular exhibition system PLN 335.00 Vertical pole extension 100cm Vertical pole extension 50cm Horizontal profile 40cm Horizontal Bar 89,9cm +4",
+    "produkt": true
+   }
   ]
  },
  "roll-up": {
   "url": "https://adsystem.pl/en/roll-up",
   "lenker": [
-   "/en/about",
-   "/en/adstand-light-85",
-   "/en/adstand-eco-85",
-   "/en/adstand-l-60",
-   "/en/adstand-drop-85",
-   "/en/adstand-lux-85",
-   "/en/adstand-premium-85",
-   "/en/adstand-twins-85",
-   "/en/adstand-level-85",
-   "/en/sego-mini-display-stand-100x250",
-   "/en/adwall-vario-presto-light-060-single-sided",
-   "/en/adframe-quick-budget-100x200-double-sided",
-   "/en/adwall-vario-s-80-double-sided"
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/adstand-light-85",
+    "tekst": "Bestseller adStand Light Rollups PLN 118.00 85x210",
+    "produkt": true
+   },
+   {
+    "href": "/en/adstand-eco-85",
+    "tekst": "adStand Eco Rollups PLN 185.00 85x210 100x210",
+    "produkt": true
+   },
+   {
+    "href": "/en/adstand-l-60",
+    "tekst": "adStand L Rollups PLN 252.00 60x204 80x204 100x204 120x204 +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/adstand-drop-85",
+    "tekst": "Bestseller New AdStand Drop Rollups PLN 265.00 85x210 100x210 120x210",
+    "produkt": true
+   },
+   {
+    "href": "/en/adstand-lux-85",
+    "tekst": "adStand Lux Rollups PLN 266.00 85x210 100x210 120x210",
+    "produkt": true
+   },
+   {
+    "href": "/en/adstand-premium-85",
+    "tekst": "adStand Premium Rollups PLN 349.00 85x215 cm 100x215 120x215 150x215",
+    "produkt": true
+   },
+   {
+    "href": "/en/adstand-twins-85",
+    "tekst": "adStand Twins Rollups PLN 367.00 85x210",
+    "produkt": true
+   },
+   {
+    "href": "/en/adstand-level-85",
+    "tekst": "adStand Level Rollups PLN 492.00 85x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/sego-mini-display-stand-100x250",
+    "tekst": "SEGO Mini Display Stand Textile rollup PLN 499.00 100x250",
+    "produkt": false
+   },
+   {
+    "href": "/en/adwall-vario-presto-light-060-single-sided",
+    "tekst": "Bestseller adWall Vario Presto Light Textile walls PLN 590.00 60 x 230 90 x 230 120x230 120 x 230 +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-quick-budget-100x200-double-sided",
+    "tekst": "Bestseller adFrame Starter Textile rollup PLN 578.00 100x200 100x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-s-80-double-sided",
+    "tekst": "adWall Vario S Textile rollup PLN 1,199.00 80x235 100x235 120x235 150x235",
+    "produkt": true
+   }
   ]
  },
  "ramy-tekstylne": {
   "url": "https://adsystem.pl/en/ramy-tekstylne",
   "lenker": [
-   "/en/about",
-   "/en/adframe-stf-100x100",
-   "/en/adframe-stfl-50x50",
-   "/en/adframe-quick-budget-100x200-double-sided",
-   "/en/combo-adframe-starter-100x200-and-adtribune-starter",
-   "/en/adframe-dtf-50x100",
-   "/en/adframe-ctf-30x30x120",
-   "/en/adframe-ctf-100x50x100-hanging",
-   "/en/adframe-stfl",
-   "/en/adframe-stf",
-   "/en/adframe-dtf",
-   "/en/adframe-ctf"
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-stf-100x100",
+    "tekst": "adFrame STF Wall-hung frames PLN 385.00 100x100 100x200 100x250 150x200 +11",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-stfl-50x50",
+    "tekst": "adFrame STFL Wall-hung frames PLN 167.00 50x50 50x70 59x84 70x100 +17",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-quick-budget-100x200-double-sided",
+    "tekst": "Bestseller adFrame Starter Textile rollup PLN 578.00 100x200 100x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/combo-adframe-starter-100x200-and-adtribune-starter",
+    "tekst": "Starter Combo Set Textile counters PLN 1,250.00 100x200 100x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-dtf-50x100",
+    "tekst": "adFrame DTF Free-standing frames PLN 636.00 50x100 50x200 80x200 100x200 +13",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-ctf-30x30x120",
+    "tekst": "adFrame CTF Free-standing frames PLN 726.00 30x30x120 50x50x50 100x100x50 100x100x100 +3",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-ctf-100x50x100-hanging",
+    "tekst": "adFrame CTF Hanging Suspended systems Individual pricing 100x50x100 100x100x100 150x100x150 150x150x150",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-stfl",
+    "tekst": "adFrame STFL RFQ Custom frames Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-stf",
+    "tekst": "adFrame STF RFQ Custom frames Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-dtf",
+    "tekst": "adFrame DTF RFQ Custom frames Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-ctf",
+    "tekst": "adFrame CTF RFQ Custom frames Individual pricing model.",
+    "produkt": false
+   }
   ]
  },
  "digital": {
   "url": "https://adsystem.pl/en/digital",
   "lenker": [
-   "/en/about",
-   "/en/digital-a-board-advideo-a-board-43",
-   "/en/foldable-led-display-advideo-poster-fold-25",
-   "/en/indoor-led-screen-advideo-poster-trifold-25",
-   "/en/videowall-2x2",
-   "/en/advideo-kiosk-55",
-   "/en/advideo-stand-32"
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/digital-a-board-advideo-a-board-43",
+    "tekst": "New Digital adVideo A-Board LED screens PLN 4,999.00 model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/foldable-led-display-advideo-poster-fold-25",
+    "tekst": "New adVideo Poster Fold LED screens PLN 9,999.00 model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/indoor-led-screen-advideo-poster-trifold-25",
+    "tekst": "New adVideo Poster Trifold LED screens PLN 16,999.00 model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/videowall-2x2",
+    "tekst": "adVideo Wall LED screens Individual pricing 300x200 300x300 400x300x50",
+    "produkt": false
+   },
+   {
+    "href": "/en/advideo-kiosk-55",
+    "tekst": "Bestseller New Digital adVideo Touch Kiosk Infokiosk PLN 7,000.00 55\" 65\"",
+    "produkt": true
+   },
+   {
+    "href": "/en/advideo-stand-32",
+    "tekst": "Temporarily unavailable adVideo Stand 32 Infokiosk PLN 4,000.00 42.8x123.7",
+    "produkt": true
+   }
   ]
  },
  "exhibition-booths-for-events-and-conferences": {
   "url": "https://adsystem.pl/en/exhibition-booths-for-events-and-conferences",
   "lenker": [
-   "/en/about",
-   "/en/advertising-spaces-up-to-5-m",
-   "/en/advertising-spaces-up-to-9-m",
-   "/en/advertising-spaces-up-to-16-m",
-   "/en/ready-to-use-smart-sets",
-   "/en/combo-adframe-starter-100x200-and-adtribune-starter",
-   "/en/popup-combo-counter-lightbox-100x100-incl-charging",
-   "/en/premium-dtf-promotional-set",
-   "/en/economic-vario-promotional-set",
-   "/en/dtf-premium-event-set",
-   "/en/economic-vario-conference-set",
-   "/en/pop-up-led-event-set",
-   "/en/premium-led-conference-set",
-   "/en/standard-dtf-conference-set",
-   "/en/premium-dtf-conference-set",
-   "/en/premium-led-trade-show-set",
-   "/en/dtf-standard-trade-show-set",
-   "/en/premium-dtf-trade-show-set",
-   "/en/double-dtf-trade-show-set",
-   "/en/adframe-smart-1x1",
-   "/en/adframe-smart-2x1",
-   "/en/adframe-smart-3x2",
-   "/en/adframe-smart-3x2-l",
-   "/en/adframe-smart-4x2-l",
-   "/en/adframe-smart-4x3-u",
-   "/en/adframe-smart-3x2-l1",
-   "/en/adframe-smart-3x3-l",
-   "/en/adframe-smart-3x3-u",
-   "/en/adframe-smart-4x2-l1"
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/advertising-spaces-up-to-5-m",
+    "tekst": "Advertising Spaces up to 5 m²",
+    "produkt": false
+   },
+   {
+    "href": "/en/advertising-spaces-up-to-9-m",
+    "tekst": "Advertising Spaces up to 9 m²",
+    "produkt": false
+   },
+   {
+    "href": "/en/advertising-spaces-up-to-16-m",
+    "tekst": "Advertising Spaces up to 16 m²",
+    "produkt": false
+   },
+   {
+    "href": "/en/ready-to-use-smart-sets",
+    "tekst": "Ready-to-Use Smart Sets",
+    "produkt": false
+   },
+   {
+    "href": "/en/combo-adframe-starter-100x200-and-adtribune-starter",
+    "tekst": "Starter Combo Set Textile counters PLN 1,250.00 100x200 100x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/popup-combo-counter-lightbox-100x100-incl-charging",
+    "tekst": "Pop-up Combo Pop-up Lightboxes PLN 2,788.00 100x200",
+    "produkt": true
+   },
+   {
+    "href": "/en/premium-dtf-promotional-set",
+    "tekst": "Premium DTF promotional set Advertising Spaces up to 5 m² Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/economic-vario-promotional-set",
+    "tekst": "Economic Vario promotional set Advertising Spaces up to 5 m² PLN 1,399.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/dtf-premium-event-set",
+    "tekst": "DTF premium event set Advertising Spaces up to 5 m² Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/economic-vario-conference-set",
+    "tekst": "Economic Vario conference set Advertising Spaces up to 9 m² PLN 2,899.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/pop-up-led-event-set",
+    "tekst": "Pop-up LED event set Advertising Spaces up to 9 m² PLN 3,999.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/premium-led-conference-set",
+    "tekst": "Premium LED conference set Advertising Spaces up to 9 m² PLN 5,999.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/standard-dtf-conference-set",
+    "tekst": "Standard DTF conference set Advertising Spaces up to 9 m² Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/premium-dtf-conference-set",
+    "tekst": "Premium DTF Conference Set Advertising Spaces up to 9 m² Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/premium-led-trade-show-set",
+    "tekst": "Premium LED trade show set Advertising Spaces up to 9 m² PLN 12,999.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/dtf-standard-trade-show-set",
+    "tekst": "DTF Standard Trade Show Set Advertising Spaces up to 9 m² PLN 5,199.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/premium-dtf-trade-show-set",
+    "tekst": "Premium DTF trade show set Advertising Spaces up to 16 m² Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/double-dtf-trade-show-set",
+    "tekst": "Double DTF trade show set Advertising Spaces up to 16 m² Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-smart-1x1",
+    "tekst": "adFrame Smart 1x1 Ready-to-Use Smart Sets PLN 3,220.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-2x1",
+    "tekst": "adFrame Smart 2x1 Ready-to-Use Smart Sets PLN 6,808.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-3x2",
+    "tekst": "adFrame Smart 3x2 U Ready-to-Use Smart Sets PLN 14,030.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-3x2-l",
+    "tekst": "adFrame Smart 3x2 L Ready-to-Use Smart Sets PLN 10,465.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-4x2-l",
+    "tekst": "adFrame Smart 4x2 U Ready-to-Use Smart Sets PLN 14,375.00 model.szeregowe",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-4x3-u",
+    "tekst": "adFrame Smart 4x3 U Ready-to-Use Smart Sets PLN 22,885.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-3x2-l1",
+    "tekst": "adFrame Smart 3x2 L Ready-to-Use Smart Sets PLN 8,970.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-3x3-l",
+    "tekst": "adFrame Smart 3x3 L Ready-to-Use Smart Sets PLN 13,685.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-3x3-u",
+    "tekst": "adFrame Smart 3x3 U Ready-to-Use Smart Sets Individual pricing model.szeregowe",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-smart-4x2-l1",
+    "tekst": "adFrame Smart 4x2 L Ready-to-Use Smart Sets PLN 14,720.00 model.narożne",
+    "produkt": true
+   }
   ]
  },
  "akcesoria-i-stojaki-reklamowe": {
   "url": "https://adsystem.pl/en/akcesoria-i-stojaki-reklamowe",
   "lenker": [
-   "/en/about",
-   "/en/adtowel-50x75cm",
-   "/en/adblanket-145x200cm",
-   "/en/ponczo",
-   "/en/adfolder-a4-25754",
-   "/en/adfolder-prestige-4-chambers",
-   "/en/adfolder-premium",
-   "/en/pump-electric-standard",
-   "/en/adtent-air-led-6x6",
-   "/en/wheeled-bag-air-tent-premium-big",
-   "/en/wheeled-bag-air-tent-premium-small",
-   "/en/adtent-air-set-of-2-backpacks-4x4-i-5x5",
-   "/en/adtent-air-set-of-2-backpacks-3x3",
-   "/en/adtent-weight-10kg-25802",
-   "/en/pump-hand-standard",
-   "/en/pump-electric-bravo",
-   "/en/adtent-air-premium-hammer",
-   "/en/adtent-air-straight-peg",
-   "/en/adtent-air-twisted-anchor",
-   "/en/led-lighting-for-vario-light-50-black"
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/adtowel-50x75cm",
+    "tekst": "adTowel Advertising gadgets PLN 50.00 50x75 75x100 75x135 100x150 +1",
+    "produkt": true
+   },
+   {
+    "href": "/en/adblanket-145x200cm",
+    "tekst": "adBlanket Advertising gadgets PLN 154.00 145x200",
+    "produkt": true
+   },
+   {
+    "href": "/en/ponczo",
+    "tekst": "adPonczo Advertising gadgets PLN 223.00 74",
+    "produkt": true
+   },
+   {
+    "href": "/en/adfolder-a4-25754",
+    "tekst": "adFolder Brochure holders PLN 379.00 Without topper With topper",
+    "produkt": true
+   },
+   {
+    "href": "/en/adfolder-prestige-4-chambers",
+    "tekst": "adFolder Prestige Brochure holders PLN 769.00 150 cm 4 compartments with top extension",
+    "produkt": true
+   },
+   {
+    "href": "/en/adfolder-premium",
+    "tekst": "adFolder Premium Brochure holders PLN 769.00 154",
+    "produkt": true
+   },
+   {
+    "href": "/en/pump-electric-standard",
+    "tekst": "adTent Air Electric Pump Accessories and advertising lightning PLN 155.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-air-led-6x6",
+    "tekst": "adTent LED 6x6 Accessories and advertising lightning PLN 799.00 40 cm",
+    "produkt": true
+   },
+   {
+    "href": "/en/wheeled-bag-air-tent-premium-big",
+    "tekst": "adTent Air Premium Bag Large Accessories and advertising lightning PLN 699.00 40x18 cm",
+    "produkt": true
+   },
+   {
+    "href": "/en/wheeled-bag-air-tent-premium-small",
+    "tekst": "adTent Air Premium Bag Small Accessories and advertising lightning PLN 599.00 38x16 cm",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-air-set-of-2-backpacks-4x4-i-5x5",
+    "tekst": "adTent Air Backpack 4x4/5x5 Accessories and advertising lightning PLN 499.00 50x40",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-air-set-of-2-backpacks-3x3",
+    "tekst": "adTent Air Backpack 3x3 Accessories and advertising lightning PLN 370.00 45x35",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-weight-10kg-25802",
+    "tekst": "adTent Weight 10kg Accessories and advertising lightning PLN 199.00 31x4",
+    "produkt": true
+   },
+   {
+    "href": "/en/pump-hand-standard",
+    "tekst": "adTent Air Handpump Accessories and advertising lightning PLN 73.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/pump-electric-bravo",
+    "tekst": "adTent Air Premium Electric Pump Accessories and advertising lightning PLN 329.00 model.elektyczna-bravo",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-air-premium-hammer",
+    "tekst": "adTent Hammer Accessories and advertising lightning PLN 39.00 7 cm",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-air-straight-peg",
+    "tekst": "adTent Air Anchor Accessories and advertising lightning PLN 8.00 3",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtent-air-twisted-anchor",
+    "tekst": "adTent Air Spiral Anchor Accessories and advertising lightning PLN 16.00 Zakręcony",
+    "produkt": true
+   },
+   {
+    "href": "/en/led-lighting-for-vario-light-50-black",
+    "tekst": "Advertising Lightning Accessories and advertising lightning PLN 195.00 1x1",
+    "produkt": true
+   }
   ]
  },
  "original-shapes-exhibition-systems": {
   "url": "https://adsystem.pl/en/original-shapes-exhibition-systems",
   "lenker": [
-   "/en/about",
-   "/en/adwall-vario-s-80-double-sided",
-   "/en/adwall-vario-add-right-double-sided",
-   "/en/adwall-vario-add-left-double-sided",
-   "/en/adwall-vario-tower-3m",
-   "/en/adwall-vario-cone-single-sided",
-   "/en/adwall-vario-crown",
-   "/en/adwall-vario-horizontal-single-sided",
-   "/en/adwall-vario-flat-ring-single-sided",
-   "/en/adwall-vario-qring-single-sided",
-   "/en/adwall-vario-ring-single-sided",
-   "/en/adwall-vario-kite-single-sided",
-   "/en/adwall-vario-serpentine-300-single-sided",
-   "/en/adwall-vario-slope-single-sided",
-   "/en/adwall-vario-peak-single-sided",
-   "/en/adwall-vario-fall-single-sided",
-   "/en/adwall-vario-twist",
-   "/en/adwall-vario-wave",
-   "/en/adwall-vario-craft-single-sided",
-   "/en/adgate-quick-arch",
-   "/en/adwall-vario-arch-c",
-   "/en/adwall-vario-arch-a",
-   "/en/adwall-vario-arch-b",
-   "/en/adwall-vario-bow",
-   "/en/adwall-vario-gate",
-   "/en/adwall-vario-arch-set-ab",
-   "/en/adup-vario-trapfloat-double-sided",
-   "/en/adup-vario-ringfloat-double-sided",
-   "/en/adup-vario-clover-maxi-double-sided",
-   "/en/adup-vario-trifloat-double-sided",
-   "/en/adup-vario-quadfloat-double-sided",
-   "/en/adwall-vario-c-wall-double-sided",
-   "/en/adwall-vario-cr-double-sided",
-   "/en/adwall-vario-island-double-sided",
-   "/en/adwall-vario-in",
-   "/en/adwall-vario-big-island-double-sided",
-   "/en/adwall-vario-tunnel-double-sided"
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/adwall-vario-s-80-double-sided",
+    "tekst": "adWall Vario S Textile rollup PLN 1,199.00 80x235 100x235 120x235 150x235",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-add-right-double-sided",
+    "tekst": "adWall Vario Add Right Advertising textile totems PLN 1,299.00 120x230 120x240",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-add-left-double-sided",
+    "tekst": "adWall Vario Add Left Advertising textile totems PLN 1,299.00 120x240",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-tower-3m",
+    "tekst": "adWall Vario Tower Advertising textile totems PLN 1,967.00 150x300x90 150x410x90",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-cone-single-sided",
+    "tekst": "adWall Vario Cone Advertising textile totems PLN 3,999.00 100x305",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-crown",
+    "tekst": "adWall Vario Crown Advertising textile totems PLN 4,999.00 290x400x40",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-horizontal-single-sided",
+    "tekst": "adWall Vario Horizontal Original textile shapes PLN 699.00 240x120x35",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-flat-ring-single-sided",
+    "tekst": "Bestseller adWall Vario Flat Ring Original textile shapes PLN 912.00 Ø200cm, with feet Ø180cm, with Waterbase Ø180cm, waterbase",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-qring-single-sided",
+    "tekst": "adWall Vario QRing Original textile shapes PLN 1,599.00 330x230x40",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-ring-single-sided",
+    "tekst": "Bestseller adWall Vario Ring Original textile shapes PLN 1,650.00 240x220x40",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-kite-single-sided",
+    "tekst": "adWall Vario Kite Original textile shapes Individual pricing 260x240x40",
+    "produkt": false
+   },
+   {
+    "href": "/en/adwall-vario-serpentine-300-single-sided",
+    "tekst": "adWall Vario Serpentine Original textile shapes PLN 1,814.00 300x235 600x235",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-slope-single-sided",
+    "tekst": "adWall Vario Slope Original textile shapes PLN 1,899.00 295x230x80 300x180x80",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-peak-single-sided",
+    "tekst": "adWall Vario Peak Original textile shapes PLN 2,199.00 330x230x110",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-fall-single-sided",
+    "tekst": "adWall Vario Fall Original textile shapes PLN 1,649.25 PLN 2,199.00 -25% model.500x185x90 500x185x90",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-twist",
+    "tekst": "adWall Vario Twist Original textile shapes PLN 3,589.00 390x130 390x130x100",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-wave",
+    "tekst": "adWall Vario Wave Original textile shapes PLN 3,789.00 495x120x125",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-craft-single-sided",
+    "tekst": "adWall Vario Craft Original textile shapes PLN 3,999.00 750x245x180",
+    "produkt": true
+   },
+   {
+    "href": "/en/adgate-quick-arch",
+    "tekst": "New For indoor use adGate Quick Arch Textile gates PLN 923.00 545x269x120 (adjustable size)",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-arch-c",
+    "tekst": "adWall Vario Arch C Textile gates PLN 2,249.00 360x250x120",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-arch-a",
+    "tekst": "adWall Vario Arch A Textile gates PLN 2,349.00 500x270x90",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-arch-b",
+    "tekst": "adWall Vario Arch B Textile gates Individual pricing 500x270x90",
+    "produkt": false
+   },
+   {
+    "href": "/en/adwall-vario-bow",
+    "tekst": "Bestseller adWall Vario Bow Textile gates PLN 2,849.00 100x240x300",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-gate",
+    "tekst": "adWall Vario Gate Textile gates PLN 4,000.00 619x310x80 cm",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-arch-set-ab",
+    "tekst": "adWall Arch SET Textile gates PLN 4,599.00 500x270x90",
+    "produkt": true
+   },
+   {
+    "href": "/en/adup-vario-trapfloat-double-sided",
+    "tekst": "adUp Vario Trapfloat Suspended systems PLN 1,979.00 300x110x300",
+    "produkt": true
+   },
+   {
+    "href": "/en/adup-vario-ringfloat-double-sided",
+    "tekst": "adUp Vario Ringfloat Suspended systems PLN 2,013.00 300x60x300",
+    "produkt": true
+   },
+   {
+    "href": "/en/adup-vario-clover-maxi-double-sided",
+    "tekst": "adUp Vario Clover Maxi Suspended systems PLN 2,969.00 330x110x330",
+    "produkt": true
+   },
+   {
+    "href": "/en/adup-vario-trifloat-double-sided",
+    "tekst": "adUp Vario Trifloat Suspended systems PLN 2,969.00 300x100x300",
+    "produkt": true
+   },
+   {
+    "href": "/en/adup-vario-quadfloat-double-sided",
+    "tekst": "adUp Vario Quadfloat Suspended systems PLN 4,288.00 370x120x370",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-c-wall-double-sided",
+    "tekst": "adWall Vario C-wall Island textile walls PLN 2,419.00 200x230x140",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-cr-double-sided",
+    "tekst": "adWall Vario Changing Room Island textile walls Individual pricing 125x219x110",
+    "produkt": false
+   },
+   {
+    "href": "/en/adwall-vario-island-double-sided",
+    "tekst": "Bestseller adWall Vario Island Island textile walls PLN 2,639.00 300x230x260",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-in",
+    "tekst": "adWall Vario In Island textile walls PLN 2,999.00 300x240x240",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-big-island-double-sided",
+    "tekst": "adWall Vario Big Island Island textile walls PLN 4,999.00 650x245x465",
+    "produkt": true
+   },
+   {
+    "href": "/en/adwall-vario-tunnel-double-sided",
+    "tekst": "adWall Vario Tunel Island textile walls PLN 6,692.00 550x245x460",
+    "produkt": true
+   }
   ]
+ },
+ "backlit-walls": {
+  "url": "https://adsystem.pl/en/backlit-walls",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-flex-led-200x250",
+    "tekst": "Bestseller New adFrame Flex LED Backlit walls PLN 2,655.00 200x250 300x250 400x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-100x200-1",
+    "tekst": "Bestseller Backlit wall Smart Backlit walls PLN 1,870.00 100x200 200x250 300x250 200x200",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-lmd-200x250-nd",
+    "tekst": "Backlit wall LMD Backlit walls PLN 4,102.00 200x250 300x200 300x250 150x200 +8",
+    "produkt": true
+   },
+   {
+    "href": "/en/sego-light-box-300x250-1",
+    "tekst": "Backlit wall SEGO Backlit walls PLN 5,879.00 300x250",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "outdoor-advertising-walls": {
+  "url": "https://adsystem.pl/en/outdoor-advertising-walls",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/adwall-presto-outdoor-single-sided",
+    "tekst": "adWall Presto Outdoor Outdoor advertising walls PLN 999.00 100x230",
+    "produkt": true
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-smart-100x200-1": {
+  "url": "https://adsystem.pl/en/adframe-smart-100x200-1",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "sego-light-box-300x250-1": {
+  "url": "https://adsystem.pl/en/sego-light-box-300x250-1",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "kasetony-pop-up": {
+  "url": "https://adsystem.pl/en/kasetony-pop-up",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/pop-up-lightbox-100x200",
+    "tekst": "Bestseller New dimensions adFrame Pop-up Pop-up Lightboxes PLN 1,499.00 100x200 100x225 100x250 120x200 +3",
+    "produkt": true
+   },
+   {
+    "href": "/en/popup-combo-counter-lightbox-100x100-incl-charging",
+    "tekst": "Pop-up Combo Pop-up Lightboxes PLN 2,788.00 100x200",
+    "produkt": true
+   }
+  ],
+  "undergruppe": true
+ },
+ "print-sego-light-box-85x200-keder-9x3mm-1": {
+  "url": "https://adsystem.pl/en/print-sego-light-box-85x200-keder-9x3mm-1",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-lmsm": {
+  "url": "https://adsystem.pl/en/adframe-lmsm",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-lmsm-60x100-nk": {
+  "url": "https://adsystem.pl/en/adframe-lmsm-60x100-nk",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-lms": {
+  "url": "https://adsystem.pl/en/adframe-lms",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-lms-100x100-nk": {
+  "url": "https://adsystem.pl/en/adframe-lms-100x100-nk",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-lmd-lcd": {
+  "url": "https://adsystem.pl/en/adframe-lmd-lcd",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-lmsm-mframe": {
+  "url": "https://adsystem.pl/en/adframe-lmsm-mframe",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-lmd": {
+  "url": "https://adsystem.pl/en/adframe-lmd",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "quick-counters": {
+  "url": "https://adsystem.pl/en/quick-counters",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/adtribune-quick-max",
+    "tekst": "New adTribune Quick Max Textile counters PLN 1,515.00 100x100x52",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-quick-round",
+    "tekst": "New adTribune Quick Round Textile counters PLN 699.00 60x100",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-quick-square",
+    "tekst": "New adTribune Quick Square Textile counters PLN 645.00 70x100x40",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-quick-kidney",
+    "tekst": "New adTribune Quick Kidney Textile counters PLN 799.00 90x100x40",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-big-quick-led-auto",
+    "tekst": "adTribune Big Quick LED Auto Textile counters PLN 1,799.00 96x97x48",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-big-quick",
+    "tekst": "Bestseller adTribune Big Quick Textile counters PLN 1,009.00 80x100x48",
+    "produkt": true
+   },
+   {
+    "href": "/en/adtribune-quick",
+    "tekst": "Bestseller adTribune Quick Textile counters PLN 957.00 70x100x40",
+    "produkt": true
+   }
+  ],
+  "undergruppe": true
+ },
+ "ready-made-outdoor-set": {
+  "url": "https://adsystem.pl/en/ready-made-outdoor-set",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/economy-set-outdoor",
+    "tekst": "Free delivery Economy Set Outdoor Advertising Sets PLN 3,100.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/heavy-duty-set-outdoor",
+    "tekst": "Free delivery Heavy-Duty Set Outdoor Advertising Sets PLN 4,600.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/fan-zone-set-outdoor",
+    "tekst": "Free delivery Fan Zone Outdoor Advertising Sets PLN 7,200.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/chill-zone-set-outdoor",
+    "tekst": "Free delivery Chill Zone Outdoor Advertising Sets PLN 8,200.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/premium-chill-zone-set-outdoor",
+    "tekst": "Free delivery Premium Chill Zone Outdoor Advertising Sets PLN 12,000.00 model.",
+    "produkt": true
+   }
+  ],
+  "undergruppe": true
+ },
+ "print-air-column-60x100": {
+  "url": "https://adsystem.pl/en/print-air-column-60x100",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "beanbag": {
+  "url": "https://adsystem.pl/en/beanbag",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "sacco": {
+  "url": "https://adsystem.pl/en/sacco",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "via": {
+  "url": "https://adsystem.pl/en/via",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "forma": {
+  "url": "https://adsystem.pl/en/forma",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "roller": {
+  "url": "https://adsystem.pl/en/roller",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "readymade-trade-show-booth-custom-2": {
+  "url": "https://adsystem.pl/en/readymade-trade-show-booth-custom-2",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "readymade-trade-show-boothcustom-3": {
+  "url": "https://adsystem.pl/en/readymade-trade-show-boothcustom-3",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "readymade-trade-show-booth-custom-1": {
+  "url": "https://adsystem.pl/en/readymade-trade-show-booth-custom-1",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-lmd-3x2-i-stand": {
+  "url": "https://adsystem.pl/en/adframe-lmd-3x2-i-stand",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "sego-mini-display-stand-100x250": {
+  "url": "https://adsystem.pl/en/sego-mini-display-stand-100x250",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-ctf-100x50x100-hanging": {
+  "url": "https://adsystem.pl/en/adframe-ctf-100x50x100-hanging",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-stfl": {
+  "url": "https://adsystem.pl/en/adframe-stfl",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-stf": {
+  "url": "https://adsystem.pl/en/adframe-stf",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-dtf": {
+  "url": "https://adsystem.pl/en/adframe-dtf",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-ctf": {
+  "url": "https://adsystem.pl/en/adframe-ctf",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "digital-a-board-advideo-a-board-43": {
+  "url": "https://adsystem.pl/en/digital-a-board-advideo-a-board-43",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "foldable-led-display-advideo-poster-fold-25": {
+  "url": "https://adsystem.pl/en/foldable-led-display-advideo-poster-fold-25",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "indoor-led-screen-advideo-poster-trifold-25": {
+  "url": "https://adsystem.pl/en/indoor-led-screen-advideo-poster-trifold-25",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "videowall-2x2": {
+  "url": "https://adsystem.pl/en/videowall-2x2",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "advertising-spaces-up-to-5-m": {
+  "url": "https://adsystem.pl/en/advertising-spaces-up-to-5-m",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/combo-adframe-starter-100x200-and-adtribune-starter",
+    "tekst": "Starter Combo Set Textile counters PLN 1,250.00 100x200 100x250",
+    "produkt": true
+   },
+   {
+    "href": "/en/popup-combo-counter-lightbox-100x100-incl-charging",
+    "tekst": "Pop-up Combo Pop-up Lightboxes PLN 2,788.00 100x200",
+    "produkt": true
+   },
+   {
+    "href": "/en/premium-dtf-promotional-set",
+    "tekst": "Premium DTF promotional set Advertising Spaces up to 5 m² Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/economic-vario-promotional-set",
+    "tekst": "Economic Vario promotional set Advertising Spaces up to 5 m² PLN 1,399.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/dtf-premium-event-set",
+    "tekst": "DTF premium event set Advertising Spaces up to 5 m² Individual pricing model.",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "advertising-spaces-up-to-9-m": {
+  "url": "https://adsystem.pl/en/advertising-spaces-up-to-9-m",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/economic-vario-conference-set",
+    "tekst": "Economic Vario conference set Advertising Spaces up to 9 m² PLN 2,899.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/pop-up-led-event-set",
+    "tekst": "Pop-up LED event set Advertising Spaces up to 9 m² PLN 3,999.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/premium-led-conference-set",
+    "tekst": "Premium LED conference set Advertising Spaces up to 9 m² PLN 5,999.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/standard-dtf-conference-set",
+    "tekst": "Standard DTF conference set Advertising Spaces up to 9 m² Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/premium-dtf-conference-set",
+    "tekst": "Premium DTF Conference Set Advertising Spaces up to 9 m² Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/premium-led-trade-show-set",
+    "tekst": "Premium LED trade show set Advertising Spaces up to 9 m² PLN 12,999.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/dtf-standard-trade-show-set",
+    "tekst": "DTF Standard Trade Show Set Advertising Spaces up to 9 m² PLN 5,199.00 model.",
+    "produkt": true
+   }
+  ],
+  "undergruppe": true
+ },
+ "advertising-spaces-up-to-16-m": {
+  "url": "https://adsystem.pl/en/advertising-spaces-up-to-16-m",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/premium-dtf-trade-show-set",
+    "tekst": "Premium DTF trade show set Advertising Spaces up to 16 m² Individual pricing model.",
+    "produkt": false
+   },
+   {
+    "href": "/en/double-dtf-trade-show-set",
+    "tekst": "Double DTF trade show set Advertising Spaces up to 16 m² Individual pricing model.",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "ready-to-use-smart-sets": {
+  "url": "https://adsystem.pl/en/ready-to-use-smart-sets",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-smart-1x1",
+    "tekst": "adFrame Smart 1x1 Ready-to-Use Smart Sets PLN 3,220.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-2x1",
+    "tekst": "adFrame Smart 2x1 Ready-to-Use Smart Sets PLN 6,808.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-3x2",
+    "tekst": "adFrame Smart 3x2 U Ready-to-Use Smart Sets PLN 14,030.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-3x2-l",
+    "tekst": "adFrame Smart 3x2 L Ready-to-Use Smart Sets PLN 10,465.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-4x2-l",
+    "tekst": "adFrame Smart 4x2 U Ready-to-Use Smart Sets PLN 14,375.00 model.szeregowe",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-4x3-u",
+    "tekst": "adFrame Smart 4x3 U Ready-to-Use Smart Sets PLN 22,885.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-3x2-l1",
+    "tekst": "adFrame Smart 3x2 L Ready-to-Use Smart Sets PLN 8,970.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-3x3-l",
+    "tekst": "adFrame Smart 3x3 L Ready-to-Use Smart Sets PLN 13,685.00 model.",
+    "produkt": true
+   },
+   {
+    "href": "/en/adframe-smart-3x3-u",
+    "tekst": "adFrame Smart 3x3 U Ready-to-Use Smart Sets Individual pricing model.szeregowe",
+    "produkt": false
+   },
+   {
+    "href": "/en/adframe-smart-4x2-l1",
+    "tekst": "adFrame Smart 4x2 L Ready-to-Use Smart Sets PLN 14,720.00 model.narożne",
+    "produkt": true
+   }
+  ],
+  "undergruppe": true
+ },
+ "premium-dtf-promotional-set": {
+  "url": "https://adsystem.pl/en/premium-dtf-promotional-set",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "dtf-premium-event-set": {
+  "url": "https://adsystem.pl/en/dtf-premium-event-set",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "standard-dtf-conference-set": {
+  "url": "https://adsystem.pl/en/standard-dtf-conference-set",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "premium-dtf-conference-set": {
+  "url": "https://adsystem.pl/en/premium-dtf-conference-set",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "premium-dtf-trade-show-set": {
+  "url": "https://adsystem.pl/en/premium-dtf-trade-show-set",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "double-dtf-trade-show-set": {
+  "url": "https://adsystem.pl/en/double-dtf-trade-show-set",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adframe-smart-3x3-u": {
+  "url": "https://adsystem.pl/en/adframe-smart-3x3-u",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adwall-vario-kite-single-sided": {
+  "url": "https://adsystem.pl/en/adwall-vario-kite-single-sided",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adwall-vario-arch-b": {
+  "url": "https://adsystem.pl/en/adwall-vario-arch-b",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
+ },
+ "adwall-vario-cr-double-sided": {
+  "url": "https://adsystem.pl/en/adwall-vario-cr-double-sided",
+  "lenker": [
+   {
+    "href": "/en/about",
+    "tekst": "About us",
+    "produkt": false
+   }
+  ],
+  "undergruppe": true
  }
 }
