@@ -75,8 +75,8 @@ jobs:
                       import io, os, hashlib
                       from PIL import Image
                       srcs = []
-                      for src in re.findall(r'https://shop-api\.adsystem\.pl/file/image\?hash=[0-9a-f-]+_1000_1000&amp;suffix=[^"\s,]+', str(soup)):
-                          src = src.replace('&amp;', '&')
+                      for hsh in re.findall(r'shop-api\.adsystem\.pl/file/image\?hash=([0-9a-f]{8}-[0-9a-f-]{27})_\d+_\d+', str(soup)):
+                          src = 'https://shop-api.adsystem.pl/file/image?hash=' + hsh + '_1000_1000&suffix=image.jpg'
                           if src not in srcs: srcs.append(src)
                       # bilder som går igjen på alle sider (footer-logoer o.l.) filtreres bort etterpå
                       pending.append((g, srcs))
