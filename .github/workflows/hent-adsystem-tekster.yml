@@ -47,7 +47,7 @@ jobs:
                   raise
           for g, v in need.items():
               if g.startswith('_'): continue
-              if out.get(g): continue
+              if out.get(g) and (not v.get('bilder') or out[g].get('imgs')): continue
               urls = [v['url']]
               base = re.sub(r'-(without-print|bez-wydruku).*$', '', v['url'])
               if base != v['url']: urls.append(base)
@@ -74,10 +74,9 @@ jobs:
                       import io, os, hashlib
                       from PIL import Image
                       srcs = []
-                      for im in soup.select('img[src]'):
-                          src = im['src']
-                          if 'shop-api.adsystem.pl/file/image' in src and '_1000_1000' in src and src not in srcs:
-                              srcs.append(src)
+                      for src in re.findall(r'https://shop-api\.adsystem\.pl/file/image\?hash=[0-9a-f-]+_1000_1000&amp;suffix=[^"\s,]+', html):
+                          src = src.replace('&amp;', '&')
+                          if src not in srcs: srcs.append(src)
                       lokale = []
                       for src in srcs[:8]:
                           h = hashlib.sha1(src.split('&v=')[0].encode()).hexdigest()[:12]

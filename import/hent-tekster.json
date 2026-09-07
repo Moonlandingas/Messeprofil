@@ -139,7 +139,7 @@
   "navn": "adWall Vario Curved Light",
   "url": "https://adsystem.pl/en/adwall-vario-curved-light-240-single-sided"
  },
- "_kjor": 3,
+ "_kjor": 4,
  "wp21117": {
   "navn": "Double DTF trade show set",
   "url": "https://adsystem.pl/en/double-dtf-trade-show-set",
@@ -163,16 +163,6 @@
  "wp21075": {
   "navn": "DTF premium event set",
   "url": "https://adsystem.pl/en/dtf-premium-event-set",
-  "bilder": true
- },
- "wp21064": {
-  "navn": "Economic Vario Event Set",
-  "url": "https://adsystem.pl/en/economic-vario-event-set",
-  "bilder": true
- },
- "wp21058": {
-  "navn": "Economic Vario Promotion Set",
-  "url": "https://adsystem.pl/en/economic-vario-promotion-set",
   "bilder": true
  },
  "wp21053": {
@@ -200,59 +190,14 @@
   "url": "https://adsystem.pl/en/roller",
   "bilder": true
  },
- "wp19716": {
-  "navn": "adTribune Air 2.0",
-  "url": "https://adsystem.pl/en/adtribune-air-20",
-  "bilder": true
- },
  "wp19689": {
   "navn": "adTribune Big Oval",
-  "url": "https://adsystem.pl/en/adtribune-big-oval",
-  "bilder": true
- },
- "wp19683": {
-  "navn": "adTribune Conference podium",
-  "url": "https://adsystem.pl/en/adtribune-conference-podium",
-  "bilder": true
- },
- "wp17580": {
-  "navn": "adFrame Pop-up",
-  "url": "https://adsystem.pl/en/adframe-pop-up",
-  "bilder": true
- },
- "wp12641": {
-  "navn": "adFrame Single",
-  "url": "https://adsystem.pl/en/quick-frame-single",
-  "bilder": true
- },
- "wp19815": {
-  "navn": "adWall Smart Straight",
-  "url": "https://adsystem.pl/en/adwall-smart-straight",
+  "url": "https://adsystem.pl/en/adtribune-big-oval-without-print",
   "bilder": true
  },
  "wp20013": {
   "navn": "adWall Vario Changing Room",
   "url": "https://adsystem.pl/en/adwall-vario-cr-double-sided",
-  "bilder": true
- },
- "wp20294": {
-  "navn": "adFlag Kryssfot for beachflag",
-  "url": "https://adsystem.pl/en/adflag-cross-base",
-  "bilder": true
- },
- "wp20290": {
-  "navn": "adFlag Rotator",
-  "url": "https://adsystem.pl/en/adflag-rotator",
-  "bilder": true
- },
- "wp20287": {
-  "navn": "adFlag Spike",
-  "url": "https://adsystem.pl/en/adflag-spike",
-  "bilder": true
- },
- "wp20297": {
-  "navn": "adFlag Plate 4kg",
-  "url": "https://adsystem.pl/en/adflag-plate-4kg",
   "bilder": true
  }
 }
