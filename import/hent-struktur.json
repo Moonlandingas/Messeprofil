@@ -1,0 +1,6 @@
+{
+ "_kjor": 1,
+ "sitemaps": ["https://adsystem.pl/sitemap.xml", "https://adsystem.pl/en/sitemap.xml", "https://adsystem.pl/sitemap_index.xml"],
+ "samples": {"forside": "https://adsystem.pl/en", "trybunki": "https://adsystem.pl/en/trybunki"},
+ "kategorier": {"trybunki": "https://adsystem.pl/en/trybunki"}
+}
