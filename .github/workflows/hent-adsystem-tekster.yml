@@ -75,7 +75,7 @@ jobs:
                       import io, os, hashlib
                       from PIL import Image
                       srcs = []
-                      for src in re.findall(r'https://shop-api\.adsystem\.pl/file/image\?hash=[0-9a-f-]+_1000_1000&amp;suffix=[^"\s,]+', html):
+                      for src in re.findall(r'https://shop-api\.adsystem\.pl/file/image\?hash=[0-9a-f-]+_1000_1000&amp;suffix=[^"\s,]+', str(soup)):
                           src = src.replace('&amp;', '&')
                           if src not in srcs: srcs.append(src)
                       # bilder som går igjen på alle sider (footer-logoer o.l.) filtreres bort etterpå
@@ -87,7 +87,7 @@ jobs:
           from PIL import Image
           freq = collections.Counter(h.split('&v=')[0] for _, ss in pending for h in ss)
           for g, srcs in pending:
-              srcs = [s for s in srcs if freq[s.split('&v=')[0]] < 2]
+              srcs = [s for s in srcs if freq[s.split('&v=')[0]] < 4]
               if True:
                       lokale = []
                       for src in srcs[:8]:
