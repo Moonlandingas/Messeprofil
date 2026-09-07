@@ -51,9 +51,17 @@ jobs:
           for navn, url in cfg.get('samples', {}).items():
               h = hent(url)
               open(f'import/adsystem-struktur/sample-{navn}.html', 'w').write(h[:600000])
-          # 3) kategorisider: produktlenker i rekkefølge
+          # 3) kategorisider: produktlenker i rekkefølge (konfig + alle /en/-kategorier fra sitemap-categories.xml)
+          kat = dict(cfg.get('kategorier', {}))
+          catxml = hent('https://adsystem.pl/sitemap-categories.xml')
+          open('import/adsystem-struktur/sitemap-categories.xml', 'w').write(catxml)
+          prodxml = hent('https://adsystem.pl/sitemap-products.xml')
+          open('import/adsystem-struktur/sitemap-products.xml', 'w').write(prodxml)
+          for u in re.findall(r'<loc>\s*(.*?)\s*</loc>', catxml):
+              if '/en/' in u:
+                  kat[u.rstrip('/').split('/')[-1]] = u
           struktur = {}
-          for slug, url in cfg.get('kategorier', {}).items():
+          for slug, url in kat.items():
               h = hent(url)
               if not h: continue
               soup = BeautifulSoup(h, 'lxml')

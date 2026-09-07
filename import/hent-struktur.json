@@ -1,6 +1,18 @@
 {
- "_kjor": 1,
- "sitemaps": ["https://adsystem.pl/sitemap.xml", "https://adsystem.pl/en/sitemap.xml", "https://adsystem.pl/sitemap_index.xml"],
- "samples": {"forside": "https://adsystem.pl/en", "trybunki": "https://adsystem.pl/en/trybunki"},
- "kategorier": {"trybunki": "https://adsystem.pl/en/trybunki"}
+ "_kjor": 2,
+ "sitemaps": [],
+ "samples": {},
+ "kategorier": {
+  "display-walls": "https://adsystem.pl/en/display-walls",
+  "kasetony-podswietlane": "https://adsystem.pl/en/kasetony-podswietlane",
+  "trybunki": "https://adsystem.pl/en/trybunki",
+  "outdoor": "https://adsystem.pl/en/outdoor",
+  "stoiska-targowe-wystawowe": "https://adsystem.pl/en/stoiska-targowe-wystawowe",
+  "roll-up": "https://adsystem.pl/en/roll-up",
+  "ramy-tekstylne": "https://adsystem.pl/en/ramy-tekstylne",
+  "digital": "https://adsystem.pl/en/digital",
+  "exhibition-booths-for-events-and-conferences": "https://adsystem.pl/en/exhibition-booths-for-events-and-conferences",
+  "akcesoria-i-stojaki-reklamowe": "https://adsystem.pl/en/akcesoria-i-stojaki-reklamowe",
+  "original-shapes-exhibition-systems": "https://adsystem.pl/en/original-shapes-exhibition-systems"
+ }
 }
