@@ -3,21 +3,11 @@
 200 192999 https://adsystem.pl/en/premium-dtf-conference-set
 200 195477 https://adsystem.pl/en/standard-dtf-conference-set
 200 196598 https://adsystem.pl/en/dtf-premium-event-set
-HTTP 404 119685 https://adsystem.pl/en/economic-vario-event-set :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
-HTTP 404 119697 https://adsystem.pl/en/economic-vario-promotion-set :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
 200 197506 https://adsystem.pl/en/premium-dtf-promotional-set
 200 204984 https://adsystem.pl/en/forma
 200 212107 https://adsystem.pl/en/via
 200 207692 https://adsystem.pl/en/sacco
 200 212284 https://adsystem.pl/en/roller
-HTTP 404 119661 https://adsystem.pl/en/adtribune-air-20 :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
+HTTP 404 119709 https://adsystem.pl/en/adtribune-big-oval-without-print :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
 HTTP 404 119667 https://adsystem.pl/en/adtribune-big-oval :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
-HTTP 404 119694 https://adsystem.pl/en/adtribune-conference-podium :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
-HTTP 404 119655 https://adsystem.pl/en/adframe-pop-up :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
-HTTP 404 119667 https://adsystem.pl/en/quick-frame-single :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
-HTTP 404 119676 https://adsystem.pl/en/adwall-smart-straight :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
 200 210834 https://adsystem.pl/en/adwall-vario-cr-double-sided
-HTTP 404 119664 https://adsystem.pl/en/adflag-cross-base :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
-HTTP 404 119655 https://adsystem.pl/en/adflag-rotator :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
-HTTP 404 119649 https://adsystem.pl/en/adflag-spike :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
-HTTP 404 119661 https://adsystem.pl/en/adflag-plate-4kg :: '<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preconnect" href="https://shop-api.adsyst'
