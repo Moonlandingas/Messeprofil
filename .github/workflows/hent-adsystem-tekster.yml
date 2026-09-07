@@ -30,6 +30,7 @@ jobs:
               out = {}
           UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128.0 Safari/537.36'}
           logg = []
+          pending = []
           sample_saved = False
           def hent(url):
               global sample_saved
@@ -77,6 +78,17 @@ jobs:
                       for src in re.findall(r'https://shop-api\.adsystem\.pl/file/image\?hash=[0-9a-f-]+_1000_1000&amp;suffix=[^"\s,]+', html):
                           src = src.replace('&amp;', '&')
                           if src not in srcs: srcs.append(src)
+                      # bilder som går igjen på alle sider (footer-logoer o.l.) filtreres bort etterpå
+                      pending.append((g, srcs))
+                      continue
+              time.sleep(1)
+          # nedlasting av produktbilder, uten de som finnes på >= 2 sider
+          import io, os, hashlib, collections
+          from PIL import Image
+          freq = collections.Counter(h.split('&v=')[0] for _, ss in pending for h in ss)
+          for g, srcs in pending:
+              srcs = [s for s in srcs if freq[s.split('&v=')[0]] < 2]
+              if True:
                       lokale = []
                       for src in srcs[:8]:
                           h = hashlib.sha1(src.split('&v=')[0].encode()).hexdigest()[:12]
@@ -92,9 +104,7 @@ jobs:
                                   print('BILDEFEIL', g, src, e); continue
                           lokale.append(loc)
                       out[g]['imgs'] = lokale
-              else:
-                  print('TOM', g, v['navn'])
-              time.sleep(1)
+                      print('BILDER', g, len(lokale))
           json.dump(out, open('import/adsystem-tekster-en.json', 'w'), ensure_ascii=False, indent=1)
           open('import/hent-tekster-logg.txt', 'w').write('\n'.join(logg))
           print('totalt', len(out))
