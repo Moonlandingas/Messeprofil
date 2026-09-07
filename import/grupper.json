@@ -1,0 +1,536 @@
+{
+ "_kommentar": "adSystems struktur (adsystem.pl/en) med norske navn. Rekkefølgen her = rekkefølgen i butikken. 'slug' er adSystems kategori-slug (brukes til produktrekkefølge fra adsystem-struktur/kategorier.json). 'bilde' = wp-id på produktet hvis hovedbilde brukes som gruppebilde.",
+ "grupper": [
+  {
+   "s": "messevegger",
+   "n": "Messevegger",
+   "en": "Display walls",
+   "slug": "display-walls",
+   "bilde": 17594,
+   "tekst": "Tekstilvegger, pop-up-vegger og lysvegger med trykk – bakveggen som definerer standen.",
+   "u": [
+    {
+     "s": "tekstilvegger",
+     "n": "Tekstilvegger",
+     "en": "Textile walls"
+    },
+    {
+     "s": "pop-up-vegger",
+     "n": "Pop-up-vegger",
+     "en": "Pop-up walls"
+    },
+    {
+     "s": "lysvegger",
+     "n": "Lysvegger",
+     "en": "Backlit walls",
+     "adslug": "backlit-walls"
+    },
+    {
+     "s": "utendorsvegger",
+     "n": "Utendørsvegger",
+     "en": "Outdoor advertising walls",
+     "adslug": "outdoor-advertising-walls"
+    }
+   ]
+  },
+  {
+   "s": "lyskasser",
+   "n": "Lyskasser",
+   "en": "Lightboxes",
+   "slug": "kasetony-podswietlane",
+   "bilde": 12799,
+   "tekst": "Frittstående, vegghengte og hengende LED-lyskasser som lyser opp budskapet.",
+   "u": [
+    {
+     "s": "frittstaende",
+     "n": "Frittstående lyskasser",
+     "en": "Free-standing lightboxes"
+    },
+    {
+     "s": "vegghengte",
+     "n": "Vegghengte lyskasser",
+     "en": "Wall-hung lightboxes"
+    },
+    {
+     "s": "hengende",
+     "n": "Hengende lyskasser",
+     "en": "Suspended lightboxes"
+    },
+    {
+     "s": "pop-up-lyskasser",
+     "n": "Pop-up-lyskasser",
+     "en": "Pop-up Lightboxes",
+     "adslug": "kasetony-pop-up"
+    }
+   ]
+  },
+  {
+   "s": "messedisker",
+   "n": "Messedisker",
+   "en": "Counters",
+   "slug": "trybunki",
+   "bilde": 10735,
+   "tekst": "Tekstildisker, LED-disker og pneumatiske Quick-disker – klare på sekunder.",
+   "u": [
+    {
+     "s": "tekstildisker",
+     "n": "Tekstildisker",
+     "en": "Textile counters"
+    },
+    {
+     "s": "led-disker",
+     "n": "LED-disker",
+     "en": "LED counters"
+    },
+    {
+     "s": "quick-disker",
+     "n": "Quick – pneumatiske disker",
+     "en": "Quick pneumatic counters",
+     "adslug": "quick-counters"
+    },
+    {
+     "s": "klassiske-disker",
+     "n": "Klassiske disker",
+     "en": "Classic counters"
+    },
+    {
+     "s": "smaksprovedisker",
+     "n": "Smaksprøvedisker",
+     "en": "Tasting stands"
+    }
+   ]
+  },
+  {
+   "s": "utendors",
+   "n": "Utendørs profilering",
+   "en": "Outdoor advertising",
+   "slug": "outdoor",
+   "bilde": 10639,
+   "tekst": "Telt, beachflagg, porter, gatebukker og utemøbler som tåler vær og vind.",
+   "u": [
+    {
+     "s": "telt",
+     "n": "Reklametelt",
+     "en": "Advertising tents"
+    },
+    {
+     "s": "porter",
+     "n": "Oppblåsbare porter",
+     "en": "Advertising gates"
+    },
+    {
+     "s": "soyler",
+     "n": "Reklamesøyler",
+     "en": "Advertising collumns"
+    },
+    {
+     "s": "flagg",
+     "n": "Beachflagg",
+     "en": "Advertising flags and winders"
+    },
+    {
+     "s": "utendorssett",
+     "n": "Utendørssett",
+     "en": "Outdoor Advertising Sets",
+     "adslug": "ready-made-outdoor-set"
+    },
+    {
+     "s": "fluktstoler",
+     "n": "Fluktstoler",
+     "en": "Advertising deck chairs"
+    },
+    {
+     "s": "gatebukker",
+     "n": "Gatebukker",
+     "en": "A-boards"
+    },
+    {
+     "s": "utemobler",
+     "n": "Reklamemøbler",
+     "en": "Advertising furniture"
+    },
+    {
+     "s": "utendorsdisker",
+     "n": "Oppblåsbare disker",
+     "en": "Counters"
+    }
+   ]
+  },
+  {
+   "s": "messestander",
+   "n": "Messestander",
+   "en": "Exhibition stands",
+   "slug": "stoiska-targowe-wystawowe",
+   "bilde": 17719,
+   "tekst": "Ferdige standpakker og modulære systemer – mFrame, Multiframe, SEGO og Foldable.",
+   "u": [
+    {
+     "s": "standpakker",
+     "n": "Ferdige standpakker",
+     "en": "Ready-made exhibition stand kits"
+    },
+    {
+     "s": "mframe",
+     "n": "mFrame – modulært system",
+     "en": "mFrame - modular exhibition system"
+    },
+    {
+     "s": "multiframe",
+     "n": "Multiframe – modulært system",
+     "en": "Multiframe - modular exhibition system"
+    },
+    {
+     "s": "sego",
+     "n": "SEGO – LED-system",
+     "en": "SEGO - illuminated exhibition system"
+    },
+    {
+     "s": "foldable",
+     "n": "Foldable – økonomisystem",
+     "en": "Foldable - economical exhibition system"
+    },
+    {
+     "s": "hengende-systemer",
+     "n": "Hengende systemer",
+     "en": "Suspended systems"
+    },
+    {
+     "s": "messemobler",
+     "n": "Messemøbler",
+     "en": "Trade fair furniture"
+    }
+   ]
+  },
+  {
+   "s": "rollups",
+   "n": "Roll-ups",
+   "en": "Roll-up",
+   "slug": "roll-up",
+   "bilde": 19416,
+   "tekst": "Klassiske roll-ups og tekstil-roll-ups – det raskeste blikkfanget.",
+   "u": [
+    {
+     "s": "rollups",
+     "n": "Roll-ups",
+     "en": "Rollups"
+    },
+    {
+     "s": "tekstil-rollups",
+     "n": "Tekstil-roll-ups",
+     "en": "Textile rollup"
+    }
+   ]
+  },
+  {
+   "s": "tekstilrammer",
+   "n": "Tekstilrammer",
+   "en": "Textile frames",
+   "slug": "ramy-tekstylne",
+   "bilde": 10371,
+   "tekst": "Rammer uten belysning – vegghengte og frittstående, med utskiftbart tekstiltrykk.",
+   "u": [
+    {
+     "s": "vegghengte-rammer",
+     "n": "Vegghengte rammer",
+     "en": "Wall-hung frames"
+    },
+    {
+     "s": "frittstaende-rammer",
+     "n": "Frittstående rammer",
+     "en": "Free-standing frames"
+    }
+   ]
+  },
+  {
+   "s": "skjermer",
+   "n": "Skjermer og infokiosker",
+   "en": "Multimedia advertising",
+   "slug": "digital",
+   "bilde": 52846,
+   "tekst": "Infokiosker og LED-skjermer for digitalt innhold på standen.",
+   "u": [
+    {
+     "s": "infokiosk",
+     "n": "Infokiosker",
+     "en": "Infokiosk"
+    },
+    {
+     "s": "led-skjermer",
+     "n": "LED-skjermer",
+     "en": "LED screens"
+    }
+   ]
+  },
+  {
+   "s": "standpakker-event",
+   "n": "Standpakker for events og konferanser",
+   "en": "Exhibition Booths for Events and Conferences",
+   "slug": "exhibition-booths-for-events-and-conferences",
+   "bilde": 21108,
+   "tekst": "Komplette pakker etter standstørrelse – 5, 9 og 16 m² – og Smart-sett klare til bruk.",
+   "u": [
+    {
+     "s": "inntil-5",
+     "n": "Stand inntil 5 m²",
+     "en": "Advertising Spaces up to 5 m²",
+     "adslug": "advertising-spaces-up-to-5-m"
+    },
+    {
+     "s": "inntil-9",
+     "n": "Stand inntil 9 m²",
+     "en": "Advertising Spaces up to 9 m²",
+     "adslug": "advertising-spaces-up-to-9-m"
+    },
+    {
+     "s": "inntil-16",
+     "n": "Stand inntil 16 m²",
+     "en": "Advertising Spaces up to 16 m²",
+     "adslug": "advertising-spaces-up-to-16-m"
+    },
+    {
+     "s": "smart-sett",
+     "n": "Smart-sett klare til bruk",
+     "en": "Ready-to-Use Smart Sets",
+     "adslug": "ready-to-use-smart-sets"
+    }
+   ]
+  },
+  {
+   "s": "tilbehor",
+   "n": "Tilbehør og stativer",
+   "en": "Accessories and advertising stands",
+   "slug": "akcesoria-i-stojaki-reklamowe",
+   "bilde": 20186,
+   "tekst": "Brosjyrestativ, belysning, pumper, føtter og annet som gjør standen komplett.",
+   "u": [
+    {
+     "s": "reklameartikler",
+     "n": "Reklameartikler",
+     "en": "Advertising gadgets"
+    },
+    {
+     "s": "brosjyrestativ",
+     "n": "Brosjyrestativ",
+     "en": "Brochure holders"
+    },
+    {
+     "s": "tilbehor-belysning",
+     "n": "Tilbehør og belysning",
+     "en": "Accessories and advertising lightning"
+    }
+   ]
+  },
+  {
+   "s": "spesialformer",
+   "n": "Spesialformer",
+   "en": "Original Shapes exhibition systems",
+   "slug": "original-shapes-exhibition-systems",
+   "bilde": 19904,
+   "tekst": "Totemer, porter, øyvegger og originale tekstilformer som skiller seg ut.",
+   "u": [
+    {
+     "s": "totemer",
+     "n": "Tekstiltotemer",
+     "en": "Advertising textile totems"
+    },
+    {
+     "s": "originale-former",
+     "n": "Originale tekstilformer",
+     "en": "Original textile shapes"
+    },
+    {
+     "s": "tekstilporter",
+     "n": "Tekstilporter",
+     "en": "Textile gates"
+    },
+    {
+     "s": "hengende-tekstil",
+     "n": "Hengende tekstilsystemer",
+     "en": "Suspended textile systems"
+    },
+    {
+     "s": "oyvegger",
+     "n": "Øyvegger",
+     "en": "Island textile walls"
+    }
+   ]
+  }
+ ],
+ "_gamle_kategorier": "CATS-indeks → [gruppe, undergruppe] for produkter uten feed-data",
+ "cats": {
+  "0": [
+   "messevegger",
+   "tekstilvegger"
+  ],
+  "1": [
+   "messestander",
+   "standpakker"
+  ],
+  "2": [
+   "messedisker",
+   "tekstildisker"
+  ],
+  "3": [
+   "lyskasser",
+   "frittstaende"
+  ],
+  "4": [
+   "tilbehor",
+   "tilbehor-belysning"
+  ],
+  "5": [
+   "utendors",
+   "utemobler"
+  ],
+  "6": [
+   "utendors",
+   "porter"
+  ],
+  "7": [
+   "utendors",
+   "telt"
+  ],
+  "8": [
+   "tekstilrammer",
+   "vegghengte-rammer"
+  ],
+  "9": [
+   "rollups",
+   "rollups"
+  ],
+  "10": [
+   "standpakker-event",
+   "inntil-9"
+  ],
+  "11": [
+   "messestander",
+   "standpakker"
+  ],
+  "12": [
+   "messevegger",
+   "pop-up-vegger"
+  ],
+  "13": [
+   "utendors",
+   "flagg"
+  ],
+  "14": [
+   "tekstilrammer",
+   "frittstaende-rammer"
+  ],
+  "15": [
+   "skjermer",
+   "infokiosk"
+  ]
+ },
+ "overstyr": {
+  "21117": [
+   "standpakker-event",
+   "inntil-16"
+  ],
+  "21113": [
+   "standpakker-event",
+   "inntil-16"
+  ],
+  "21100": [
+   "standpakker-event",
+   "inntil-9"
+  ],
+  "21096": [
+   "standpakker-event",
+   "inntil-9"
+  ],
+  "21064": [
+   "standpakker-event",
+   "inntil-9"
+  ],
+  "21075": [
+   "standpakker-event",
+   "inntil-5"
+  ],
+  "21058": [
+   "standpakker-event",
+   "inntil-5"
+  ],
+  "21053": [
+   "standpakker-event",
+   "inntil-5"
+  ],
+  "20307": [
+   "utendors",
+   "flagg"
+  ],
+  "20304": [
+   "utendors",
+   "flagg"
+  ],
+  "20300": [
+   "utendors",
+   "flagg"
+  ],
+  "20297": [
+   "utendors",
+   "flagg"
+  ],
+  "20294": [
+   "utendors",
+   "flagg"
+  ],
+  "20290": [
+   "utendors",
+   "flagg"
+  ],
+  "20287": [
+   "utendors",
+   "flagg"
+  ],
+  "20153": [
+   "utendors",
+   "utemobler"
+  ],
+  "20147": [
+   "utendors",
+   "utemobler"
+  ],
+  "20142": [
+   "utendors",
+   "utemobler"
+  ],
+  "19716": [
+   "utendors",
+   "utendorsdisker"
+  ],
+  "19689": [
+   "messedisker",
+   "tekstildisker"
+  ],
+  "19683": [
+   "messedisker",
+   "tekstildisker"
+  ],
+  "17580": [
+   "lyskasser",
+   "pop-up-lyskasser"
+  ],
+  "12641": [
+   "lyskasser",
+   "frittstaende"
+  ],
+  "19815": [
+   "messevegger",
+   "pop-up-vegger"
+  ],
+  "20013": [
+   "spesialformer",
+   "oyvegger"
+  ],
+  "20272": [
+   "tilbehor",
+   "tilbehor-belysning"
+  ],
+  "20261": [
+   "tilbehor",
+   "tilbehor-belysning"
+  ]
+ }
+}
