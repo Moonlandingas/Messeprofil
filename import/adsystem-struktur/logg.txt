@@ -1,0 +1,10 @@
+200 561 https://adsystem.pl/sitemap.xml
+200 43096 https://adsystem.pl/sitemap-blog.xml
+200 5321 https://adsystem.pl/sitemap-categories.xml
+200 143295 https://adsystem.pl/sitemap-products.xml
+200 1080 https://adsystem.pl/sitemap-static.xml
+HTTP 500 https://adsystem.pl/en/sitemap.xml
+HTTP 404 https://adsystem.pl/sitemap_index.xml
+200 395168 https://adsystem.pl/en
+200 551404 https://adsystem.pl/en/trybunki
+200 551404 https://adsystem.pl/en/trybunki
