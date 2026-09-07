@@ -100,11 +100,23 @@ def img_local(url, folder):
 manifest = {}
 data = {}
 
+try:
+    manuelle = json.load(open(os.path.join(IMP, 'manuelle-produkter.json')))  # produkter som ikke finnes i feeden: tekst/bilder hentet manuelt
+except FileNotFoundError:
+    manuelle = {}
+
 for p in prods:
     wp = str(p[0])
     g = mapping.get(wp)
     if not g or g not in fam:
-        if wp in old:
+        if wp in manuelle:
+            m = manuelle[wp]
+            base = dict(old.get(wp) or {})
+            base.update({'g': None, 'pt': m.get('pt', base.get('pt', '')), 'd': m.get('d') or base.get('d', ''),
+                         'imgs': m.get('imgs', []), 'acc': base.get('acc', []), 'ds': base.get('ds', False), 'ss': base.get('ss', False), 'wp': base.get('wp', False),
+                         's': base.get('s', []), 'v': base.get('v', 0), 'ean': base.get('ean', ''), 'wmin': base.get('wmin'), 'wmax': base.get('wmax')})
+            data[wp] = base
+        elif wp in old:
             data[wp] = old[wp]
         continue
     f = fam[g]
