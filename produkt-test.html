@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta name="robots" content="noindex, nofollow">
+
+<!-- Bot-vakt: MÅ ligge FØR all sporing (Matomo, GTM, Google Ads, Meta).
+     Blokkerer alle tracking-tagger når URL-en inneholder den utgåtte WooCommerce-
+     parameteren «add-to-cart» (brukes ikke av den nye siden – ren bot-markør),
+     eller når nettleseren er automatisert (navigator.webdriver).
+     Rydder samtidig URL-en: beholder gyldige parametre (kat, q, id), dropper
+     add-to-cart, min_price, max_price m.m. Vanlige besøk påvirkes ikke.
+     Hosting-nivå-blokkering finnes i tillegg i .htaccess (301 før HTML serveres). -->
+<script>
+(function(){
+  var bot = (navigator.webdriver === true);
+  try{
+    var p = new URLSearchParams(location.search);
+    if (p.has('add-to-cart')) {
+      bot = true;
+      var behold = ['kat','q','id'], ny = new URLSearchParams();
+      for (var i=0;i<behold.length;i++){ if (p.has(behold[i])) ny.set(behold[i], p.get(behold[i])); }
+      var s = ny.toString();
+      history.replaceState(null, '', location.pathname + (s ? '?'+s : '') + location.hash);
+    }
+  }catch(e){}
+  window.__mpBot = bot;
+})();
+</script>
+<!-- Fokusring kun ved tastaturnavigasjon: klikk/tap skal ikke gi ring rundt knapper -->
+<script>
+(function(){
+  var d=document;
+  d.addEventListener('mousedown',function(){if(d.body)d.body.classList.add('bruker-mus')},true);
+  d.addEventListener('touchstart',function(){if(d.body)d.body.classList.add('bruker-mus')},true);
+  d.addEventListener('keydown',function(e){if(e.key==='Tab'&&d.body)d.body.classList.remove('bruker-mus')},true);
+})();
+</script>
+
+<!-- Matomo (hoppes over hvis bot-vakten over har slått til) -->
+<script>
+if (!window.__mpBot) {
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://moonlandingsite.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '38']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://cdn.matomo.cloud/moonlandingsite.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+}
+</script>
+<!-- End Matomo Code -->
+
+<!-- Google Tag Manager (hoppes over hvis bot-vakten har slått til) -->
+<script>if(!window.__mpBot){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQTKCM9D');}</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messevegg tekstil buet 3×3 – messevegg med eget trykk | Messeprofil.no</title>
+<script src="typeform-produkter.js"></script>
+<script src="produktdata.js"></script>
+<link rel="canonical" href="https://www.messeprofil.no/produkt.html">
+<meta property="og:title" content="Messevegg tekstil buet 3×3 – messevegg med eget trykk | Messeprofil.no">
+<meta property="og:description" content="Buet messevegg i tekstil 3×3 med ditt design. Lett å frakte, montert på minutter – perfekt til messestand, event og butikk. Rask levering i hele Norge.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.messeprofil.no/produkt.html">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="bilder/2025/06/adFrame-Smart-4x2-L.jpeg">
+<meta name="description" content="Buet messevegg i tekstil 3×3 med ditt design. Lett å frakte, montert på minutter – perfekt til messestand, event og butikk. Rask levering i hele Norge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#D51D29;--red-dark:#B01523;--red-soft:#F9E2E4;
+  --ink:#16161A;--grey-50:#FBF6F7;--grey-100:#F7EDEF;--grey-200:#EBDCDF;--grey-500:#75676B;
+  --white:#fff;--radius:14px;
+  --shadow-sm:0 1px 2px rgba(22,22,26,.05);--shadow-md:0 10px 30px rgba(22,22,26,.08);
+  --font-head:'Montserrat',sans-serif;--font-body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}html{background:#EBDCDF}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+body{font-family:var(--font-body);color:var(--ink);background:#FDFAFB;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,select{font-family:inherit;cursor:pointer}
+h1,h2,h3{font-family:var(--font-head);line-height:1.15}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+
+.topbar{background:var(--ink);color:#D6D6DC;font-size:13px}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:16px}
+.topbar a{display:inline-flex;align-items:center;gap:6px;color:#D6D6DC;transition:color .15s}
+.topbar a:hover{color:#fff}
+.topbar-left{display:flex;gap:24px;align-items:center}
+.topbar svg{width:14px;height:14px;flex:none}
+
+.header{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--grey-200)}
+.header-inner{display:flex;align-items:center;gap:32px;min-height:76px}
+.logo{display:flex;align-items:center;gap:10px;flex:none}
+.logo-mark{width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:var(--font-head);font-weight:800;font-size:19px}
+.logo-text{font-family:var(--font-head);font-weight:800;font-size:20px;letter-spacing:-.02em}
+.logo-text span{color:var(--red)}
+.search{flex:1;max-width:440px;position:relative}
+.search input{width:100%;height:46px;border:1.5px solid var(--grey-200);border-radius:999px;background:var(--grey-50);padding:0 48px 0 20px;font:500 15px var(--font-body);color:var(--ink);transition:border-color .15s,background .15s}
+.search input::placeholder{color:var(--grey-500)}
+.search input:focus{outline:none;border-color:var(--red);background:#fff}
+.search button{position:absolute;right:5px;top:5px;width:36px;height:36px;border-radius:50%;border:none;background:var(--red);color:#fff;display:grid;place-items:center;transition:background .15s}
+.search button:hover{background:var(--red-dark)}
+.search svg{width:16px;height:16px}
+.nav{display:flex;gap:28px;margin-left:auto}
+.nav a{font:600 15px var(--font-body);color:var(--ink);padding:6px 0;position:relative;white-space:nowrap}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.nav a:hover::after,.nav a[aria-current]::after{transform:scaleX(1)}
+.header-actions{display:flex;align-items:center;gap:12px;flex:none}
+.cart-btn{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--grey-200);background:#fff;display:grid;place-items:center;position:relative;transition:border-color .15s}
+.cart-btn:hover{border-color:var(--ink)}
+.cart-btn svg{width:19px;height:19px}
+.cart-count{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;border-radius:999px;background:var(--red);color:#fff;font:600 11px/18px var(--font-body);text-align:center;padding:0 4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px var(--font-body);border-radius:999px;border:none;padding:0 26px;height:48px;transition:background .15s,color .15s,border-color .15s;white-space:nowrap}
+.btn svg{width:15px;height:15px}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000}
+.btn-outline{background:#fff;color:var(--ink);border:1.5px solid var(--grey-200)}
+.btn-outline:hover{border-color:var(--ink)}
+.burger{display:none;width:46px;height:46px;border-radius:12px;border:1.5px solid var(--grey-200);background:#fff;place-items:center}
+.burger svg{width:20px;height:20px}
+.mobile-menu{display:none;background:#fff;border-bottom:1px solid var(--grey-200);padding:12px 24px 20px}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:12px 4px;font:600 16px var(--font-body);border-bottom:1px solid var(--grey-100)}
+.mobile-menu .btn{width:100%;margin-top:14px}
+
+.breadcrumb{display:flex;gap:8px;flex-wrap:wrap;font-size:13.5px;color:var(--grey-500);padding:24px 0 0}
+.breadcrumb a:hover{color:var(--red)}
+.breadcrumb span[aria-current]{color:var(--ink);font-weight:500}
+
+/* Product layout */
+.product{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;padding:32px 0 80px;align-items:start}
+
+.gallery-main{position:relative;background:#fff;border-radius:var(--radius);aspect-ratio:1/.85;overflow:hidden;border:1px solid var(--grey-200)}
+.gallery-main svg{position:absolute;inset:44px;width:calc(100% - 88px);height:calc(100% - 88px)}
+.gallery-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+.gallery-thumbs button{background:var(--grey-100);border:1.5px solid var(--grey-200);border-radius:10px;aspect-ratio:1/.8;display:grid;place-items:center;padding:12px;transition:border-color .15s}
+.gallery-thumbs button:hover{border-color:var(--grey-500)}
+.gallery-thumbs button.active{border-color:var(--red)}
+.gallery-thumbs svg{width:100%;height:100%}
+
+.p-cat{font:600 12px var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.p-info h1{font-size:clamp(26px,3vw,34px);font-weight:800;letter-spacing:-.02em;margin:10px 0 12px}
+.stars{display:flex;gap:3px;color:var(--red);align-items:center;margin-bottom:20px}
+.stars svg{width:16px;height:16px}
+.stars a{color:var(--grey-500);font-size:13.5px;margin-left:8px;text-decoration:underline}
+.p-price{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.p-price strong{font:800 30px var(--font-head);letter-spacing:-.02em}
+.p-price span{color:var(--grey-500);font-size:14px}
+.p-lead{color:var(--grey-500);font-size:15.5px;margin:16px 0 26px}
+
+.option-label{font:700 13px var(--font-head);letter-spacing:.04em;margin-bottom:10px;display:flex;justify-content:space-between}
+.option-label small{font:500 13px var(--font-body);color:var(--grey-500)}
+.options{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.opt{height:46px;padding:0 18px;border-radius:12px;border:1.5px solid var(--grey-200);background:#fff;font:600 14px var(--font-body);transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--ink)}
+.opt.active{border-color:var(--red);background:var(--red-soft);color:var(--red)}
+
+.buy-row{display:flex;gap:12px;margin:26px 0 18px}
+.qty{display:flex;align-items:center;border:1.5px solid var(--grey-200);border-radius:999px;height:54px}
+.qty button{width:46px;height:100%;border:none;background:none;font:600 20px var(--font-body);color:var(--grey-500)}
+.qty button:hover{color:var(--ink)}
+.qty input{width:44px;text-align:center;border:none;font:600 16px var(--font-body);color:var(--ink)}
+.qty input:focus{outline:none}
+.buy-row .btn{flex:1;height:54px;font-size:16px}
+.design-help{margin:-8px 0 24px;padding:20px 22px;border-radius:14px;background:var(--red-soft);border:1px solid #F3C9CD}
+.design-help h3{font:700 16px var(--font-head);margin-bottom:6px}
+.design-help p{font-size:14.5px;line-height:1.55;color:#5C5054;margin-bottom:14px}
+.design-help .btn{height:44px}
+.buy-alt{font-size:14px;color:var(--grey-500);margin-bottom:26px}
+.buy-alt a{color:var(--red);font-weight:600;text-decoration:underline}
+
+.usp-list{display:grid;gap:11px;border-top:1px solid var(--grey-200);padding-top:24px}
+.usp-list li{display:flex;gap:11px;align-items:center;list-style:none;font-size:14.5px;color:var(--ink)}
+.usp-list svg{width:17px;height:17px;color:var(--red);flex:none}
+
+/* Tabs */
+.tabs{border-top:1px solid var(--grey-200);padding:64px 0 80px}
+.tab-nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:32px}
+.tab-nav button{height:46px;padding:0 22px;border-radius:999px;border:1.5px solid var(--grey-200);background:#fff;font:600 14.5px var(--font-body);transition:all .15s}
+.tab-nav button:hover{border-color:var(--ink)}
+.tab-nav button.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.tab-panel{display:none;max-width:760px}
+.tab-panel.active{display:block}
+.tab-panel h3{font-size:19px;margin-bottom:14px}
+.tab-panel p{color:var(--grey-500);margin-bottom:14px;font-size:15.5px}
+.spec-table{width:100%;border-collapse:collapse;font-size:14.5px}
+.spec-table tr{border-bottom:1px solid var(--grey-200)}
+.spec-table th{text-align:left;padding:13px 16px 13px 0;font-weight:600;color:var(--ink);width:40%}
+.spec-table td{padding:13px 0;color:var(--grey-500)}
+
+/* Related */
+.related{background:var(--grey-100);padding:80px 0 96px}
+.related h2{font-size:clamp(24px,3vw,32px);font-weight:800;letter-spacing:-.02em;margin-bottom:36px}
+.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.product-card{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;position:relative}
+.product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.product-thumb{position:relative;background:#fff;aspect-ratio:1/.82;overflow:hidden}
+.product-thumb svg{position:absolute;inset:20px;width:calc(100% - 40px);height:calc(100% - 40px);max-height:110px;margin:auto}
+.product-thumb img{position:absolute;inset:20px;width:calc(100% - 40px);height:calc(100% - 40px);object-fit:contain;object-position:center}
+.product-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1;gap:4px}
+.product-body h3{font-size:14.5px;font-weight:700;font-family:var(--font-body)}
+.product-price{color:var(--grey-500);font-size:13.5px}
+.product-price strong{color:var(--ink);font-weight:600}
+.product-body .btn{height:40px;font-size:13.5px;margin-top:12px;width:100%}
+
+/* Cart drawer */
+.drawer-backdrop{position:fixed;inset:0;background:rgba(22,22,26,.45);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:#fff;z-index:91;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column}
+body.drawer-open .drawer{transform:none}
+body.drawer-open .drawer-backdrop{opacity:1;pointer-events:auto}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:22px 26px;border-bottom:1px solid var(--grey-200)}
+.drawer-head h2{font-size:19px;font-weight:800}
+.drawer-head button{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--grey-200);background:#fff;display:grid;place-items:center}
+.drawer-head svg{width:16px;height:16px}
+.drawer-body{flex:1;overflow-y:auto;padding:26px}
+.cart-item{display:flex;gap:16px;padding-bottom:20px;border-bottom:1px solid var(--grey-200)}
+.cart-item-thumb{flex:none;width:86px;height:72px;background:var(--grey-100);border-radius:10px;display:grid;place-items:center;padding:10px}
+.cart-item h3{font:600 14.5px var(--font-body)}
+.cart-item p{font-size:13px;color:var(--grey-500)}
+.cart-item strong{font-size:14.5px}
+.drawer-foot{padding:22px 26px;border-top:1px solid var(--grey-200)}
+.drawer-total{display:flex;justify-content:space-between;font:700 16px var(--font-body);margin-bottom:16px}
+.drawer-foot .btn{width:100%;height:52px}
+.drawer-foot .btn + .btn{margin-top:10px}
+
+.footer{background:var(--ink);color:#B9B9C2;font-size:14.5px}
+.footer-bottom{padding:26px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#8A8A94}
+.footer a:hover{color:#fff}
+
+@media (max-width:1024px){
+  .nav{display:none}
+  .burger{display:grid}
+  .search{max-width:none}
+  .product{grid-template-columns:1fr;gap:36px}
+  .related-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  .topbar-left span.hide-m{display:none}
+  .header-inner{flex-wrap:wrap;gap:14px;padding:14px 0}
+  .search{order:3;flex-basis:100%}
+  .header-actions .btn{display:none}
+  .buy-row{flex-wrap:wrap}
+  .buy-row .btn{flex-basis:100%}
+  .related-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+}
+
+body.bruker-mus :focus{outline:none}
+</style>
+<style>
+/* Figma-restyle: rød header, hvit logo, lys footer, mobil-fix */
+html,body{overflow-x:hidden}
+.header{background:var(--red);border-bottom:none;transition:box-shadow .25s}
+.header.scrolled{box-shadow:0 8px 26px rgba(142,16,27,.35)}
+.logo{color:#fff;display:flex;align-items:center;gap:10px}
+.logo-mark{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--red);display:grid;place-items:center;font-family:var(--font-head);font-weight:800;font-size:18px;flex:none}
+.logo-text{font-family:var(--font-head);font-weight:800;font-size:19px;letter-spacing:-.02em;white-space:nowrap}
+.nav a{color:rgba(255,255,255,.92)}
+.nav a:hover{color:#fff}
+.nav a::after{background:#fff}
+.search input{border:none;background:#fff}
+.search input:focus{outline:2px solid rgba(255,255,255,.7);outline-offset:2px;border:none}
+.cart-btn{border-color:rgba(255,255,255,.5);background:transparent;color:#fff}
+.cart-btn:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+.cart-count{background:#fff;color:var(--red)}
+.header .btn-red{background:#fff;color:var(--red)}
+.header .btn-red:hover{background:var(--red-soft)}
+.burger{border-color:rgba(255,255,255,.5);background:transparent;color:#fff}
+.mobile-menu{background:var(--red-dark);border-bottom:none}
+.mobile-menu a{color:#fff;border-bottom:1px solid rgba(255,255,255,.14)}
+.mobile-menu .btn-red{background:#fff;color:var(--red)}
+.footer{background:#FBF8F8;color:var(--grey-500);border-top:1px solid var(--grey-200)}
+.footer a:hover{color:var(--red)}
+.footer-bottom{color:var(--grey-500)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}}
+@media (max-width:720px){
+  .container{padding:0 18px}
+  .logo{margin-right:auto}
+  .logo-text{font-size:17px}
+}
+</style>
+<style>
+/* Mobil-luft */
+@media (max-width:720px){
+  .container{padding:0 20px}
+  .header-inner{row-gap:14px;padding:12px 0 18px}
+  .hero-inner{padding-top:58px}
+  .page-hero-inner{padding:48px 0 52px}
+  .section{padding-top:56px}
+}
+</style>
+<style>
+/* ===== v4: hvit header, lys hero, konvertering ===== */
+:root{--green:#1E7A46;--green-soft:#E7F3EC;--font-head:'Manrope',sans-serif}
+.header{background:#fff;border-bottom:1px solid var(--grey-200)}
+.header.scrolled{box-shadow:0 4px 18px rgba(26,26,26,.08)}
+.logo{color:var(--ink)}
+.logo-mark{background:var(--red);color:#fff}
+.nav>li>a{color:var(--ink)}
+.nav>li>a:hover,.nav>li>a[aria-current]{color:var(--red);background:var(--red-soft,#FBE9EA)}
+.search input{background:#fff;border:1.5px solid var(--grey-200);color:var(--ink)}
+.search input::placeholder{color:var(--grey-500)}
+.search button{background:var(--red);color:#fff}
+.header-actions .btn-white{background:var(--red);color:#fff;border-color:var(--red)}
+.header-actions .btn-white:hover{background:var(--red-dark,#B01523)}
+.burger{color:var(--ink);border-color:var(--grey-200)}
+.hero{background:linear-gradient(125deg,#FFFFFF 0%,#FBF4F5 45%,#F6E4E6 100%);color:var(--ink)}
+.hero::before{background-image:radial-gradient(circle at center,rgba(213,29,41,.08) 0 6px,transparent 7px)}
+.hero h1{color:var(--ink);font-size:clamp(30px,4.4vw,52px);line-height:1.08}
+.hero-inner>div>p{color:#5C5054}
+.hero-ctas .btn-white{background:var(--red);color:#fff;border-color:var(--red)}
+.hero-ctas .btn-white:hover{background:var(--red-dark,#B01523)}
+.hero-ctas .btn-ghost-w{border-color:var(--red);color:var(--red)}
+.hero-ctas .btn-ghost-w:hover{background:var(--red-soft,#FBE9EA)}
+.trust-line{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:20px;font:600 13.5px var(--font-body);color:#4C4245}
+.trust-line span{display:flex;align-items:center;gap:7px}
+.trust-line svg{width:15px;height:15px;color:var(--green);flex:none}
+.usp-box.green .usp-icon{background:var(--green-soft);color:var(--green)}
+.valgt-label{text-align:center;font:700 12px var(--font-head);letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500);margin-bottom:18px}
+.price-line{font:800 15.5px var(--font-head);color:var(--red);margin:-6px 0 10px}
+.price-line small{font:500 12.5px var(--font-body);color:var(--grey-500)}
+.pdel{font-size:12.5px;color:var(--grey-500);margin:-4px 0 10px}
+.insp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.insp-card{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;display:block;background:var(--grey-100)}
+.insp-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.insp-card:hover img{transform:scale(1.05)}
+.insp-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,10,11,.72))}
+.insp-txt{position:absolute;left:18px;right:18px;bottom:16px;z-index:1;color:#fff}
+.insp-txt h3{font:800 18px var(--font-head);margin-bottom:2px}
+.insp-txt span{font:600 13px var(--font-body);opacity:.9}
+.insp-note{font-size:13px;color:var(--grey-500);margin-top:14px}
+.trykk-band{background:var(--grey-50,#F7F5F6);border-top:1px solid var(--grey-200);border-bottom:1px solid var(--grey-200)}
+.trykk-inner{display:grid;grid-template-columns:1.4fr .6fr;gap:36px;align-items:center;padding:44px 0}
+.trykk-inner h2{font:800 clamp(21px,2.6vw,28px) var(--font-head);letter-spacing:-.02em;margin-bottom:8px}
+.trykk-inner p{color:#5C5054;max-width:60ch}
+.mini-form{display:grid;grid-template-columns:1.1fr 1.1fr 1fr 1fr auto;gap:10px;margin-top:18px;width:100%}
+.mini-form input{height:48px;border-radius:10px;border:none;padding:0 14px;font:500 14px var(--font-body);color:var(--ink)}
+.mini-form .btn{height:48px;white-space:nowrap}
+.cta-note{font-size:13px;opacity:.85;margin-top:10px}
+.faqstripe details{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faqstripe summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:15px 20px;font:600 15px var(--font-head)}
+.faqstripe summary::-webkit-details-marker{display:none}
+.faqstripe summary::after{content:"+";font:700 20px var(--font-head);color:var(--red);transition:transform .2s}
+.faqstripe details[open] summary::after{transform:rotate(45deg)}
+.faqstripe .a{padding:0 20px 16px;color:#3d3538;font-size:14.5px;line-height:1.7}
+.feature-icons{display:flex;flex-wrap:nowrap;gap:8px 12px;margin:14px 0 20px}
+.fi{display:flex;flex-direction:column;align-items:center;gap:5px;flex:1 1 0;min-width:0;text-align:center}
+.fi svg{width:28px;height:28px;color:var(--red);border:1.4px solid currentColor;border-radius:50%;padding:6px}
+.fi span{font:600 9px var(--font-head);letter-spacing:.03em;text-transform:uppercase;color:#4C4245;line-height:1.25}
+@media (max-width:480px){.feature-icons{flex-wrap:wrap}.fi{flex:0 0 auto;width:56px}}
+.sticky-cta{display:none}
+@media (max-width:720px){
+  .sticky-cta{display:grid;grid-template-columns:1fr 1fr;gap:1px;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--grey-200);border-top:1px solid var(--grey-200);padding-bottom:env(safe-area-inset-bottom)}
+  .sticky-cta a{display:flex;align-items:center;justify-content:center;gap:8px;height:54px;font:700 14px var(--font-head);background:#fff;color:var(--red)}
+  .sticky-cta a.primary{background:var(--red);color:#fff}
+  body{padding-bottom:56px}
+  .insp-grid{grid-template-columns:1fr}
+  .mini-form{grid-template-columns:1fr}
+  .trykk-inner{grid-template-columns:1fr;padding:36px 0}
+}
+</style>
+<style>.logo-img{height:38px;width:auto;display:block}@media(max-width:640px){.logo-img{height:31px}}.as-credit strong{font-weight:700}.g-avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:#fff;font:700 17px var(--font-head,sans-serif);flex:none}.g-stars{color:#FBBC04;letter-spacing:2px;font-size:14px}.g-src{font-size:12.5px;color:var(--grey-500,#777)}</style>
+<style>.as-credit{display:inline-flex;align-items:center;margin-left:10px}.as-logo{height:23px;width:auto;display:block}
+@media (max-width:720px){
+  .hero--video .hero-inner{padding-bottom:76px}
+  .hero-inner .trust-line{margin-bottom:6px}
+  .cta-inner{padding:48px 0 60px}
+  .cta-actions{margin-bottom:6px}
+}
+/* Galleri med ekte produktbilder + tilbehør (adSystem-feed) */
+.gallery-main img.gm{position:absolute;inset:24px;width:calc(100% - 48px);height:calc(100% - 48px);object-fit:contain;object-position:center;display:block}
+.gallery-thumbs.real{grid-template-columns:repeat(auto-fill,minmax(64px,1fr))}
+.gallery-thumbs.real button{padding:6px;aspect-ratio:1/1;background:#fff;overflow:hidden}
+.gallery-thumbs.real button img{width:100%;height:100%;object-fit:contain;display:block}
+.tilbehor{border-top:1px solid var(--grey-200);padding:56px 0 8px}
+.tilbehor h2{font-size:clamp(22px,2.6vw,28px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.tilbehor-sub{color:var(--grey-500);font-size:15px;margin-bottom:24px;max-width:70ch}
+.tilbehor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+.tb{background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius-sm,12px);padding:14px;display:flex;flex-direction:column;gap:10px;text-align:center}
+.tb .im{aspect-ratio:1/1;background:#fff;display:grid;place-items:center;overflow:hidden;border-radius:8px}
+.tb .im img{width:100%;height:100%;object-fit:contain}
+.tb .im.ph{background:var(--grey-100);color:var(--grey-500);font-size:12px}
+.tb h3{font:700 14px var(--font-head);line-height:1.3;margin:0}
+.tb a.go{font:600 13px var(--font-body);color:var(--red);text-decoration:underline;margin-top:auto}
+.fi.hide{display:none}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTKCM9D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="tel:+4791168911">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2Z"/></svg>
+        +47 911 68 911
+      </a>
+      <span class="hide-m">Rask levering i hele Norge</span>
+    </div>
+    <a href="butikk.html">← Tilbake til nettbutikken</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Messeprofil.no – til forsiden">
+      <img class="logo-img" src="logo-messeprofil.svg" alt="Messeprofil.no">
+    </a>
+    <form class="search" role="search" action="butikk.html" method="get">
+      <input type="search" name="q" placeholder="Søk etter messevegg, roll-up, lyskasse …" aria-label="Søk i nettbutikken">
+      <button type="submit" aria-label="Søk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+    </form>
+    <nav class="nav" aria-label="Hovedmeny">
+      <a href="index.html">Hjem</a>
+      <a href="butikk.html" aria-current="page">Nettbutikk</a>
+      <a href="om-oss.html">Om oss</a>
+      <a href="verdt-a-vite.html">Kundeservice</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-red" href="kontakt.html">Send forespørsel</a>
+      <button class="burger" aria-label="Åpne meny" aria-expanded="false" onclick="toggleMenu(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Hjem</a>
+    <a href="butikk.html">Nettbutikk</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="verdt-a-vite.html">Kundeservice</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a class="btn btn-red" href="kontakt.html">Send forespørsel</a>
+  </div>
+</header>
+
+<main class="container">
+
+<nav class="breadcrumb" aria-label="Brødsmulesti">
+  <a href="index.html">Hjem</a> / <a href="butikk.html">Nettbutikk</a> / <a href="butikk.html">Messevegger</a> / <span aria-current="page">Messevegg tekstil buet 3×3</span>
+</nav>
+
+<div class="product">
+
+  <div>
+    <div class="gallery-main" id="galleryMain">
+      <svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="dots" x="0" y="0" width="34" height="34" patternUnits="userSpaceOnUse">
+            <circle cx="17" cy="17" r="8.5" fill="#fff" opacity=".92"/>
+          </pattern>
+          <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#E23540"/>
+            <stop offset="1" stop-color="#D51D29"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="280" cy="372" rx="230" ry="20" fill="#16161A" opacity=".06"/>
+        <path d="M100 60 q180 -34 360 0 v240 q-180 -34 -360 0 Z" fill="url(#wall)"/>
+        <rect x="130" y="92" width="140" height="150" fill="url(#dots)"/>
+        <text x="300" y="128" font-family="Montserrat,sans-serif" font-weight="800" font-size="24" fill="#fff">Messeprofil.no</text>
+        <rect x="300" y="144" width="110" height="6" rx="3" fill="#fff" opacity=".55"/>
+        <rect x="300" y="160" width="80" height="6" rx="3" fill="#fff" opacity=".35"/>
+        <rect x="132" y="304" width="12" height="66" rx="4" fill="#B01523"/>
+        <rect x="416" y="304" width="12" height="66" rx="4" fill="#B01523"/>
+      </svg>
+    </div>
+    <div class="gallery-thumbs" role="tablist" aria-label="Produktbilder">
+      <button class="active" aria-label="Bilde 1: forfra"><svg viewBox="0 0 100 70"><path d="M14 12 q36 -8 72 0 v42 q-36 -8 -72 0Z" fill="#D51D29"/></svg></button>
+      <button aria-label="Bilde 2: fra siden"><svg viewBox="0 0 100 70"><path d="M30 10 l40 6 v40 l-40 6Z" fill="#D51D29"/></svg></button>
+      <button aria-label="Bilde 3: bakside og ramme"><svg viewBox="0 0 100 70"><rect x="16" y="12" width="68" height="44" rx="4" fill="none" stroke="#D51D29" stroke-width="4"/><line x1="16" y1="34" x2="84" y2="34" stroke="#D51D29" stroke-width="3"/><line x1="50" y1="12" x2="50" y2="56" stroke="#D51D29" stroke-width="3"/></svg></button>
+      <button aria-label="Bilde 4: transportbag"><svg viewBox="0 0 100 70"><rect x="20" y="26" width="60" height="28" rx="12" fill="#16161A"/><path d="M38 26 q12 -16 24 0" fill="none" stroke="#16161A" stroke-width="5"/></svg></button>
+    </div>
+  </div>
+
+  <div class="p-info">
+    <span class="p-cat">Messevegger tekstil</span>
+    <h1>Messevegg tekstil buet 3×3</h1>
+<div class="feature-icons" aria-label="Produktegenskaper"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m14.7 6.3 3-3 3 3-3 3M3 21l6-6M14 4 4 14l6 6L20 10z" opacity="0"/><path d="M15 7 8.5 13.5M3.3 20.7l4.2-4.2M20.7 3.3 15 9M9 15l-2 6 6-2M21 9l-6-2 2 6"/><path d="M4 4l16 16"/></svg><span>Uten verktøy</span></div><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M9 5h.01M15 7h.01M9 9h.01M15 11h.01M9 13h.01M15 15h.01"/><rect x="10" y="17" width="4" height="4" rx="1"/></svg><span>Glidelås</span></div><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="8" height="12" rx="1"/><rect x="13" y="6" width="8" height="12" rx="1"/><path d="M7 3v3M17 3v3"/></svg><span>Dobbeltsidig</span></div><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M7 17 17 7M7 7h3M7 7v3M17 17h-3M17 17v-3"/></svg><span>32 mm rør</span></div><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 0 1 15.5-6.2M21 12a9 9 0 0 1-15.5 6.2"/><path d="M18.5 2v4h-4M5.5 22v-4h4"/></svg><span>Gjenbrukbar</span></div><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><path d="M8.5 13c1.2-1 2.3 1 3.5 0s2.3 1 3.5 0"/><path d="M7 6h.01M10 6h.01"/></svg><span>Vaskbart trykk</span></div></div>
+<p class="pdel" style="font-size:13.5px;color:#4C4245;margin-bottom:14px"><strong style="color:var(--green,#1E7A46)">Estimert levering: 8–10 arbeidsdager</strong> (produksjon + frakt) · Ekspress 2–3 virkedager mot tillegg</p>
+    <div class="stars" aria-label="5 av 5 stjerner på Google">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+      <a href="index.html#omtaler">5/5 · 31 anmeldelser på Google</a>
+    </div>
+    <div class="p-price"><strong id="price" style="font-size:22px">Be om pris</strong><span>– du får tilbud samme dag · inkl. trykk av ditt design</span></div>
+    <p class="p-lead">Buet tekstilvegg med sømløst trykk på hele flaten. Aluminiumsramme som klikkes sammen uten verktøy – én person monterer hele veggen på ca. 10 minutter.</p>
+
+    <div class="option-label">Størrelse <small id="sizeLabel">3 × 3 m</small></div>
+    <div class="options" role="group" aria-label="Velg størrelse">
+      <button class="opt" data-size="2 × 3 m" onclick="pick(this,'size')">2 × 3 m</button>
+      <button class="opt active" data-size="3 × 3 m" onclick="pick(this,'size')">3 × 3 m</button>
+      <button class="opt" data-size="4 × 3 m" onclick="pick(this,'size')">4 × 3 m</button>
+      <button class="opt" data-size="5 × 3 m" onclick="pick(this,'size')">5 × 3 m</button>
+    </div>
+
+    <div class="option-label">Trykk</div>
+    <div class="options" role="group" aria-label="Velg trykk">
+      <button class="opt active" onclick="pick(this,'print')">Enkeltsidig</button>
+      <button class="opt" onclick="pick(this,'print')">Dobbeltsidig</button>
+    </div>
+
+    <div class="option-label">Design</div>
+    <div class="options" role="group" aria-label="Velg design">
+      <button class="opt active" data-design="eget" onclick="pick(this,'design')">Jeg har eget design</button>
+      <button class="opt" data-design="hjelp" onclick="pick(this,'design')">Jeg trenger designhjelp</button>
+    </div>
+    <div class="design-help" id="designHelp" hidden>
+      <h3>Vi hjelper deg med designet</h3>
+      <p>Våre designere hjelper deg med å tilpasse logo, tekst og grafikk og lager produksjonsklare filer til produktene du trenger. Send oss det du har, så tar vi kontakt for å avklare løsning og pris.</p>
+      <a class="btn btn-red" id="designHelpBtn" href="https://416jbe00upv.typeform.com/to/hGGF7wQ7">Få hjelp med design
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="buy-row">
+      <div class="qty" aria-label="Antall">
+        <button type="button" aria-label="Reduser antall" onclick="qty(-1)">−</button>
+        <input type="text" id="qtyInput" value="1" inputmode="numeric" aria-label="Antall">
+        <button type="button" aria-label="Øk antall" onclick="qty(1)">+</button>
+      </div>
+      <a class="btn btn-red" id="sendReq" href="https://416jbe00upv.typeform.com/to/hGGF7wQ7">
+        Send forespørsel
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <p class="buy-alt">Vi svarer innen 1 virkedag med pris og forslag – eller ring oss direkte på <a href="tel:+4791168911">+47 911 68 911</a>.</p>
+
+    <ul class="usp-list">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Levering 3–5 virkedager etter designgodkjenning</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Transportbag og monteringsanvisning inkludert</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Vaskbar tekstil – nytt trykk kan bestilles til samme ramme</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>2 års garanti på ramme</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Tilbehør (fylles fra produktdata.js) -->
+<section class="tilbehor" id="tilbehor" hidden>
+  <h2>Tilbehør til dette produktet</h2>
+  <p class="tilbehor-sub">Flere av produktene trenger tilleggsutstyr for å bli komplette – velg det du trenger, så tar vi det med i tilbudet.</p>
+  <div class="tilbehor-grid" id="tilbehorGrid"></div>
+</section>
+
+<!-- Tabs -->
+<section class="tabs" id="omtaler">
+  <div class="tab-nav" role="tablist">
+    <button class="active" role="tab" aria-selected="true" onclick="tab(this,0)">Beskrivelse</button>
+    <button role="tab" aria-selected="false" onclick="tab(this,1)">Spesifikasjoner</button>
+    <button role="tab" aria-selected="false" onclick="tab(this,2)">Levering og filkrav</button>
+  </div>
+  <div class="tab-panel active" role="tabpanel" id="descPanel">
+    <h3>Produsert med ditt design</h3>
+    <p>Alle produktene våre leveres med ditt eget trykk, produsert i samme europeiske fabrikk. Send en forespørsel, så får du pris, designforslag og leveringstid samme dag.</p>
+    <p>Detaljert produktbeskrivelse vises når du velger et produkt fra nettbutikken.</p>
+  </div>
+  <div class="tab-panel" role="tabpanel" id="specPanel">
+    <table class="spec-table">
+      <tr><th>Spesifikasjoner</th><td>Velg et produkt i nettbutikken for detaljerte mål og vekt – eller kontakt oss, så hjelper vi deg.</td></tr>
+    </table>
+  </div>
+  <div class="tab-panel" role="tabpanel">
+    <h3>Levering</h3>
+    <p>Normal produksjonstid er 3–4 virkedager fra godkjent trykkfil. I tillegg kommer frakt: standard 7–8 virkedager, eller ekspress på ca. 3 dager om du har dårlig tid – si fra i forespørselen, så setter vi opp raskeste løp.</p>
+    <h3>Filkrav</h3>
+    <p>Last opp trykkeklar PDF i målestokk 1:10 med 3 mm utfall, CMYK og minimum 150 dpi i full størrelse. Ferdige maler ligger klare for nedlasting – eller velg «Jeg trenger designhjelp» over, så setter designerne våre opp filene for deg – vi tar kontakt om løsning og pris.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- Related -->
+<section class="related">
+  <div class="container">
+    <h2>Andre har også sett på</h2>
+    <div class="related-grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-bottom">
+    <span>© 2026 Messeprofil.no – Alle rettigheter forbeholdt</span> <span class="ml-credit">Nettside fra <a href="https://www.moonlandingsite.no" target="_blank" rel="noopener">Moonlanding AS – Launchpad</a></span> <span class="as-credit"><img src="logo-adsystem-powered.png" alt="Powered by adsystem" class="as-logo"></span>
+    <a href="index.html">Til forsiden</a>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(btn){
+  const menu = document.getElementById('mobileMenu');
+  const open = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+function pick(btn, group){
+  [...btn.parentElement.children].forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  if(group === 'size'){
+        document.getElementById('sizeLabel').textContent = btn.dataset.size;
+  }
+  if(group === 'design'){
+    const dh = document.getElementById('designHelp');
+    if(dh) dh.hidden = btn.dataset.design !== 'hjelp';
+  }
+  updateReqLink();
+}
+function qty(d){
+  const i = document.getElementById('qtyInput');
+  i.value = Math.max(1, (parseInt(i.value)||1) + d);
+  updateReqLink();
+}
+/* Bygger forespørselslenken slik at valgte opsjoner følger med inn i Typeform.
+   NB: Typeform kan IKKE forhåndsutfylle tekstfelt via URL – bare forhåndsvelge
+   choice-felt (#answers-<ref>=<choice-ref>) og motta SKJULTE felt (#felt=verdi).
+   Valgene sendes derfor som skjult felt «konfig», som følger innsendingen videre
+   til e-postvarsler og integrasjoner. Krever at «konfig» er definert som
+   hidden field i skjemaet hGGF7wQ7 (Typeform-bygger → Create → Hidden fields). */
+function updateReqLink(){
+  const req = document.getElementById('sendReq');
+  if(!req || !window.typeformLenke || !window.__prodName) return;
+  const deler = [];
+  const groups = document.querySelectorAll('.options');
+  groups.forEach(g=>{
+    if(g.style.display==='none') return;
+    const a=g.querySelector('.opt.active');
+    const label=g.getAttribute('aria-label')||'';
+    if(a) deler.push(label.replace('Velg ','').replace(/^./,c=>c.toUpperCase())+': '+a.textContent.trim());
+  });
+  const q=document.getElementById('qtyInput');
+  if(q && parseInt(q.value)>0) deler.push('Antall: '+q.value);
+  deler.push('Produktside: https://www.messeprofil.no/produkt.html?id='+new URLSearchParams(location.search).get('id'));
+  const sammendrag = window.__prodName + ' – ' + deler.join(' · ');
+  var u = window.typeformLenke(window.__prodName);
+  u += (u.indexOf('#') >= 0 ? '&' : '#') + 'konfig=' + encodeURIComponent(sammendrag);
+  req.href = u;
+  const dhb = document.getElementById('designHelpBtn');
+  if(dhb) dhb.href = u;
+}
+function tab(btn, i){
+  document.querySelectorAll('.tab-nav button').forEach((b,j)=>{
+    b.classList.toggle('active', j===i);
+    b.setAttribute('aria-selected', j===i);
+  });
+  document.querySelectorAll('.tab-panel').forEach((p,j)=>p.classList.toggle('active', j===i));
+}
+</script>
+
+<script>
+(function(){
+  var h=document.querySelector('.header');
+  if(h){addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>10)},{passive:true});}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.pg-card,.product-card,.review-card,.filter-group,.gallery-main,.p-info,.tabs').forEach(function(el){el.classList.add('reveal');io.observe(el);});
+})();
+</script>
+
+<script>
+const CATS = ["Messevegg tekstil", "Messestand - Ferdige sett med vegger", "Messebord og disker", "Tekstilrammer med LED-lys", "Tilbehør", "Reklame møbler", "Oppblåsbare produkter", "Reklame telt med profilering", "Tekstilramme uten belysning", "RollUps", "Kampanje pakker", "Klassisk Messestand", "Pop-up vegger", "Reklameflagg", "Tekstilrammer", "Skjermer og infokiosker"];
+const PRODS = [[21194,"adFrame Flex LED",[3],"2025/06/adFrame-Flex-LED.webp",9],[21187,"adWall Presto Outdoor",[0,12],"2025/06/adWall-Presto-Outdoor.webp",6],[21179,"Premium Chill Zone",[10,1,6],"2025/06/Premium-Chill-Zone-1.jpeg",0],[21175,"Chill Zone",[10,1,6],"2025/06/Chill-Zone.jpeg",0],[21172,"Fan Zone",[10,1,6],"2025/06/Fan-Zone.jpeg",0],[21169,"Heavy-Duty Set",[10,1,7],"2025/06/Heavy-Duty-Set.jpeg",0],[21164,"Economy Set",[10,1,7],"2025/06/image.jpeg",0],[21160,"adFrame Smart 4&#215;2 L",[1,3],"2025/06/adFrame-Smart-4x2-L.jpeg",1],[21156,"adFrame Smart 3&#215;3 U",[1,3],"2025/06/adFrame-Smart-3x3-U.jpeg",1],[21152,"adFrame Smart 3&#215;3 L",[1,3],"2025/06/adFrame-Smart-3x3-L.jpeg",1],[21147,"adFrame Smart 3&#215;2 L",[1,3],"2025/06/adFrame-Smart-3x2-L.jpeg",1],[21143,"adFrame Smart 4&#215;3 U",[1,3],"2025/06/adFrame-Smart-4x3-U.jpeg",1],[21139,"adFrame Smart 4&#215;2 U",[1,3],"2025/06/adFrame-Smart-4x2-U.jpeg",1],[21135,"adFrame Smart 3&#215;2 L",[1,3],"2025/06/adFrame-Smart-3x2-L.webp",1],[21131,"adFrame Smart 3&#215;2 U",[1,3],"2025/06/adFrame-Smart-3x2-U.webp",1],[21125,"adFrame Smart 2&#215;1",[1,3],"2025/06/adFrame-Smart-2x1-1.webp",1],[21121,"adFrame Smart 1&#215;1",[1,3],"2025/06/adFrame-Smart-1x1-1.webp",1],[21117,"Double DTF trade show set",[1],"adsystem/mwp21117/6463458f1d67.webp",1],[21113,"Premium DTF trade show set",[1],"adsystem/mwp21113/43c55839e6dd.webp",1],[21108,"SEGO LED trade show set",[1,3],"2025/06/SEGO-LED-trade-show-set.jpeg",1],[21104,"Standard DTF trade show set",[1],"2025/06/Standard-DTF-trade-show-set.jpeg",1],[21100,"Premium DTF Conference Set",[1],"adsystem/mwp21100/2fd138f36840.webp",1],[21096,"Standard DTF conference set",[1,8],"adsystem/mwp21096/293b470cb011.webp",1],[21090,"Premium LED conference set",[],"2025/06/Premium-LED-conference-set.jpeg",1],[21085,"Pop-up LED event set",[1,3],"2025/06/Pop-up-LED-event-set.jpeg",2],[21080,"Economic Vario conference set",[],"2025/06/Economic-Vario-conference-set.jpeg",2],[21075,"DTF premium event set",[1,8],"adsystem/mwp21075/719127b28c25.webp",2],[21069,"Quick LED promotion set",[1,3],"2025/06/Quick-LED-promotion-set.jpeg",2],[21064,"Economic Vario Event Set",[1,0],"2025/06/Economic-Vario-Event-Set.jpeg",2],[21058,"Economic Vario Promotion Set",[1,0],"2025/06/Economic-Vario-Promotion-Set.jpeg",2],[21053,"Premium DTF promotional set",[1,8],"adsystem/mwp21053/02093c297548.webp",2],[21042,"Pop-Up combo",[1,3],"2025/06/Pop-Up-combo.jpeg",4],[20852,"adWall Vario Curved 43fi",[],"2025/06/5-1.webp",0],[20829,"adTribune Air",[],"2025/06/adTribune-Air.webp",0],[20822,"adBlanket",[5],"2025/06/image-335.webp",0],[20818,"adTowel",[5],"2025/06/towel_1.webp",0],[20809,"LED lighting 116W SILVER",[],"2025/06/image-5.webp",0],[20806,"LED lighting 60W SILVER",[],"2025/06/image-3.webp",0],[20765,"adBox Hit",[2],"2025/06/adBox-Hit-stoisko-degustacyjne.webp",0],[20307,"adFlag Plate 12kg",[4],"adsystem/acc/d03098803c6a.webp",0],[20304,"adFlag Plate 8kg",[4],"adsystem/acc/c11b19e447d4.webp",0],[20300,"adFlag Plate 6kg",[4],"adsystem/acc/1d47f3091c37.webp",0],[20297,"adFlag Plate 4kg",[4],"adsystem/acc/259feb954258.webp",0],[20294,"adFlag Kryssfot for beachflag",[],"adsystem/acc/e370c26bfabe.webp",0],[20290,"adFlag Rotator",[],"adsystem/acc/febd6c11bc76.webp",0],[20287,"adFlag Spike",[],"adsystem/acc/ac93d40f9e7a.webp",0],[20283,"adTent Air Spiral Anchor",[4],"2025/04/adTent-Air-Spiral-Anchor.webp",0],[20279,"adTent Air Anchor",[],"2025/04/image-2.webp",0],[20272,"adTent LED 3&#215;3",[],"2025/04/adTent-LED-3x3-1.webp",0],[20261,"adTent LED 6&#215;6",[],"2025/04/adTent-LED-6x6-1.webp",0],[20237,"Transportveske (L/XL)",[4],"2025/04/Transportveske.webp",0],[20234,"Transportveske (S/M)",[4],"2025/04/Transportveske.webp",0],[20230,"adTent Air Backpack 4&#215;4/5&#215;5",[4],"2025/04/adTent-Air-Backpack.webp",0],[20226,"adTent vektlodd 10kg",[4],"2025/04/adTent-weight-10kg.webp",0],[20221,"LED-belysning 116 Svart",[4],"2025/04/Vario-power-LED-116W-BLACK.webp",0],[20216,"LED-belysning 116 Sølv",[4],"2025/04/LED-lighting-116W-SILVER.webp",0],[20211,"LED lampe 50W svart",[4],"2025/04/LED-lighting-50W-BLACK-1.webp",0],[20206,"LED-belysning 50 Sølv",[4],"2025/04/image.webp",0],[20186,"adFolder Premium",[11,9],"2025/03/adFolder-Premium.jpg",0],[20178,"adFolder Prestige",[11,9],"2025/03/adFolder-Prestige.jpg",0],[20172,"Adfolder A4",[11,9],"2025/03/Adfolder-A4.jpg",0],[20163,"SEGO LED-utstillingssystemet",[1,14,3],"2025/03/Sego-Ready-Made-Sets.jpg",4],[20158,"adFoam Roller",[5],"adsystem/mwp20158/f02b4e99afa1.webp",0],[20153,"adFoam Forma",[5],"adsystem/mwp20153/07115f575e2b.webp",0],[20147,"adFoam Via",[5],"adsystem/mwp20147/eb674afdc7ed.webp",0],[20142,"adSacco",[5],"adsystem/mwp20142/e76608a7fcf0.webp",0],[20137,"adFoam Roller Mini",[5],"2025/03/adFoam-Miniroller.jpg",0],[20131,"adFoam Cube",[5],"2025/03/adFoam-Cube.jpg",0],[20121,"adFrame CTF Hanging LED",[3],"2025/03/adFrame-CTF-Hanging-LED.jpg",4],[20111,"adFrame LMD 70&#215;100 (B1) PD Hanging",[3],"2025/03/adFrame-LMD-70x100-B1-PD-Hanging.jpg",4],[20101,"adFrame LPO",[3],"2025/03/adFrame-LPO.jpg",3],[20091,"adFrame LMS 100&#215;100 NK",[3],"2025/03/adFrame-LMS-100x100-NK.jpg",4],[20082,"adFrame Poster",[3],"2025/03/adFrame-Poster.jpg",4],[20076,"Lumina Stick",[11,5],"2025/03/image_LUMINA.png",0],[20068,"adFrame Slim",[14,3],"2025/03/adFrame-Slim.jpg",2],[20050,"adStand Eco",[9],"2025/03/adStand-Eco.jpg",2],[20045,"adWall Vario Big Island",[0],"2025/03/adWall-Vario-Big-Island.jpg",0],[20037,"adWall Vario Island",[0],"2025/03/adWall-Vario-Island.jpg",0],[20030,"adWall Vario In",[0],"2025/03/adWall-Vario-In.jpg",0],[20020,"adWall Vario C-wall",[0],"2025/03/adWall-Vario-C-wall.jpg",0],[20013,"adWall Vario Changing Room",[0],"adsystem/mwp20013/055f92f29a52.webp",0],[20007,"adWall Vario Tunnel",[0],"2025/03/adWall-Vario-Tunel.jpg",0],[20000,"adUp Vario Trifloat",[0],"2025/03/adUp-Vario-Trifloat.jpg",0],[19992,"adUp Vario Clover Maxi",[0],"2025/03/adUp-Vario-Clover-Maxi.jpg",0],[19984,"adWall Vario Gate",[],"2025/03/adWall-Vario-Gate.jpg",0],[19978,"adWall Vario Bow",[0],"2025/03/adWall-Vario-Bow.jpg",0],[19972,"adWall Vario Arch C",[],"2025/03/adWall-Vario-Arch-C.jpg",0],[19966,"adWall Vario Arch",[],"2025/03/adWall-Arch-SET.jpg",0],[19960,"adWall Vario Arch B",[],"2025/03/adWall-Vario-Arch-B.jpg",0],[19954,"adWall Vario Arch A",[],"2025/03/adWall-Vario-Arch-A.jpg",0],[19948,"adWall Vario Craft",[],"2025/03/adWall-Vario-Craft.jpg",0],[19942,"adWall Vario Wave",[0],"2025/03/adWall-Vario-Wave.jpg",0],[19927,"adWall Vario Twist",[],"2025/03/adWall-Vario-Twist.jpg",2],[19921,"adWall Vario Fall",[0],"2025/03/adWall-Vario-Fall.jpg",0],[19914,"adWall Vario Slope",[0],"2025/03/adWall-Vario-Slope.jpg",0],[19904,"adWall Vario Serpentine",[0],"2025/03/adWall-Vario-Serpentine.jpg",2],[19898,"adWall Vario Horizontal",[0],"2025/03/adWall-Vario-Horizontal.jpg",0],[19893,"adWall Vario Kite",[0],"2025/03/adWall-Vario-Kite.jpg",0],[19886,"adWall Vario Peak",[0],"2025/03/image-24.jpg",0],[19880,"adWall Vario Ring",[0],"2025/03/adWall-Vario-Ring.jpg",0],[19874,"adWall Vario QRing",[0],"2025/03/adWall-Vario-QRing.jpg",0],[19867,"adWall Vario Flat Ring",[0],"2025/03/adWall-Vario-Flat-Ring.jpg",2],[19857,"adWall Vario Add Right",[0],"2025/03/adWall-Vario-Add-Right.jpg",0],[19852,"adWall Vario Add Left",[0],"2025/03/adWall-Vario-Add-Left.jpg",0],[19844,"adWall Vario Crown",[0],"2025/03/adWall-Vario-Crown.jpg",0],[19839,"adWall Vario Cone",[0],"2025/03/adWall-Vario-Cone.jpg",0],[19831,"adWall Vario Tower",[0],"2025/03/adWall-Vario-Tower.jpg",2],[19823,"adWall Smart Curved",[12],"2025/03/adWall-Smart-Curved.webp",0],[19815,"adWall Smart Straight",[12],"2025/03/adWall-Smart-Straight.jpg",2],[19805,"adWall EDGE",[12],"2025/03/adWall-EDGE.jpg",4],[19796,"SEG Exhibition Wall",[8],"2025/03/SEG-Exhibition-Wall.jpg",4],[19785,"adWall Vario Classic",[0],"2025/03/adWall-Vario-Classic.jpg",4],[19775,"adWall Vario Curved Premium",[0],"2025/03/adWall-Vario-Curved-Premium.jpg",4],[19764,"adWall Vario Straight Premium",[0],"2025/03/adWall-Vario-Straight-Premium.jpg",4],[19757,"adBox Standard",[2],"2025/03/adBox-Standard.webp",0],[19748,"adBox Hit C",[2],"2025/03/adBox-Hit-C.jpg",0],[19741,"adBox Elypse Mini",[2],"2025/03/adBox-Elypse-Mini.webp",0],[19735,"adBox Hit",[2],"2025/03/adBox-Hit.webp",0],[19729,"adBox Hit Mini",[2],"2025/03/adBox-Hit-Mini.jpg",0],[19723,"adTribune SEGO",[2],"2025/03/SEGO-Tribune.jpg",0],[19716,"adTribune Air 2.0",[2,6],"2025/03/adTribune-Air-2.0.jpg",0],[19711,"adTribune Smart LED SF",[2],"2025/03/adTribune-Smart-LED-SF.jpg",0],[19703,"adTribune SEG",[2],"2025/03/adTribune-SEG.jpg",2],[19695,"adTribune Quick",[2],"2025/03/adTribune-Quick.jpg",0],[19689,"adTribune Big Oval",[2],"2025/03/adTribune-Big-Oval.jpg",0],[19683,"adTribune Conference podium",[2],"2025/03/image_Main.jpg",0],[19676,"adTribune Starter",[2],"2025/03/adTribune-Starter.jpg",0],[19670,"adTribune Hit C",[2],"2025/03/adTribune-Hit-C.jpg",0],[19664,"adTribune Elypse",[2],"2025/03/adTribune-Elypse.webp",0],[19658,"adTribune Elypse Mini",[2],"2025/03/adTribune-Elypse-Mini.jpg",0],[19652,"adTribune Hit",[2],"2025/03/adTribune-Hit.jpg",0],[19645,"adTribune Hit Mini",[2],"2025/03/adTribune-Hit-Mini.jpg",0],[19639,"adBox Elypse",[2],"2025/03/adBox-Elypse.jpg",0],[19632,"adBox Ring",[2],"2025/03/adBox-Ring.jpg",0],[19626,"adTribune Standard",[2],"2025/03/adTribune-Standard.jpg",0],[19620,"adTribune Shell 2in1",[2],"2025/03/adTribune-Shell-2in1.jpg",0],[19614,"adTribune Shell",[2],"2025/03/adTribune-Shell.jpg",0],[19602,"Multiframe messesystem",[1],"2025/03/Multiframe-Ready-Made-Sets.jpg",4],[19592,"mFrame utstillingssystem",[1],"2025/03/mFrame-Ready-Made-Sets.jpg",4],[19581,"adFrame Quick 2.0",[3],"2025/03/adFrame-Quick-2.0.jpg",4],[19575,"adFrame Battery",[3],"2025/03/image111.jpg",0],[19561,"adBoard LED",[3],"2025/03/adBoard-LED.jpg",2],[19553,"adBoard Hips",[11],"2025/03/adBoard-Hips.jpg",2],[19547,"adDeck",[5],"2025/03/adDeck.webp",0],[19527,"adFlag Drop PRO",[13],"2025/03/adFlag-Drop-PRO.jpg",4],[19517,"adFlag Hook PRO",[13],"2025/03/adFlag-Hook-PRO.jpg",4],[19507,"adFlag Standard PRO",[13],"2025/03/adFlag-Standard-PRO.jpg",4],[19497,"adColumn Air",[6],"2025/03/adColumn-Air.jpg",4],[19487,"adTent V",[6,7],"2025/03/adTent-V.jpg",3],[19478,"adTent Vario",[7],"2025/03/adTent-Vario.jpg",2],[19469,"adTent Express Pro",[7],"2025/05/3_vegger_b.jpg",20],[19461,"adGate Air Square",[6],"2025/03/adGate-Air-Square.jpg",2],[19455,"adUp Vario Quadfloat",[0],"2025/03/adUp-Vario-Quadfloat.jpg",0],[19440,"adUp Vario Trapfloat",[0],"2025/03/adUp-Vario-Trapfloat.jpg",0],[19441,"adUp Vario Ringfloat",[0],"2025/03/adUp-Vario-Ringfloat.jpg",0],[19429,"adWall Vario S",[0],"2025/03/image-3.jpg",4],[19416,"adStand Premium",[9],"2025/03/adStand-Premium.jpg",4],[19404,"adStand L",[9],"2025/03/adStand-L.jpg",4],[19388,"adStand Light",[9],"2025/03/adStand-Light.jpg",0],[19378,"adWall Vario Classic Light",[0],"2025/03/image-2025-03-06T110725.877.jpg",2],[19354,"adWall Vario Curved Light",[0],"2025/03/3.jpeg",4],[19340,"adWall Vario buet lys",[],"2025/03/b1.jpg",0],[19332,"adTribune/adColumn/adTent Air &#8211; elektrisk pumpe (Kopi)",[4],"2025/02/image.webp",0],[19260,"Premium bag for adTent Air 5&#215;5 og 6&#215;6",[4],"2025/02/Premium-bag-for-adTent-Air-5x5-og-6x6-1.webp",0],[19257,"adTribune/ adColumn/ adTent Air &#8211; håndpumpe",[4],"2025/02/adTribune-adColumn-adTent-Air-handpumpe.webp",0],[19246,"adTribune/adColumn/adTent Air &#8211; elektrisk pumpe",[4],"2025/02/image.webp",0],[19242,"Bravo elektrisk pumpe",[4],"2025/02/Bravo-elektrisk-pumpe.webp",0],[19239,"Hammer",[4],"2025/02/•-adTent-Air-premium-Mlotek-1-szt.webp",0],[18339,"adFrame Slim",[3],"2025/03/adFrame-Slim.jpg",2],[17751,"Foldable &#8211; Komplett pakke",[1],"2024/05/image-58.jpeg",11],[17719,"Sego &#8211; Komplett pakke",[1],"2024/05/image-52.jpeg",11],[17594,"adWall Vario Straight Light",[0],"2024/05/Vario_Staight_Light_Messevegg_Zipper_wall_1.webp",30],[17583,"adTribune Pop-up",[2],"2024/05/image-19.jpeg",2],[17580,"adFrame Pop-up",[3],"2024/05/image.jpeg",2],[12641,"adFrame Single",[3],"2023/07/adFrame-LMD-glowne.jpg",6],[13386,"adTribune Expo",[2],"2023/02/image-366.jpg",2],[13279,"adFrame CTF",[8],"2023/07/ADFRAM1.jpg",4],[12799,"adFrame LMD",[3],"2023/07/adFrame-LMD-glowne.jpg",24],[12783,"adTribune Case",[2],"2023/07/adTribune-Case-glowne-01.jpg",0],[12423,"adWall Vario Presto Light",[0],"2023/06/Presto_messevegg_1.webp",16],[10954,"adFrame STFL",[8],"2023/05/adFrame-STFL-RFQ-5.jpg",18],[10832,"adTent Express",[7],"2023/05/adTent-Express.jpg",20],[10738,"adTribune Oval",[2],"2023/05/adTribune-Oval-glowne-1.jpg",2],[10735,"adTribune Big Quick",[2],"2023/05/big-quick-glowne-01.jpg",2],[10732,"adTribune Big Quick LED",[2],"2023/05/big-quick-led-glowne-01.jpg",2],[10713,"adGate Air Triangle",[6],"2023/05/adGate-Air-Triangle-2.jpg",3],[10639,"adTent Air Premium",[6,7],"2023/04/adTent_Air_Premium_5x5_0-drzwi-wiz.jpg",20],[10371,"adFrame DTF",[8],"2023/03/adFrame-DTF-3.jpg",22],[10320,"adFlag Blade PRO",[13],"2023/03/adFlag-Blade-1.jpg",4],[54619,"adTribune Pop-up Battery",[2],"adsystem/4619/959e16dfdf0a.webp",1],[54603,"adTribune Quick Max",[2],"adsystem/4603/c13f25cf5a2d.webp",4],[54602,"Multiframe standpakke MT6",[1],"adsystem/4602/be55ad037816.webp",2],[54601,"Multiframe standpakke MT5",[1],"adsystem/4601/47c1c35cb628.webp",2],[54600,"Multiframe standpakke MT4",[1],"adsystem/4600/f9a98e3cb775.webp",2],[54599,"Multiframe standpakke MT3",[1],"adsystem/4599/e78a4816f08b.webp",2],[54598,"Multiframe standpakke MT2",[1],"adsystem/4598/a80261ef1f88.webp",2],[54596,"adTribune Quick Square",[2],"adsystem/4596/7c9424004c70.webp",4],[54568,"adTribune Flex Expo",[2],"adsystem/4568/2c3ccf353daf.webp",2],[54567,"adTribune Flex Lock",[2],"adsystem/4567/95835d9a406d.webp",2],[54508,"Multiframe standpakke MT1",[1],"adsystem/4508/ac1f91eb143b.webp",2],[54491,"adTribune Quick Round",[2],"adsystem/4491/bee97fed2c5d.webp",4],[54490,"adTribune Quick Kidney",[2],"adsystem/4490/47135dc8c9ef.webp",4],[54419,"adChair Inflate",[5],"adsystem/4419/f57021f30722.webp",1],[54418,"adPuff Inflate",[5],"adsystem/4418/d0b2320a7e61.webp",1],[54417,"adTribune Inflate",[6],"adsystem/4417/061ffcd9a4ea.webp",1],[52851,"adFrame Quick Safe Case",[3],"adsystem/2851/7d912fee96ed.webp",12],[52850,"adTribune Lumina RGB",[2],"adsystem/2850/d456515805ce.webp",2],[52846,"adVideo InfoKiosk 55\"",[15],"adsystem/2846/0f06a7244472.webp",4],[52826,"adTribune Big Quick LED Auto",[2],"adsystem/2826/1254d4094bf7.webp",2],[52811,"mFrame LED-disk med dører",[2],"adsystem/2811/be5bc35f1482.webp",1],[52800,"adGate Round",[6],"adsystem/2800/e1d9deb66085.webp",2],[52797,"adTent Air Premium Automatic",[7],"adsystem/2797/008fad4d77e9.webp",4],[52769,"Combo adFrame Starter + adTribune Starter",[2],"adsystem/2769/36e806ce8f49.webp",2],[52759,"adTribune Tube Square",[2],"adsystem/2759/dcdc906730fb.webp",2],[52758,"adTribune Tube Oval",[2],"adsystem/2758/90b1a596734b.webp",2],[52748,"adStand Drop",[9],"adsystem/2748/3616331e901b.webp",6],[52744,"adGate Quick Arch",[0],"adsystem/2744/ec84255f0808.webp",2],[52742,"adVideo Stand 32\"",[15],"adsystem/2742/76ae064a40d8.webp",1],[52707,"adFrame Lumina RGB",[3],"adsystem/2707/9d44dfc05e32.webp",7],[52703,"adTribune Cubic (SEGO)",[2],"adsystem/2703/1cb774357bcc.webp",3],[52690,"Economic Vario kampanjesett",[1],"adsystem/2690/cd1fd4c9c333.webp",1],[52686,"Premium LED messesett",[1],"adsystem/2686/f793d9caf974.webp",1],[52676,"Economic Vario messesett",[1],"adsystem/2676/da0aab9d4dcc.webp",1],[52487,"Pop-up lyskasse",[3],"adsystem/2487/7bdb7be42d74.webp",14],[52212,"Foldable modulvegg",[0],"adsystem/2212/b6ac001a74d3.webp",2],[52211,"Multiframe messestand",[1],"adsystem/2211/35fdc3d6b4e9.webp",5],[52204,"mFrame messestand",[1],"adsystem/2204/35b54571bfc9.webp",3],[52076,"Multiframe Tribune",[2],"adsystem/2076/86050a17e928.webp",2],[52029,"SEGO lyskasse-disk",[2],"adsystem/2029/6145a0ecacd4.webp",2],[52004,"adFrame Smart standpakke 10",[1],"adsystem/2004/77b8b76b3dd5.webp",1],[52000,"adFrame Smart standpakke 8",[1],"adsystem/2000/a0f5d0ffdd50.webp",1],[51999,"adFrame Smart standpakke 7",[1],"adsystem/1999/551b6af88a04.webp",1],[51998,"adFrame Smart standpakke 6",[1],"adsystem/1998/f498b1a4dcb9.webp",1],[51996,"adFrame Smart standpakke 5",[1],"adsystem/1996/c4ac32c10609.webp",1],[51995,"adFrame Smart standpakke 4",[1],"adsystem/1995/63944c272833.webp",1],[51993,"adFrame Smart standpakke 3",[1],"adsystem/1993/064878afde66.webp",1],[51992,"adFrame Smart standpakke 2",[1],"adsystem/1992/04c1c2bcd2d7.webp",1],[51990,"adFrame Smart standpakke 1",[1],"adsystem/1990/e4bd79ca2334.webp",1],[51935,"adVideo VideoWall 3&#215;3",[15],"adsystem/placeholder.webp",1],[50208,"adWall Vario Arch (sett A+B)",[0],"adsystem/208/87bc9f02c15e.webp",2],[50198,"adTent Air ryggsekker 3&#215;3",[4],"adsystem/placeholder.webp",1],[50193,"adFlag Standard",[13],"adsystem/193/46eb90bcba07.webp",4],[50189,"adFlag Drop",[13],"adsystem/189/fb8c649d4b2d.webp",4],[50187,"adFlag Blade",[13],"adsystem/187/9347aee04e18.webp",4],[50178,"adWall L",[0],"adsystem/178/f131b3710a39.webp",1],[50163,"adFrame STF",[8],"adsystem/163/bbe7a72bcfc8.webp",25],[50161,"adFrame LMSM",[3],"adsystem/161/f3fba6a633c3.webp",35],[50156,"adBoard OWZ",[4],"adsystem/156/359f8b06e98f.webp",2],[50115,"adWall Vario CR",[0],"adsystem/115/6541333b9a90.webp",1],[50061,"adTribune Oval Maxi",[2],"adsystem/61/1c12bb8cfc10.webp",3],[50059,"adStand Twins",[9],"adsystem/59/9892c3968858.webp",1],[50057,"adStand Level",[9],"adsystem/57/44ce7ad3ef3b.webp",1],[50055,"adStand Lux",[9],"adsystem/55/394f961f5e04.webp",3],[50024,"adFrame Smart enkeltvegg",[3],"adsystem/24/91a40ddac331.webp",4],[50023,"adFrame Quick Single",[3],"adsystem/23/5bfc98edf6e3.webp",2],[50022,"adFrame Starter",[9],"adsystem/22/9d47eaa444aa.webp",4]];
+const IMGBASE = "bilder/";
+(function(){
+  const id = parseInt(new URLSearchParams(location.search).get('id')||'');
+  const p = PRODS.find(x=>x[0]===id);
+  if(!p) return;
+  const dec = s=>{const t=document.createElement('textarea');t.innerHTML=s;return t.value;};
+  const name = dec(p[1]);
+  const cat = CATS[p[2][0]] || 'Messeutstyr';
+  document.title = name+' – '+cat+' | Messeprofil.no';
+  /* SEO: hver produkt-URL skal kanonisere til seg selv, ikke til bar produkt.html */
+  const canonUrl = 'https://www.messeprofil.no/produkt.html?id='+p[0];
+  const canon = document.querySelector('link[rel="canonical"]');
+  if(canon) canon.href = canonUrl;
+  const ogu = document.querySelector('meta[property="og:url"]');
+  if(ogu) ogu.content = canonUrl;
+  const ogt = document.querySelector('meta[property="og:title"]');
+  if(ogt) ogt.content = name+' – '+cat+' | Messeprofil.no';
+  const ogi = document.querySelector('meta[property="og:image"]');
+  if(ogi) ogi.content = 'https://www.messeprofil.no/bilder/'+p[3];
+  const md = document.querySelector('meta[name="description"]');
+  if(md) md.content = name+' ('+cat+') med ditt eget design fra Messeprofil. Be om pris – du får tilbud samme dag. Rask levering i hele Norge.';
+  const h1 = document.querySelector('.p-info h1'); if(h1) h1.textContent = name;
+  const pc = document.querySelector('.p-cat'); if(pc) pc.textContent = cat;
+  const bc = document.querySelector('.breadcrumb span[aria-current]'); if(bc) bc.textContent = name;
+  const bcs = document.querySelectorAll('.breadcrumb a'); if(bcs[2]) bcs[2].textContent = cat;
+  const gm = document.getElementById('galleryMain');
+  if(gm){ gm.innerHTML=''; const im=document.createElement('img'); im.src=IMGBASE+p[3]; im.alt=name+' – '+cat; im.style.cssText='position:absolute;inset:24px;width:calc(100% - 48px);height:calc(100% - 48px);object-fit:contain;object-position:center;display:block'; gm.appendChild(im); }
+  const th = document.querySelector('.gallery-thumbs'); if(th) th.style.display='none';
+  /* Bildegalleri fra adSystem-feeden (produktdata.js -> imgs). Faller tilbake til det gamle bildet hvis fila mangler. */
+  const PDg = (window.PRODUKTDATA || {})[String(id)];
+  if(gm && PDg && PDg.imgs && PDg.imgs.length){
+    const main = gm.querySelector('img');
+    const setMain = src => { main.src = IMGBASE+src; };
+    main.onerror = function(){ this.onerror=null; this.src = IMGBASE+p[3]; };
+    setMain(PDg.imgs[0]);
+    if(ogi) ogi.content = 'https://www.messeprofil.no/bilder/'+PDg.imgs[0];
+    if(th && PDg.imgs.length>1){
+      th.innerHTML=''; th.classList.add('real'); th.style.display='';
+      PDg.imgs.forEach((src,i)=>{
+        const b=document.createElement('button'); b.type='button'; b.className=i===0?'active':''; b.setAttribute('aria-label','Bilde '+(i+1)+' av '+PDg.imgs.length);
+        const im=document.createElement('img'); im.loading='lazy'; im.src=IMGBASE+src; im.alt='';
+        im.onerror=function(){ b.remove(); if(th.children.length<2) th.style.display='none'; };
+        b.appendChild(im);
+        b.onclick=()=>{ [...th.children].forEach(x=>x.classList.remove('active')); b.classList.add('active'); setMain(src); };
+        th.appendChild(b);
+      });
+    }
+  }
+  /* Trykkvalg: «Dobbeltsidig» vises bare når produktet faktisk finnes dobbeltsidig hos leverandøren */
+  const trykk = document.querySelector('.options[aria-label="Velg trykk"]');
+  if(trykk){
+    const lbl = trykk.previousElementSibling;
+    if(!(PDg && PDg.ds)){ trykk.style.display='none'; if(lbl && lbl.classList.contains('option-label')) lbl.style.display='none'; }
+  }
+  /* Egenskapsikoner per produktgruppe (feedens product_type) */
+  const fiRow = document.querySelector('.feature-icons');
+  if(fiRow){
+    const pt = (PDg && PDg.pt) || '';
+    const grp = pt.split(' > ')[0];
+    const sub = pt.split(' > ')[1] || '';
+    const nm = name.toLowerCase();
+    const tekstil = /Display walls|Original Shapes|Textile frames|Roll-up|Exhibition stands|Exhibition Booths/.test(grp) || /Textile counters|Tasting stands/.test(sub);
+    const lys = /Lightboxes/.test(grp) || /Backlit|LED|SEGO/.test(pt) || /led|lumina|sego/.test(nm);
+    const ute = /Outdoor/.test(grp);
+    const tilbehor = /Accessories|Panel B2B|Multimedia/.test(grp) || (!pt && (p[2].includes(4) || !p[2].length));
+    if(tilbehor){
+      /* Tilbehør/reservedeler leveres uten trykk: skjul designvalg og trykk-tekster */
+      const dg = document.querySelector('.options[aria-label="Velg design"]');
+      if(dg){ dg.style.display='none'; const l=dg.previousElementSibling; if(l && l.classList.contains('option-label')) l.style.display='none'; }
+      const dh = document.getElementById('designHelp'); if(dh) dh.hidden = true;
+      const ps = document.querySelector('.p-price span'); if(ps) ps.textContent = '– du får tilbud samme dag';
+      window.__erTilbehor = true;
+      const ld = document.querySelector('.p-lead'); if(ld) ld.textContent = 'Tilbehør til messeutstyret vårt. Send forespørsel, så får du pris og leveringstid samme dag – legg gjerne ved hvilket produkt det skal brukes til.';
+      document.querySelectorAll('.usp-list li').forEach(li=>{ if(/designgodkjenning/.test(li.textContent)) li.lastChild.textContent = 'Levering 8–10 arbeidsdager'; });
+    }
+    const show = {
+      'Uten verktøy': !tilbehor,
+      'Glidelås': /Display walls|Original Shapes|Textile rollup/.test(pt) && /vario|presto/.test(nm),
+      'Dobbeltsidig': !!(PDg && PDg.ds),
+      '32 mm rør': /Textile walls|Original Shapes|Textile gates|textile totems/.test(pt) && /light|presto/.test(nm),
+      'Gjenbrukbar': !tilbehor,
+      'Vaskbart trykk': tekstil && !ute
+    };
+    fiRow.querySelectorAll('.fi').forEach(el=>{
+      const t = el.querySelector('span').textContent.trim();
+      if(t in show && !show[t]) el.classList.add('hide');
+    });
+    if(lys){
+      const el=document.createElement('div'); el.className='fi';
+      el.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></svg><span>LED-belysning</span>';
+      fiRow.insertBefore(el, fiRow.children[1]||null);
+    }
+    if(ute){
+      const el=document.createElement('div'); el.className='fi';
+      el.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><span>Utendørs</span>';
+      fiRow.insertBefore(el, fiRow.firstChild);
+    }
+    if(!fiRow.querySelector('.fi:not(.hide)')) fiRow.style.display='none';
+    /* USP-listen: tekstil-punktene gjelder ikke tilbehør */
+    if(tilbehor || ute){
+      document.querySelectorAll('.usp-list li').forEach(li=>{
+        const t=li.textContent;
+        if(/Vaskbar tekstil/.test(t) && !tekstil) li.remove();
+        if(/garanti på ramme/.test(t) && tilbehor) li.remove();
+        if(/Transportbag/.test(t) && tilbehor) li.remove();
+      });
+    }
+  }
+  /* Tilbehør fra feeden */
+  const tbSec = document.getElementById('tilbehor'), tbGrid = document.getElementById('tilbehorGrid');
+  if(tbSec && tbGrid && PDg && PDg.acc && PDg.acc.length){
+    const escq = s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+    tbGrid.innerHTML = PDg.acc.map(a=>{
+      const img = a.img ? '<div class="im"><img loading="lazy" src="'+IMGBASE+a.img+'" alt="'+escq(a.n)+'" onerror="this.parentNode.className=\'im ph\';this.remove()"></div>' : '<div class="im ph">Tilbehør</div>';
+      const link = a.id ? '<a class="go" href="produkt.html?id='+a.id+'">Se produkt →</a>' : '<a class="go" href="#" onclick="document.getElementById(\'sendReq\').click();return false;">Ta med i forespørsel →</a>';
+      return '<article class="tb">'+img+'<h3>'+escq(a.n)+'</h3>'+link+'</article>';
+    }).join('');
+    tbSec.hidden = false;
+  }
+  const lead = document.querySelector('.p-lead');
+  if(lead && !window.__erTilbehor) lead.textContent = (p[4]>0 ? p[4]+' varianter/størrelser tilgjengelig. ' : '')+'Produseres med ditt eget design. Send forespørsel, så får du pris, forslag og leveringstid samme dag.';
+  /* Størrelsesvelger: ekte størrelser fra feeden når vi har dem, ellers skjules raden */
+  const ol = document.querySelectorAll('.option-label')[0];
+  const og = document.querySelectorAll('.options')[0];
+  const PDx = (window.PRODUKTDATA || {})[String(id)];
+  if(og && PDx && PDx.s && PDx.s.length){
+    const unit = s => (s.split('×').every(n=>parseInt(n)<20) ? ' m' : ' cm');
+    og.innerHTML = PDx.s.map((s,i)=>
+      '<button class="opt'+(i===0?' active':'')+'" data-size="'+s+unit(s)+'" onclick="pick(this,\'size\')">'+s+unit(s)+'</button>').join('');
+    const sl=document.getElementById('sizeLabel'); if(sl) sl.textContent = PDx.s[0]+unit(PDx.s[0]);
+  } else {
+    if(ol) ol.style.display='none';
+    if(og) og.style.display='none';
+  }
+  window.__prodName = name;
+  if(window.updateReqLink) window.updateReqLink();
+
+  /* Per-produkt beskrivelse og spesifikasjoner fra adSystem-feeden (produktdata.js) */
+  const PD = (window.PRODUKTDATA || {})[String(id)];
+  const esc = s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const descPanel = document.getElementById('descPanel');
+  if(descPanel && PD && PD.d){
+    const blocks = PD.d.split(/\n\s*\n/).map(b=>b.trim()).filter(Boolean);
+    descPanel.innerHTML = blocks.map(b=>{
+      const lines=b.split('\n').map(l=>l.trim()).filter(Boolean);
+      return lines.map(l=>
+        (l.length<75 && !/[.!?:,]$/.test(l)) ? '<h3>'+esc(l)+'</h3>' : '<p>'+esc(l)+'</p>'
+      ).join('');
+    }).join('');
+  } else if(descPanel){
+    descPanel.innerHTML = '<h3>'+esc(name)+'</h3>'+
+      '<p>'+esc(name)+' leveres med ditt eget design og trykk. Send en forespørsel, så får du pris, produktdetaljer og leveringstid samme dag.</p>'+
+      '<p>Lurer du på mål, vekt eller varianter? Kontakt oss – vi svarer raskt.</p>';
+  }
+  const specPanel = document.getElementById('specPanel');
+  if(specPanel){
+    const rows=[];
+    if(PD && PD.s && PD.s.length){
+      rows.push(['Tilgjengelige størrelser (cm)', PD.s.join(', ')]);
+    } else if(p[4]>0){
+      rows.push(['Varianter/størrelser', p[4]+' – se forespørselsskjemaet']);
+    }
+    if(PD && PD.wmin){
+      rows.push(['Vekt', PD.wmin===PD.wmax ? PD.wmin+' kg' : PD.wmin+'–'+PD.wmax+' kg (avhengig av størrelse)']);
+    }
+    if(PD && PD.v>1) rows.push(['Antall varianter', String(PD.v)]);
+    if(PD && (PD.ds || PD.ss)) rows.push(['Trykk', PD.ds ? 'Enkeltsidig eller dobbeltsidig' : 'Enkeltsidig']);
+    if(PD && PD.wp) rows.push(['Uten trykk', 'Kan også leveres uten trykk (kun konstruksjon)']);
+    if(PD && PD.ean) rows.push(['EAN', PD.ean]);
+    rows.push(['Kategori', cat]);
+    rows.push(['Produsent', 'adSystem – trykk og montering via Messeprofil']);
+    specPanel.innerHTML = '<table class="spec-table">'+
+      rows.map(r=>'<tr><th>'+esc(r[0])+'</th><td>'+esc(r[1])+'</td></tr>').join('')+'</table>';
+  }
+})();
+(function(){
+  const grid = document.getElementById('relatedGrid');
+  if(!grid) return;
+  const id = parseInt(new URLSearchParams(location.search).get('id')||'');
+  const cur = PRODS.find(x=>x[0]===id);
+  const dec = s=>{const t=document.createElement('textarea');t.innerHTML=s;return t.value;};
+  let pool = [];
+  if(cur){
+    pool = PRODS.filter(x=>x[0]!==cur[0] && x[1]!==cur[1] && x[2].some(c=>cur[2].includes(c)));
+  }
+  for(const x of PRODS){
+    if(pool.length>=4) break;
+    if((!cur || (x[0]!==cur[0] && x[1]!==cur[1])) && !pool.includes(x)) pool.push(x);
+  }
+  grid.innerHTML = pool.slice(0,4).map(x=>{
+    const n = dec(x[1]);
+    return '<article class="product-card">'+
+      '<a class="product-thumb" href="produkt.html?id='+x[0]+'"><img loading="lazy" src="'+IMGBASE+x[3]+'" alt="'+n.replace(/"/g,'&quot;')+'"></a>'+
+      '<div class="product-body">'+
+      '<h3><a href="produkt.html?id='+x[0]+'" style="color:inherit">'+n+'</a></h3>'+
+      '<p class="product-price">Be om pris</p>'+
+      '<a class="btn btn-dark" href="produkt.html?id='+x[0]+'">Se produkt</a>'+
+      '</div></article>';
+  }).join('');
+})();
+</script>
+<script>
+/* Klikksporing: telefon, e-post og forespørsel -> dataLayer (GTM -> Google Ads + Matomo) */
+(function(){
+  window.dataLayer = window.dataLayer || [];
+  function push(ev, method, label){
+    window.dataLayer.push({event:ev, kontakt_metode:method, kontakt_verdi:label||'', side:location.pathname});
+    if(window.fbq){ window.fbq('track','Contact',{metode:method}); }
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if(!a || !a.href) return;
+    var h = a.getAttribute('href') || '';
+    if(h.indexOf('tel:') === 0){ push('kontakt_telefon','telefon', h.replace('tel:','')); }
+    else if(h.indexOf('mailto:') === 0){ push('kontakt_epost','epost', h.replace('mailto:','')); }
+    else if(h.indexOf('typeform.com') > -1){ push('skjema_apnet','skjema', h); }
+  }, true);
+})();
+</script>
+<script src="trykkfil-sjekk.js" defer></script>
+</body>
+</html>
