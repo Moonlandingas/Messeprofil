@@ -38,6 +38,9 @@
   '.tf-ic{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font:800 13px var(--font-head,Manrope,sans-serif);color:#fff}'+
   '.tf-ok .tf-ic{background:#1E7A46}.tf-warn .tf-ic{background:#C77700}.tf-bad .tf-ic{background:var(--red,#D51D29)}.tf-info .tf-ic{background:var(--grey-500,#75676B)}'+
   '.tf-row b{display:block;font-weight:700}'+
+  '.tf-res.kort .tf-row.tf-ok,.tf-res.kort .tf-row.tf-info{display:none}'+
+  '.tf-more{background:none;border:none;padding:8px 0 0;font:600 13px var(--font-body,Inter,sans-serif);color:var(--grey-500,#75676B);cursor:pointer;text-decoration:underline}'+
+  '.tf-res.kort .tf-sum.ok{margin-top:4px}'+
   '.tf-sum{margin-top:12px;padding:14px;border-radius:12px;font-size:14.5px;font-weight:600}'+
   '.tf-sum.ok{background:#E7F3EC;color:#14522F}.tf-sum.warn{background:#FFF3DF;color:#7A4A00}.tf-sum.bad{background:var(--red-soft,#F9E2E4);color:#8E101B}'+
   '.tf-tips{margin-top:16px;font-size:13.5px;color:#4C4245}'+
@@ -200,7 +203,7 @@
               else if(Math.abs(r - 0.1) <= 0.004) rad('ok', 'Målestokk 1:10 ('+n1(wCm)+' × '+n1(hCm)+' cm)', 'Riktig – vi skalerer opp til '+n0(target[0])+' × '+n0(target[1])+' cm.');
               else rad('warn', 'Uvanlig sidestørrelse ('+n1(wCm)+' × '+n1(hCm)+' cm)', 'Vi forventet '+n0(target[0])+' × '+n0(target[1])+' cm (1:1) eller '+n1(target[0]/10)+' × '+n1(target[1]/10)+' cm (1:10). '+(bleedW>0 && bleedW<15 ? 'Avviket kan være utfall eller ombrett.' : 'Sjekk at du har valgt riktig størrelse over.'));
             } else {
-              rad('info', 'Sidestørrelse '+n1(wCm)+' × '+n1(hCm)+' cm', 'Velg produktets størrelse over for å sjekke mål og målestokk.');
+              rad('warn', 'Velg størrelse', 'Velg produktets størrelse over for å sjekke mål og målestokk. Fila er '+n1(wCm)+' × '+n1(hCm)+' cm.');
             }
             sammenlign(info.wPt, info.hPt, 'pdf');
           }
@@ -228,9 +231,9 @@
         var png = ext === 'png' || file.type === 'image/png';
         var info = png ? pngInfo(buf) : jpegInfo(buf);
         if(!info){ rad('bad', 'Kunne ikke lese bildet', 'Fila kan være skadet eller i et uvanlig format. Lagre den på nytt som PDF eller JPG.'); return res; }
-        rad(png ? 'warn' : 'info', (png ? 'PNG' : 'JPG')+' – '+n0(info.w)+' × '+n0(info.h)+' piksler',
+        rad('info', (png ? 'PNG' : 'JPG')+' – '+n0(info.w)+' × '+n0(info.h)+' piksler',
           png ? 'Kan brukes, men PNG er alltid RGB. PDF er foretrukket for trykk.' : 'Kan brukes. PDF er foretrukket, særlig når motivet har tekst eller logo.');
-        if(!target) rad('info', 'Velg størrelse', 'Velg produktets størrelse over for å sjekke proporsjoner og oppløsning.');
+        if(!target) rad('warn', 'Velg størrelse', 'Velg produktets størrelse over for å sjekke proporsjoner og oppløsning.');
         sammenlign(info.w, info.h, 'bilde');
         if(info.comp === 4) rad('ok', 'CMYK-farger', 'Bildet er i CMYK, som er riktig for trykk.');
         else if(info.comp === 1) rad('info', 'Gråtoner', 'Bildet er i gråtoner. Det er greit hvis motivet skal være svart-hvitt.');
@@ -327,9 +330,24 @@
       warn: 'Fila kan brukes, men se over punktene merket med ! – eller send den til oss, så hjelper vi deg.',
       bad: 'Fila må rettes før trykk. Se punktene merket med × – eller la oss fikse det for deg.'
     }[st];
+    var orden = { bad: 0, warn: 1, info: 2, ok: 3 };
+    var rader = r.rader.slice().sort(function(a, b){ return orden[a.st] - orden[b.st]; });
+    var antFeil = rader.filter(function(x){ return x.st === 'bad' || x.st === 'warn'; }).length;
+    var antOk = rader.length - antFeil;
+    if(st === 'ok') sum = 'Fila ser bra ut – ingen feil funnet. Vi gjør alltid en siste manuell kontroll før trykk.';
+    else if(st === 'warn') sum = 'Fila kan brukes, men sjekk punktet'+(antFeil>1?'ene':'')+' over – eller send den til oss, så ordner vi det.';
+    else sum = antFeil === 1 ? 'Ett punkt må rettes før trykk – eller send fila til oss, så fikser vi det.' : antFeil+' punkter må rettes før trykk – eller send fila til oss, så fikser vi det.';
+    resEl.classList.add('kort');
     resEl.innerHTML = '<div class="tf-file">'+esc(r.navn)+' · '+fmtMB(r.str)+'</div>'+
-      r.rader.map(function(x){ return '<div class="tf-row tf-'+x.st+'"><span class="tf-ic">'+tegn[x.st]+'</span><div><b>'+esc(x.t)+'</b>'+esc(x.x)+'</div></div>'; }).join('')+
-      '<div class="tf-sum '+st+'">'+sum+'</div>' + handlinger(st);
+      rader.map(function(x){ return '<div class="tf-row tf-'+x.st+'"><span class="tf-ic">'+tegn[x.st]+'</span><div><b>'+esc(x.t)+'</b>'+esc(x.x)+'</div></div>'; }).join('')+
+      '<div class="tf-sum '+st+'">'+sum+'</div>'+
+      (antOk ? '<button type="button" class="tf-more" id="tfMore">Vis alle '+rader.length+' sjekker</button>' : '')+
+      handlinger(st);
+    var more = document.getElementById('tfMore');
+    if(more) more.onclick = function(){
+      var kort = resEl.classList.toggle('kort');
+      more.textContent = kort ? 'Vis alle '+rader.length+' sjekker' : 'Vis bare det som må rettes';
+    };
     track('trykkfil_sjekket', st);
   }
 
@@ -355,8 +373,8 @@
     }
     var hjelp = st === 'bad' || st === 'warn' || st === null;
     return '<div class="tf-act">'+
-      '<a class="btn btn-red" href="'+esc(tfUrl)+'" data-tf="foresporsel">'+(hjelp ? 'Be om hjelp med fila' : 'Send forespørsel')+'</a>'+
-      '<a class="btn" style="border:1.5px solid var(--grey-200,#EBDCDF)" href="'+esc(mail)+'" data-tf="epost">Send fila til gratis sjekk</a>'+
+      '<a class="btn btn-red" href="'+esc(mail)+'" data-tf="epost">'+(hjelp ? 'Send fila til oss – gratis sjekk' : 'Send fila til gratis sjekk')+'</a>'+
+      '<a class="btn" style="border:1.5px solid var(--grey-200,#EBDCDF)" href="'+esc(tfUrl)+'" data-tf="foresporsel">Send forespørsel</a>'+
     '</div>';
   }
 
