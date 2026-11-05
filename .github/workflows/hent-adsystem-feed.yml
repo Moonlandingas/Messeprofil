@@ -1,0 +1,54 @@
+name: Hent adSystem-feed
+
+# Henter fersk XML-feed (https://adsystem.pl/xml/price-wars) til import/adsystem-feed.xml,
+# og ev. enkeltsider fra adsystem.pl/en listet i import/hent-sider.json til import/adsystem-sider/.
+# Committer tilbake til grenen workflowen kjører på. Deploy-workflowen trigges ikke av bot-commits.
+
+on:
+  push:
+    branches: [hent-feed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hent feed og sider
+        run: |
+          python3 - <<'PYEOF'
+          import json, os, re, urllib.request, time
+          UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128.0 Safari/537.36 (messeprofil.no import)'}
+          def hent(url):
+              req = urllib.request.Request(url, headers=UA)
+              with urllib.request.urlopen(req, timeout=120) as r:
+                  return r.read()
+          raw = hent('https://adsystem.pl/xml/price-wars')
+          assert b'<rss' in raw[:500], raw[:200]
+          open('import/adsystem-feed.xml', 'wb').write(raw)
+          print('feed', len(raw), 'bytes')
+          try:
+              sider = json.load(open('import/hent-sider.json'))
+          except FileNotFoundError:
+              sider = []
+          os.makedirs('import/adsystem-sider', exist_ok=True)
+          for url in sider:
+              slug = re.sub(r'[^a-z0-9]+', '-', url.split('/en/')[-1].lower()).strip('-') or 'index'
+              try:
+                  h = hent(url)
+                  open(f'import/adsystem-sider/{slug}.html', 'wb').write(h)
+                  print('ok', len(h), url)
+              except Exception as e:
+                  print('FEIL', e, url)
+              time.sleep(1)
+          PYEOF
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add import/adsystem-feed.xml import/adsystem-sider
+          git diff --cached --quiet || git commit -m "Fersk adSystem-feed og sider (automatisk)"
+          git push
