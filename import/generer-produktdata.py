@@ -186,8 +186,8 @@ except FileNotFoundError:
     hoved = {}
 for wp, v in hoved.items():
     b = (v or {}).get('side')
-    if b and wp in data and b in (data[wp].get('imgs') or []):
-        data[wp]['imgs'] = [b] + [x for x in data[wp]['imgs'] if x != b]
+    if b and wp in data and (b in (data[wp].get('imgs') or []) or os.path.exists(os.path.join(ROOT, 'bilder', b))):
+        data[wp]['imgs'] = [b] + [x for x in (data[wp].get('imgs') or []) if x != b]
 
 hdr = ('// Produktdata fra adSystem XML-feed (adsystem.pl/xml/price-wars).\n'
        '// GENERERT av import/generer-produktdata.py - ikke rediger for haand. Norske tekster: import/beskrivelser-no.json\n')
