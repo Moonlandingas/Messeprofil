@@ -1,5 +1,5 @@
 // Typeform-kobling: produktnavn -> valg-referanse i skjemaet MESSEPROFIL (hGGF7wQ7)
-window.TYPEFORM_URL = "https://416jbe00upv.typeform.com/to/hGGF7wQ7";
+window.TYPEFORM_URL = "https://form.typeform.com/to/hGGF7wQ7";
 window.TYPEFORM_PRODUKTREF = {
   "adBlanket": "01KZD0G47SEYP44D8PHYFFPQ6T",
   "adBoard Hips": "01KZD0G47S5HKBD6746J0WBX1R",
