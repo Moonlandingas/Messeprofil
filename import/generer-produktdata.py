@@ -179,6 +179,16 @@ for p in prods:
         'imgs': imgs, 'acc': acc, 'ds': ds, 'ss': ss, 'wp': wpr,
     }
 
+# Hovedbilde: valgt av import/velg-hovedbilde.py (bilde MED trykk/design først, ikke stativ/ramme)
+try:
+    hoved = json.load(open(os.path.join(IMP, 'hovedbilde.json'), encoding='utf-8'))
+except FileNotFoundError:
+    hoved = {}
+for wp, v in hoved.items():
+    b = (v or {}).get('side')
+    if b and wp in data and b in (data[wp].get('imgs') or []):
+        data[wp]['imgs'] = [b] + [x for x in data[wp]['imgs'] if x != b]
+
 hdr = ('// Produktdata fra adSystem XML-feed (adsystem.pl/xml/price-wars).\n'
        '// GENERERT av import/generer-produktdata.py - ikke rediger for haand. Norske tekster: import/beskrivelser-no.json\n')
 with open(os.path.join(ROOT, 'produktdata.js'), 'w', encoding='utf-8') as fh:
