@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMP = os.path.join(ROOT, 'import')
 B = os.path.join(ROOT, 'bilder')
 MIN_FARGE = 0.02      # minst 2 % av bildet er farget flate …
-MIN_ANDEL = 0.25      # … og minst 25 % av selve produktet (resten av bildet er lys bakgrunn)
+MIN_ANDEL = 0.20      # … og minst 20 % av selve produktet (resten av bildet er lys bakgrunn)
 MAKS_KANT = 0.04      # rent produktbilde: høyst 4 % av bildekanten er dekket
 MIN_MILJO = 0.60      # miljøbilde: minst 60 % av kanten dekket. Alt imellom er utsnitt/nærbilder og velges aldri
 
