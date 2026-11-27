@@ -64,8 +64,8 @@ if (!window.__mpBot) {
 <meta property="og:title" content="Messeprofil.no – Alt du trenger for å bli sett på messen">
 <meta property="og:description" content="Messevegger, lyskasser, roll-ups og komplette stands. Tilbud samme dag, montert på minutter.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://stage.messeprofil.no/">
-<meta property="og:image" content="bilder/grupper/messepakker-og-stands.webp">
+<meta property="og:url" content="https://www.messeprofil.no/">
+<meta property="og:image" content="https://www.messeprofil.no/bilder/grupper/messepakker-og-stands.webp">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "LocalBusiness"], "@id": "https://www.messeprofil.no/#org", "name": "Messeprofil AS", "url": "https://www.messeprofil.no/", "telephone": "+47 911 68 911", "email": "kundeservice@messeprofil.no", "vatID": "NO 924 970 154 MVA", "address": {"@type": "PostalAddress", "streetAddress": "Storgata 6", "postalCode": "2050", "addressLocality": "Jessheim", "addressCountry": "NO"}, "areaServed": "NO", "sameAs": ["https://no.pinterest.com/Messeprofil_AS/_saved/"], "description": "Messeprofil AS leverer messeutstyr og messemateriell med kundens eget design: messevegger, messestands, roll up bannere, messetelt, messebord, messedisker, flaggbannere, pressevegger og LED-lyskasser. Rask levering i hele Norge.", "knowsAbout": ["messestand", "messeutstyr", "messevegger", "roll up banner", "messetelt med logo", "messebord", "messedisk", "pressevegg", "flaggbanner", "pop up telt med logo", "messemateriell", "standmateriell", "messesystemer"]}, {"@type": "WebSite", "@id": "https://www.messeprofil.no/#website", "url": "https://www.messeprofil.no/", "name": "Messeprofil.no", "publisher": {"@id": "https://www.messeprofil.no/#org"}, "inLanguage": "nb-NO"}]}</script>
 <link rel="icon" href="bilder/beta/Logo-1.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -492,6 +492,31 @@ body.bruker-mus :focus{outline:none}
   .ide-inner{grid-template-columns:1fr;gap:32px;padding:48px 0}
   .trykk-inner{grid-template-columns:1fr;gap:20px;padding:44px 0}
 }
+/* ===== Gratis befaring + Nordental 2026 ===== */
+.hero-award{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;margin-bottom:20px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.45);color:#fff;font:500 14px var(--font-body);text-decoration:none;backdrop-filter:blur(6px);opacity:0;animation:heroUp .8s cubic-bezier(.2,.7,.3,1) forwards}
+.hero-award:hover{background:rgba(255,255,255,.24)}
+.hero-award svg{flex:none;width:20px;height:20px;color:#FFD66B}
+.hero-award strong{font-weight:800}
+.befaring{background:#fff;border-bottom:1px solid var(--grey-200)}
+.befaring-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-top:72px;padding-bottom:72px}
+.befaring-bilde{margin:0}
+.befaring-bilde img{width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 24px 50px rgba(40,12,16,.16)}
+.befaring-bilde figcaption{margin-top:12px;font-size:14px;line-height:1.5;color:#5C5054}
+.befaring-bilde figcaption strong{color:var(--ink)}
+.befaring-kicker{font:700 13px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.befaring-tekst h2{font:800 clamp(24px,3vw,34px) var(--font-head);letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
+.befaring-tekst>p{color:#5C5054;font-size:16.5px;line-height:1.6;max-width:52ch}
+.befaring-steg{list-style:none;counter-reset:steg;margin:24px 0 28px;padding:0;display:grid;gap:14px}
+.befaring-steg li{counter-increment:steg;position:relative;padding-left:46px;font-size:15.5px;line-height:1.5}
+.befaring-steg li::before{content:counter(steg);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--red-soft,#FBE9EA);color:var(--red);font:800 15px var(--font-head);display:grid;place-items:center}
+.befaring-steg strong{display:block;color:var(--ink);font-weight:700}
+.befaring-steg span{color:#5C5054}
+.befaring-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.befaring-lenke{font:600 15px var(--font-body);color:var(--red);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:900px){
+  .befaring-inner{grid-template-columns:1fr;gap:28px;padding-top:48px;padding-bottom:48px}
+  .hero-award{font-size:13px;align-items:flex-start;border-radius:16px}
+}
 /* Hero-video: lesbar tekst uten å skjule videoen – mørk «scrim» bak tekstblokken + skygge på teksten */
 .hero--video .hero-veil{background:linear-gradient(100deg,rgba(18,8,10,.72) 0%,rgba(18,8,10,.42) 40%,rgba(18,8,10,.08) 75%,rgba(18,8,10,0) 100%)}
 .hero--video .hero-inner>div{position:relative}
@@ -580,22 +605,51 @@ body.bruker-mus :focus{outline:none}
   <div class="hero-veil" aria-hidden="true"></div>
   <div class="container hero-inner">
     <div>
-      <h1>Messestander og LED-vegger som blir lagt merke til.</h1>
-      <p>Messevegger, LED-lyskasser og komplette messestander – lette å frakte og montert på minutter uten verktøy. Design, trykk og levering fra én leverandør.</p>
+      <a class="hero-award" href="#nordental"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1 1.2-1.200.5-2 2-2 3.8M14 14.7V17c0 .6.5 1 1 1.2 1.2.5 2 2 2 3.8M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg><span><strong>Årets stand</strong> på Nordental 2026 – bygget av oss for Dental Sør</span></a>
+      <h1>Skal du på messe? Vi tar jobben for deg.</h1>
+      <p>Konsultasjon, planlegging, design, bygging og utleie av messestand – samlet hos én leverandør. Start med en gratis befaring, så får du et prisforslag.</p>
       <div class="hero-ctas">
-        <a class="btn btn-white" href="messestand/">Se messestander
+        <a class="btn btn-white" href="https://form.typeform.com/to/QnlBj424#kilde=forside-hero">Bestill gratis befaring
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a class="btn btn-ghost-w" href="lyskasser-og-tekstilrammer/">Se LED-vegger og lyskasser</a>
+        <a class="btn btn-ghost-w" href="butikk.html">Eller handle selv i nettbutikken</a>
       </div>
       <div class="trust-line">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Tilbud samme dag</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Levering 8–14 arbeidsdager – ekspress mulig</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Vi lager trykkfilene for deg</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Gratis og uforpliktende befaring</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Prisforslag etter befaringen</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Vi designer, bygger, monterer og henter</span>
       </div>
     </div>
     <div class="hero-visual">
       <img class="float" src="bilder/2025/06/adFrame-Smart-4x2-L.jpeg" alt="adFrame Smart messestand med vegger og disk" loading="eager" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<!-- Gratis befaring + Nordental 2026 -->
+<section class="befaring" id="nordental">
+  <div class="container befaring-inner reveal">
+    <figure class="befaring-bilde">
+      <img src="bilder/grupper/nordental-2026-dental-sor.webp" alt="Dental Sørs stand på Nordental 2026, bygget av Messeprofil og kåret til Årets stand" loading="lazy" width="1600" height="900">
+      <figcaption><strong>Årets stand, Nordental 2026.</strong> Dental Sørs stand – konsept av Moonlanding, bygget og montert av Messeprofil.</figcaption>
+    </figure>
+    <div class="befaring-tekst">
+      <p class="befaring-kicker">Komplett messestand</p>
+      <h2>Fra første idé til ferdig montert stand</h2>
+      <p>Juryen på Nordental 2026 trakk fram et gjennomarbeidet konsept med rød tråd i design og kommunikasjon – helt ut i det digitale. Slik jobber vi med din stand også:</p>
+      <ol class="befaring-steg">
+        <li><strong>Gratis befaring</strong><span>Vi ser på plassen, målene og budsjettet ditt.</span></li>
+        <li><strong>Planlegging og design</strong><span>Du får skisse og prisforslag før du bestemmer deg.</span></li>
+        <li><strong>Bygging og montering</strong><span>Vi produserer, frakter og setter opp standen.</span></li>
+        <li><strong>Kjøp eller leie</strong><span>Lei standen til én messe, eller kjøp og bruk den igjen.</span></li>
+      </ol>
+      <div class="befaring-ctas">
+        <a class="btn btn-red" href="https://form.typeform.com/to/QnlBj424#kilde=forside-nordental">Bestill gratis befaring
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="befaring-lenke" href="leie-messestand/">Les om leie av stand</a>
+        <a class="befaring-lenke" href="https://moonlandingsite.no/prosjekter/dental-sor-nordental-2026/" target="_blank" rel="noopener">Se hele Nordental-caset</a>
+      </div>
     </div>
   </div>
 </section>
