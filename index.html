@@ -498,7 +498,7 @@ body.bruker-mus :focus{outline:none}
 .hero-award svg{flex:none;width:20px;height:20px;color:#FFD66B}
 .hero-award strong{font-weight:800}
 .befaring{background:#fff;border-bottom:1px solid var(--grey-200)}
-.befaring-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-top:72px;padding-bottom:72px}
+.befaring-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:72px}
 .befaring-bilde{margin:0}
 .befaring-bilde img{width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 24px 50px rgba(40,12,16,.16)}
 .befaring-bilde figcaption{margin-top:12px;font-size:14px;line-height:1.5;color:#5C5054}
@@ -511,8 +511,10 @@ body.bruker-mus :focus{outline:none}
 .befaring-steg li::before{content:counter(steg);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--red-soft,#FBE9EA);color:var(--red);font:800 15px var(--font-head);display:grid;place-items:center}
 .befaring-steg strong{display:block;color:var(--ink);font-weight:700}
 .befaring-steg span{color:#5C5054}
-.befaring-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
-.befaring-lenke{font:600 15px var(--font-body);color:var(--red);text-decoration:underline;text-underline-offset:3px}
+.befaring-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px}
+.befaring-ctas .btn{padding:0 22px}
+.befaring-lenker{display:flex;flex-wrap:nowrap;gap:16px;white-space:nowrap}
+.befaring-lenke{font:600 14.5px var(--font-body);color:var(--red);text-decoration:underline;text-underline-offset:3px}
 @media (max-width:900px){
   .befaring-inner{grid-template-columns:1fr;gap:28px;padding-top:48px;padding-bottom:48px}
   .hero-award{font-size:13px;align-items:flex-start;border-radius:16px}
@@ -647,8 +649,7 @@ body.bruker-mus :focus{outline:none}
         <a class="btn btn-red" href="https://form.typeform.com/to/QnlBj424#kilde=forside-nordental">Bestill gratis befaring
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a class="befaring-lenke" href="leie-messestand/">Les om leie av stand</a>
-        <a class="befaring-lenke" href="https://moonlandingsite.no/prosjekter/dental-sor-nordental-2026/" target="_blank" rel="noopener">Se hele Nordental-caset</a>
+        <span class="befaring-lenker"><a class="befaring-lenke" href="leie-messestand/">Leie av stand</a><a class="befaring-lenke" href="https://moonlandingsite.no/prosjekter/dental-sor-nordental-2026/" target="_blank" rel="noopener">Se Nordental-caset</a></span>
       </div>
     </div>
   </div>
